@@ -2,6 +2,7 @@
 ## Applications
 ### Detect the Email Addresses
 ```py
+# python 3
 import re
 
 lines=int(input(),10)
