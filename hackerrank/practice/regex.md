@@ -19,3 +19,41 @@ r.sort()
 
 print(*r,sep=';')
 ```
+
+### IP Address Validation
+```js
+// javascript (node.js)
+function is_ipv4(i) {
+    if (i.search(/^(\d{1,3}\.){3}\d{1,3}$/) < 0) return !1;
+    return i.split('.').every(v => 0 <= v && v <= 255);
+}
+function is_ipv6(i) {
+    if (i.search(/^(([0-9a-fA-F]{1,4}):){7}[0-9a-fA-F]{1,4}$/) < 0) return !1;
+    return i.split(':').map(n => +("0x" + n)).every(v => 0 <= v && v <= 0xffff);
+}
+
+function whatis(i) {
+    if (is_ipv4(i)) return 'IPv4';
+    if (is_ipv6(i)) return 'IPv6';
+    return 'Neither';
+}
+
+function processData(input) {
+    input = input.split('\n');
+    input.shift();
+    let o;
+    o = input.map(whatis);
+    process.stdout.write(o.join('\n'));
+}
+
+process.stdin.resume();
+process.stdin.setEncoding("ascii");
+_input = "";
+process.stdin.on("data", function (input) {
+    _input += input;
+});
+
+process.stdin.on("end", function () {
+    processData(_input);
+});
+```
