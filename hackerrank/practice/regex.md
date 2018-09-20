@@ -57,3 +57,25 @@ process.stdin.on("end", function () {
     processData(_input);
 });
 ```
+
+### Detect HTML Tags
+```js
+// javascript (node.js)
+function processData(input) {
+    s=new Set();
+    e=input.match(/(?<=<\/*\s*)[\w]+(?=(\s+\S+)*\s*\/*>)/g);
+    e.forEach(v=>{s.add(v);});
+    console.log([...s].sort().join(';'));
+} 
+
+process.stdin.resume();
+process.stdin.setEncoding("ascii");
+_input = "";
+process.stdin.on("data", function (input) {
+    _input += input;
+});
+
+process.stdin.on("end", function () {
+   processData(_input);
+});
+```
