@@ -79,3 +79,24 @@ process.stdin.on("end", function () {
    processData(_input);
 });
 ```
+### Split the Phone Numbers
+```js
+// javascript (node.js)
+function processData(input) {
+    input = input.split('\n');
+    input.shift();
+    let o = input.map(n => n.replace(/^([0-9]+)[ -]([0-9]+)[ -]([0-9]+)$/, 'CountryCode=$1,LocalAreaCode=$2,Number=$3'));
+    process.stdout.write(o.join('\n'));
+}
+
+process.stdin.resume();
+process.stdin.setEncoding("ascii");
+_input = "";
+process.stdin.on("data", function (input) {
+    _input += input;
+});
+
+process.stdin.on("end", function () {
+    processData(_input);
+});
+```
