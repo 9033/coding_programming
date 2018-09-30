@@ -28,9 +28,9 @@ false : `12`, `23`
 `/(\d)\1/` not eq `/\d\d/`  
 
 + `/(?<=a)x(?=b)/` : lookbehind, lookahead  
-select `x`, after `a` and before `b`  
+select `x` after `a` and before `b`  
 
-## add on last value
+## add value on last
 ```js
 //javascript
 a=[]//array object
