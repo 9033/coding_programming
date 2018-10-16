@@ -100,3 +100,29 @@ process.stdin.on("end", function () {
     processData(_input);
 });
 ```
+### Detect HTML links
+```py
+# python 3
+import re
+
+lines=int(input(),10)
+for l in range(lines):
+    iss=input()
+    regex=re.compile('<a[^>]*>.*?</a>')
+    ret=regex.findall(iss)
+    for a in ret:
+        x=[]
+        p=re.compile('href=([\'\"])(?P<href>[^\'\"]*?)\\1')    
+        m=p.search(a)
+        if m is not None:
+            t=m.groupdict()
+            x.append(t['href'])
+
+        inn=re.compile('<([^<>]+)(?:\s+[^>]*)*>\s*(?P<inner>.*?)\s*</\\1>')    
+        mm=inn.search(a)
+        if mm is not None:
+            t=mm.groupdict()
+            x.append( re.sub(r'<[^>]*>','',t['inner'] ) )
+        
+        print(*x,sep=',')
+```
