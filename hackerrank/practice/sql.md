@@ -54,3 +54,25 @@ FROM OCCUPATIONS
 GROUP BY OCCUPATION
 ORDER BY COUNT(name), OCCUPATION;
 ```
+### Occupations
+```sql
+-- MySQL
+set @d=0, @p=0, @s=0, @a=0;
+select min(d),min(p),min(s),min(a)
+from(
+    select
+     case when occupation='Doctor' then @d:=@d+1
+          when occupation='Professor' then @p:=@p+1
+          when occupation='Singer' then @s:=@s+1
+          when occupation='Actor' then @a:=@a+1
+     end as i
+    ,case when occupation='Doctor' then name end as d
+    ,case when occupation='Professor' then name end as p
+    ,case when occupation='Singer' then name end as s
+    ,case when occupation='Actor' then name end as a
+    from OCCUPATIONS
+    order by name
+) f
+group by i
+;
+```
