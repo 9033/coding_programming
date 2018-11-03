@@ -1,7 +1,8 @@
+# readme
 ## Profiles
 [hackerrank](https://www.hackerrank.com/kkangnet)  
 [UVa Online Judge](https://uhunt.onlinejudge.org/id/82804)  
-
+# memo
 ## python
 + loop without for, while  
     ```py
@@ -16,6 +17,19 @@
     ```
     ```py
     print(*[str(i)+'x'+str(j)+'='+str(i*j) for i in range(2,10) for j in range(2,10) if i<=j])
+    ```
+
+## c
++ [set]
+    ```c
+    int main()
+    {
+        char st[100];
+        scanf("%[^\n]%*c", st);
+        printf("%s",st);
+        scanf("%[^\n]s", st);
+        printf("%s",st);
+    }
     ```
 
 ## regular expresion

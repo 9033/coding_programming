@@ -4,7 +4,7 @@
 [Regex](practice/regex.md)  
 [SQL](practice/sql.md)  
 [ProjectEuler+](ProjectEuler+/readme.md)  
-[C](c/readme.md)  
+[C](practice/c.md)  
 ## Regex > Applications
 ### [Detect the Email Addresses](https://www.hackerrank.com/challenges/detect-the-email-addresses)
 `a.a@b.com.au` is vaild email address too.  
