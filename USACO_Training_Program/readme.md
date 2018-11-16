@@ -10,36 +10,36 @@ char name[15];
 int money[10];
 int mp;
 main(){
-	FILE *in=fopen("gift1.in","r");
-	FILE *out=fopen("gift1.out","w");
-	int x,y,z;
-	int mon,p;
-	fscanf(in,"%d",&mp);
-	for(x=0;x<mp;x++)
-		fscanf(in,"%s",names[x]);
-	for(x=0;x<mp;x++){
-		fscanf(in,"%s %d %d",name,&mon,&p);
-		if(mon!=0){
-			for(y=0;y<mp;y++)
-				if(!strcmp(name,names[y])){
-					money[y]-=(int)(mon/p)*p;
-					break;
-				}
+    FILE *in=fopen("gift1.in","r");
+    FILE *out=fopen("gift1.out","w");
+    int x,y,z;
+    int mon,p;
+    fscanf(in,"%d",&mp);
+    for(x=0;x<mp;x++)
+        fscanf(in,"%s",names[x]);
+    for(x=0;x<mp;x++){
+        fscanf(in,"%s %d %d",name,&mon,&p);
+        if(mon!=0){
+            for(y=0;y<mp;y++)
+                if(!strcmp(name,names[y])){
+                    money[y]-=(int)(mon/p)*p;
+                    break;
+                }
 
-			for(z=0;z<p;z++){
-				fscanf(in,"%s",name);
-				for(y=0;y<mp;y++)
-					if(!strcmp(name,names[y]))
-						money[y]+=(int)mon/p;
-			}
-		}
-		else
-			for(z=0;z<p;z++)
-				fscanf(in,"%s",name);
-	}
-	for(x=0;x<mp;x++)
-		fprintf(out,"%s %d\n",names[x],money[x]);
-	return 0;
+            for(z=0;z<p;z++){
+                fscanf(in,"%s",name);
+                for(y=0;y<mp;y++)
+                    if(!strcmp(name,names[y]))
+                        money[y]+=(int)mon/p;
+            }
+        }
+        else
+            for(z=0;z<p;z++)
+                fscanf(in,"%s",name);
+    }
+    for(x=0;x<mp;x++)
+        fprintf(out,"%s %d\n",names[x],money[x]);
+    return 0;
 }
 ```
 
@@ -58,38 +58,38 @@ char name[15];
 int money[10];
 int mp;
 main(){
-	FILE *in=fopen("gift1.in","r");
-	FILE *out=fopen("gift1.out","w");
-	int x,y,z;
-	int mon,p;
-	fscanf(in,"%d",&mp);
-	for(x=0;x<mp;x++)
-		fscanf(in,"%s",names[x]);
-	for(x=0;x<mp;x++){
-		fscanf(in,"%s %d %d",name,&mon,&p);
-		if(mon!=0){
-			div_t g;
-			g = div(mon,p);
-			for(y=0;y<mp;y++)
-				if(!strcmp(name,names[y])){
-					money[y]-=mon-g.rem;
-					break;
-				}
+    FILE *in=fopen("gift1.in","r");
+    FILE *out=fopen("gift1.out","w");
+    int x,y,z;
+    int mon,p;
+    fscanf(in,"%d",&mp);
+    for(x=0;x<mp;x++)
+        fscanf(in,"%s",names[x]);
+    for(x=0;x<mp;x++){
+        fscanf(in,"%s %d %d",name,&mon,&p);
+        if(mon!=0){
+            div_t g;
+            g = div(mon,p);
+            for(y=0;y<mp;y++)
+                if(!strcmp(name,names[y])){
+                    money[y]-=mon-g.rem;
+                    break;
+                }
 
-			for(z=0;z<p;z++){
-				fscanf(in,"%s",name);
-				for(y=0;y<mp;y++)
-					if(!strcmp(name,names[y]))
-						money[y]+=g.quot;
-			}
-		}
-		else
-			for(z=0;z<p;z++)
-				fscanf(in,"%s",name);
-	}
-	for(x=0;x<mp;x++)
-		fprintf(out,"%s %d\n",names[x],money[x]);
-	return 0;
+            for(z=0;z<p;z++){
+                fscanf(in,"%s",name);
+                for(y=0;y<mp;y++)
+                    if(!strcmp(name,names[y]))
+                        money[y]+=g.quot;
+            }
+        }
+        else
+            for(z=0;z<p;z++)
+                fscanf(in,"%s",name);
+    }
+    for(x=0;x<mp;x++)
+        fprintf(out,"%s %d\n",names[x],money[x]);
+    return 0;
 }
 ```
 
@@ -104,36 +104,36 @@ map을 사용해서 사람이름과 돈을 짝지은 값이 들어가게 하고,
 #include<vector>
 #include<unordered_map>
 main(){
-	std::fstream fin("gift1.in", std::fstream::in);
-	std::fstream fout("gift1.out", std::fstream::out);
-	int NP;
-	fin >> NP;
-	std::string name;
-	std::unordered_map<decltype(name), int> p;
-	std::vector<decltype(name)> names;
-	for (int i = NP; i;i--) {
-		fin >> name;
-		p.insert({ name,0 });
-		names.push_back(name);
-	}
-	for (int i = NP; i; i--) {
-		int money, ap;
-		fin >> name >> money >> ap;
-		div_t g = {};
-		if (money && ap)
-			g = div(money, ap);
-		auto chmoney = [&](int chm) {
-			p.find(name)->second += chm;
-		};
-		chmoney(-(money - g.rem));
-		for (int j = ap; j; j--) {
-			fin >> name;
-			chmoney(g.quot);
-		}
-	}
-	for (auto& x : names) {
-		auto h = p.find(x);
-		fout << h->first << " " << h->second << std::endl;
-	}
+    std::fstream fin("gift1.in", std::fstream::in);
+    std::fstream fout("gift1.out", std::fstream::out);
+    int NP;
+    fin >> NP;
+    std::string name;
+    std::unordered_map<decltype(name), int> p;
+    std::vector<decltype(name)> names;
+    for (int i = NP; i;i--) {
+        fin >> name;
+        p.insert({ name,0 });
+        names.push_back(name);
+    }
+    for (int i = NP; i; i--) {
+        int money, ap;
+        fin >> name >> money >> ap;
+        div_t g = {};
+        if (money && ap)
+            g = div(money, ap);
+        auto chmoney = [&](int chm) {
+            p.find(name)->second += chm;
+        };
+        chmoney(-(money - g.rem));
+        for (int j = ap; j; j--) {
+            fin >> name;
+            chmoney(g.quot);
+        }
+    }
+    for (auto& x : names) {
+        auto h = p.find(x);
+        fout << h->first << " " << h->second << std::endl;
+    }
 }
 ```

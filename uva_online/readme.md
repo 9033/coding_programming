@@ -19,44 +19,44 @@ The 3n + 1 problem
 using namespace std;
 
 int cycle(int N){
-	int cnt = 1;//including number 1
-	while(N!=1){
-		if(N%2){
-			N = 3* N + 1;
-		}
-		else{
-			N >>= 1;
-		}
-		cnt++;
-	}
-	return cnt;
+    int cnt = 1;//including number 1
+    while(N!=1){
+        if(N%2){
+            N = 3* N + 1;
+        }
+        else{
+            N >>= 1;
+        }
+        cnt++;
+    }
+    return cnt;
 }
 
 int main()
 {
-	//****************
-	//start of process
-	//****************
-	int a,b;
-	while(cin >> a >> b){
-		cout << a << ' ' << b << ' ';
-		if(a>b){
-			swap(a,b);
-		}
-		int ret = 0;
-		int n;
-		For(n,a,b){
-			ret = max(ret,cycle(n));
-		}
-		cout << ret << endl;
-	}
-	//****************
-	//end of process
-	//****************
+    //****************
+    //start of process
+    //****************
+    int a,b;
+    while(cin >> a >> b){
+        cout << a << ' ' << b << ' ';
+        if(a>b){
+            swap(a,b);
+        }
+        int ret = 0;
+        int n;
+        For(n,a,b){
+            ret = max(ret,cycle(n));
+        }
+        cout << ret << endl;
+    }
+    //****************
+    //end of process
+    //****************
 #ifndef _useCpp
-	fcloseall();
+    fcloseall();
 #endif
-	return 0;
+    return 0;
 }
 ```
 
@@ -85,49 +85,49 @@ using namespace std;
 vector<int> pre(1000001);
 
 int cycle(int N){
-	int cnt = 1;//including number 1
-	while(N>1){
-		if( N<=1000000){
-			if(pre.at(N) !=0){
-				return cnt+pre.at(N)-1;
-			}
-		}
-		if(N%2){
-			N = 3* N + 1;
-		}
-		else{
-			N >>= 1;
-		}
-		cnt++;
-	}
-	return cnt;
+    int cnt = 1;//including number 1
+    while(N>1){
+        if( N<=1000000){
+            if(pre.at(N) !=0){
+                return cnt+pre.at(N)-1;
+            }
+        }
+        if(N%2){
+            N = 3* N + 1;
+        }
+        else{
+            N >>= 1;
+        }
+        cnt++;
+    }
+    return cnt;
 }
 
 int main()
 {
-	//****************
-	//start of process
-	//****************
-	int a,b;
-	while(cin >> a >> b){
-		cout << a << ' ' << b << ' ';
-		if(a>b){
-			swap(a,b);
-		}
-		int ret = 0;
-		int n;
-		For(n,a,b){
-			if( pre.at(n)==0 ){
-				pre.at(n) = cycle(n);
-			}
-			ret = max(ret,pre.at(n));
-		}
-		cout << ret << endl;
-	}
-	//****************
-	//end of process
-	//****************
-	return 0;
+    //****************
+    //start of process
+    //****************
+    int a,b;
+    while(cin >> a >> b){
+        cout << a << ' ' << b << ' ';
+        if(a>b){
+            swap(a,b);
+        }
+        int ret = 0;
+        int n;
+        For(n,a,b){
+            if( pre.at(n)==0 ){
+                pre.at(n) = cycle(n);
+            }
+            ret = max(ret,pre.at(n));
+        }
+        cout << ret << endl;
+    }
+    //****************
+    //end of process
+    //****************
+    return 0;
 }
 ```
 
@@ -161,54 +161,54 @@ using namespace std;
 vector<int> pre(1000001);
 
 int cycle(int N) {
-	int cnt = 1;//including number 1
-	int before = N;
-	while (N>1) {
-		before = N;
-		if (N % 2) {
-			N = 3 * N + 1;
-		}
-		else {
-			N >>= 1;
-		}
-		cnt++;
-		if (N <= 1000000) {
-			if (pre.at(N) != 0) {
-				if (before <= 1000000) {
-					pre.at(before) = pre.at(N) + 1;
-				}
-				return cnt + pre.at(N) - 1;
-			}
-		}
-	}
-	return cnt;
+    int cnt = 1;//including number 1
+    int before = N;
+    while (N>1) {
+        before = N;
+        if (N % 2) {
+            N = 3 * N + 1;
+        }
+        else {
+            N >>= 1;
+        }
+        cnt++;
+        if (N <= 1000000) {
+            if (pre.at(N) != 0) {
+                if (before <= 1000000) {
+                    pre.at(before) = pre.at(N) + 1;
+                }
+                return cnt + pre.at(N) - 1;
+            }
+        }
+    }
+    return cnt;
 }
 
 int main()
 {
-	//****************
-	//start of process
-	//****************
-	int a,b;
-	while(cin >> a >> b){
-		cout << a << ' ' << b << ' ';
-		if(a>b){
-			swap(a,b);
-		}
-		int ret = 0;
-		int n;
-		For(n,a,b){
-			if( pre.at(n)==0 ){
-				pre.at(n) = cycle(n);
-			}
-			ret = max(ret,pre.at(n));
-		}
-		cout << ret << endl;
-	}
-	//****************
-	//end of process
-	//****************
-	return 0;
+    //****************
+    //start of process
+    //****************
+    int a,b;
+    while(cin >> a >> b){
+        cout << a << ' ' << b << ' ';
+        if(a>b){
+            swap(a,b);
+        }
+        int ret = 0;
+        int n;
+        For(n,a,b){
+            if( pre.at(n)==0 ){
+                pre.at(n) = cycle(n);
+            }
+            ret = max(ret,pre.at(n));
+        }
+        cout << ret << endl;
+    }
+    //****************
+    //end of process
+    //****************
+    return 0;
 }
 
 ```
@@ -226,27 +226,27 @@ P/2번 곱한걸 제곱 하니까 이미 구한 해를 재활용하는 동적계
 */
 #include<stdio.h>
 int mulmod(int B, int P, int M) {
-	if (P == 1) {
-		return B%M;
-	}
-	else if (P == 0) {
-		return 1;
-	}
-	int ret;
-	ret = mulmod(B, P/2, M);
-	ret = (ret*ret)%M;
-	ret = ret * mulmod(B, P % 2, M);
-	return ret%M;
+    if (P == 1) {
+        return B%M;
+    }
+    else if (P == 0) {
+        return 1;
+    }
+    int ret;
+    ret = mulmod(B, P/2, M);
+    ret = (ret*ret)%M;
+    ret = ret * mulmod(B, P % 2, M);
+    return ret%M;
 }
 int main() {
-	int B, P, M;
-	while (3 == scanf("%d %d %d", &B, &P, &M)) {
-		int ans;
-		B %= M;
-		ans = mulmod(B, P, M);
-		printf("%d\n", ans);
-	}
-	return 0;
+    int B, P, M;
+    while (3 == scanf("%d %d %d", &B, &P, &M)) {
+        int ans;
+        B %= M;
+        ans = mulmod(B, P, M);
+        printf("%d\n", ans);
+    }
+    return 0;
 }
 ```
 
@@ -268,120 +268,120 @@ int main() {
 #include<vector>
 class verylonginteger {
 public:
-	std::vector<long long> i;//max : 18446744073709551615
-	long long reversestoi(std::string s) {
-		long long digit = 1;
-		long long ret = 0;
-		for (auto it = s.begin(); it < s.end(); it++) {
-			ret += ((*it) - '0')*digit;
-			digit *= 10;
-		}
-		return ret;
-	}
-	long long get(int idx) {
-		if (this->i.size() > idx) {
-			return this->i[idx];
-		}
-		return 0;
-	}
-	bool set(int idx, long long v) {
-		if (this->i.max_size() <= idx)
-			return false;
-		if (this->i.size() <= idx) {
-			this->i.resize(idx + 1);
-		}
-		this->i[idx] = v;
-		return true;
-	}
-	verylonginteger() {
-		this->i.resize(10);
-		for (long long &l : this->i)l = 0;
-	}
-	verylonginteger(std::string s) {
-		this->i.resize(10);
-		for (long long &l : this->i)l = 0;
-		std::reverse(s.begin(), s.end());
-		std::string t;
-		int digits = 18;
-		for (int i = 0;i<this->i.max_size(); i++) {
-			if (s.size() > digits * i) {
-				t = s.substr(digits * i, digits);
-				this->set(i, this->reversestoi(t));
-			}
-			else {
-				break;
-			}
-		}
-	}
-	~verylonginteger() {
-	}
-	bool operator=(long long b) {
-		for (long long &l : this->i)l = 0;
-		return this->set(0, b);
-	}
-	bool operator=(verylonginteger b) {
-		this->i.resize(b.i.size());
-		std::copy(b.i.begin(), b.i.end(), this->i.begin());
-		return true;
-	}
-	friend bool operator==(verylonginteger a, long long b) {
-		if (a.i[0] == b && std::all_of(a.i.begin() + 1, a.i.end(), [](long long i) {return i == 0; }))return true;
-		return false;
-	}
-	friend verylonginteger operator+(verylonginteger a, verylonginteger b) {
-		lldiv_t c;
-		long long carry = 0;
-		verylonginteger ret;
-		ret.i.resize(std::max(a.i.size(),b.i.size()));
-		for (int i = 0;i<ret.i.max_size(); i++) {
-			long long na=0, nb=0;
-			na = a.get(i);
-			nb = b.get(i);
-			c = lldiv(na+nb + carry, 1000000000000000000LL);
-			if (na + nb + carry == 0)break;
-			ret.set(i, c.rem);
-			carry = c.quot;
-		}
-		return ret;
-	}
-	std::string tostring() {
-		std::string ret;
-		char buf[21];
-		auto it = this->i.rbegin();
-		bool first = true;
-		for (; it < this->i.rend(); it++) {
-			if (!first) {
-				sprintf(buf, "%018lld", *it);
-				ret.append(buf);
-			}
-			else if (*it > 0) {
-				sprintf(buf, "%lld", *it);
-				ret.append(buf);
-				first = false;
-			}
-		}
-		if (first) {
-			sprintf(buf, "%lld", 0LL);
-			ret.append(buf);
-		}
-		return ret;
-	}
+    std::vector<long long> i;//max : 18446744073709551615
+    long long reversestoi(std::string s) {
+        long long digit = 1;
+        long long ret = 0;
+        for (auto it = s.begin(); it < s.end(); it++) {
+            ret += ((*it) - '0')*digit;
+            digit *= 10;
+        }
+        return ret;
+    }
+    long long get(int idx) {
+        if (this->i.size() > idx) {
+            return this->i[idx];
+        }
+        return 0;
+    }
+    bool set(int idx, long long v) {
+        if (this->i.max_size() <= idx)
+            return false;
+        if (this->i.size() <= idx) {
+            this->i.resize(idx + 1);
+        }
+        this->i[idx] = v;
+        return true;
+    }
+    verylonginteger() {
+        this->i.resize(10);
+        for (long long &l : this->i)l = 0;
+    }
+    verylonginteger(std::string s) {
+        this->i.resize(10);
+        for (long long &l : this->i)l = 0;
+        std::reverse(s.begin(), s.end());
+        std::string t;
+        int digits = 18;
+        for (int i = 0;i<this->i.max_size(); i++) {
+            if (s.size() > digits * i) {
+                t = s.substr(digits * i, digits);
+                this->set(i, this->reversestoi(t));
+            }
+            else {
+                break;
+            }
+        }
+    }
+    ~verylonginteger() {
+    }
+    bool operator=(long long b) {
+        for (long long &l : this->i)l = 0;
+        return this->set(0, b);
+    }
+    bool operator=(verylonginteger b) {
+        this->i.resize(b.i.size());
+        std::copy(b.i.begin(), b.i.end(), this->i.begin());
+        return true;
+    }
+    friend bool operator==(verylonginteger a, long long b) {
+        if (a.i[0] == b && std::all_of(a.i.begin() + 1, a.i.end(), [](long long i) {return i == 0; }))return true;
+        return false;
+    }
+    friend verylonginteger operator+(verylonginteger a, verylonginteger b) {
+        lldiv_t c;
+        long long carry = 0;
+        verylonginteger ret;
+        ret.i.resize(std::max(a.i.size(),b.i.size()));
+        for (int i = 0;i<ret.i.max_size(); i++) {
+            long long na=0, nb=0;
+            na = a.get(i);
+            nb = b.get(i);
+            c = lldiv(na+nb + carry, 1000000000000000000LL);
+            if (na + nb + carry == 0)break;
+            ret.set(i, c.rem);
+            carry = c.quot;
+        }
+        return ret;
+    }
+    std::string tostring() {
+        std::string ret;
+        char buf[21];
+        auto it = this->i.rbegin();
+        bool first = true;
+        for (; it < this->i.rend(); it++) {
+            if (!first) {
+                sprintf(buf, "%018lld", *it);
+                ret.append(buf);
+            }
+            else if (*it > 0) {
+                sprintf(buf, "%lld", *it);
+                ret.append(buf);
+                first = false;
+            }
+        }
+        if (first) {
+            sprintf(buf, "%lld", 0LL);
+            ret.append(buf);
+        }
+        return ret;
+    }
 };
 verylonginteger fibonaccin[5001];
 int calculated;
 int main() {
-	fibonaccin[1] = 1;
-	calculated = 1;
-	int n = 5;
-	while (1== scanf("%d", &n)) {
-		while (n > calculated) {
-			calculated++;
-			fibonaccin[calculated]=fibonaccin[calculated - 1] + fibonaccin[calculated - 2];
-			//printf("The Fibonacci number for %d is %s\n", calculated, fibonaccin[calculated].tostring().data());
-		}
-		printf("The Fibonacci number for %d is %s\n", n, fibonaccin[n].tostring().data());
-	}
-	return 0;
+    fibonaccin[1] = 1;
+    calculated = 1;
+    int n = 5;
+    while (1== scanf("%d", &n)) {
+        while (n > calculated) {
+            calculated++;
+            fibonaccin[calculated]=fibonaccin[calculated - 1] + fibonaccin[calculated - 2];
+            //printf("The Fibonacci number for %d is %s\n", calculated, fibonaccin[calculated].tostring().data());
+        }
+        printf("The Fibonacci number for %d is %s\n", n, fibonaccin[n].tostring().data());
+    }
+    return 0;
 }
 ```
 
@@ -396,12 +396,12 @@ import java.io.*;
 import java.util.*;
 import java.math.*;
 class Main {
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		while(sc.hasNext()){
-			System.out.println(sc.nextBigInteger().multiply(sc.nextBigInteger()));
-		}
-	}
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        while(sc.hasNext()){
+            System.out.println(sc.nextBigInteger().multiply(sc.nextBigInteger()));
+        }
+    }
 }
 ```
 
@@ -416,22 +416,22 @@ import java.io.*;
 import java.util.*;
 import java.math.*;
 public class Main {
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		while(sc.hasNext()){
-			BigInteger N1 = sc.nextBigInteger();
-			String Op = sc.next();
-			BigInteger N2 = sc.nextBigInteger();
-			BigInteger ret;			
-			if(Op.equals("/")){//compare string by value
-				ret = N1.divide(N2); 
-			}
-			else {
-				ret = N1.mod(N2);
-			}
-			System.out.println(ret);
-		}
-	}
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        while(sc.hasNext()){
+            BigInteger N1 = sc.nextBigInteger();
+            String Op = sc.next();
+            BigInteger N2 = sc.nextBigInteger();
+            BigInteger ret;            
+            if(Op.equals("/")){//compare string by value
+                ret = N1.divide(N2); 
+            }
+            else {
+                ret = N1.mod(N2);
+            }
+            System.out.println(ret);
+        }
+    }
 }
 ```
 
@@ -457,14 +457,14 @@ import java.io.*;
 import java.util.*;
 import java.math.*;
 class Main {
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		while(true){
-			int b = sc.nextInt();
-			if(b==0)break;
-			System.out.println(sc.nextBigInteger(b).mod(sc.nextBigInteger(b)).toString(b));
-		}
-	}
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        while(true){
+            int b = sc.nextInt();
+            if(b==0)break;
+            System.out.println(sc.nextBigInteger(b).mod(sc.nextBigInteger(b)).toString(b));
+        }
+    }
 }
 ```
 
@@ -485,14 +485,14 @@ log2에서 나온 숫자를 ceil등을 이용해서 같거나 큰 정수를 구�
 #include<iostream>
 #include<cmath>
 int main() {
-	int iCase = 1;
-	while (1) {
-		int N;
-		std::cin >> N;
-		if (N < 0)
-			break;
-		std::cout << "Case " << iCase++ <<": "<< (int)std::ceil(std::log2(N)) << std::endl;
-	}
+    int iCase = 1;
+    while (1) {
+        int N;
+        std::cin >> N;
+        if (N < 0)
+            break;
+        std::cout << "Case " << iCase++ <<": "<< (int)std::ceil(std::log2(N)) << std::endl;
+    }
 }
 ```
 
@@ -546,19 +546,19 @@ n에 1을 더하고 bitset에 =연산자로 바로 대입. count함수로 비트
 #include<iostream>
 #include<bitset>
 int main() {
-	while (1) {
-		int N;
-		std::cin >> N;
-		if (N == 0)
-			break;
-		std::bitset<sizeof(decltype(N))*8> b;
-		b = N+1;
-		if (b.count() == 1) {
-			std::cout << "Bob\n";
-		}
-		else {
-			std::cout << "Alice\n";
-		}
-	}
+    while (1) {
+        int N;
+        std::cin >> N;
+        if (N == 0)
+            break;
+        std::bitset<sizeof(decltype(N))*8> b;
+        b = N+1;
+        if (b.count() == 1) {
+            std::cout << "Bob\n";
+        }
+        else {
+            std::cout << "Alice\n";
+        }
+    }
 }
 ```
