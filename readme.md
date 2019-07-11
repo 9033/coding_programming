@@ -2,6 +2,10 @@
 ## Profiles
 [hackerrank](https://www.hackerrank.com/kkangnet)  
 [UVa Online Judge](https://uhunt.onlinejudge.org/id/82804)  
+## My solutions
+[hackerrank](hackerrank/readme.md)  
+[UVa Online Judge](uva_online/readme.md)  
+[USACO_Training_Program](USACO_Training_Program/readme.md)  
 # memo
 ## python
 + loop without for, while  

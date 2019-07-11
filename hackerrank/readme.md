@@ -2,7 +2,7 @@
 
 Practice > Algorithms > Implementation > [Forming a Magic Square](practice/Problem%20Solving.md#forming-a-magic-square)  
 
-Practice > Mathematics > Number Theory > [Fibonacci Finding (easy)](practice/mathematics.md#fibonacci-Finding-(easy))  
+Practice > Mathematics > Number Theory > [Fibonacci Finding (easy)](practice/mathematics.md#fibonacci-finding-easy)  
 
 ## Domains (my solution submits)
 [Python](practice/python.md)  
