@@ -64,3 +64,9 @@ def genMagicSq():
 
 print(genMagicSq())
 ```
+
+## Bit Manipulation
+### Counter game
+[LINK](https://www.hackerrank.com/challenges/counter-game)  
+Can find the number of next largest power of 2?  
+If given n=132, put number 2^7=128.  
