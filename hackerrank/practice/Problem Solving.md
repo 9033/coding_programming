@@ -65,6 +65,10 @@ def genMagicSq():
 print(genMagicSq())
 ```
 
+### Non-Divisible Subset  
+[LINK](https://www.hackerrank.com/challenges/non-divisible-subset/problem)  
+`(x + y) % k == ( x%k + y%k ) % k` is TRUE.  
+
 ## Bit Manipulation
 ### Counter game
 [LINK](https://www.hackerrank.com/challenges/counter-game)  
