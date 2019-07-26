@@ -74,3 +74,13 @@ print(genMagicSq())
 [LINK](https://www.hackerrank.com/challenges/counter-game)  
 Can find the number of next largest power of 2?  
 If given n=132, put number 2^7=128.  
+
+## Trees
+### Tree : Top View
+[LINK](https://www.hackerrank.com/challenges/tree-top-view)  
+![](img/topview_tree.png)  
+answer : 97 20 50 100  
+
+First time, I think drawing the tree like left side. but nothing to do getting answer.  
+Draw a tree in the test-case and find how to do that.  
+I found abstracting the tree at right side on the drawing.  
