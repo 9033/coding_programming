@@ -77,3 +77,12 @@ int main(){
     return 0;
 }
 ```
+
+## Project Euler #3: Largest prime factor  
+Loop sqrt(N) times
+```py
+while k<=int(n**(1/2)):
+    ...
+    while ...:
+        ...
+```

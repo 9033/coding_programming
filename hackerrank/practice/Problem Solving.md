@@ -1,6 +1,6 @@
 # Practice > Problem Solving
 ## Implementation
-### Forming a Magic Square
+### Forming a Magic Square (medium, 20)  
 [LINK](https://www.hackerrank.com/challenges/magic-square-forming)  
 Hint : Magic Square are only few cases.
 #### Generate 3x3 Magic Square (python 3)
@@ -65,12 +65,21 @@ def genMagicSq():
 print(genMagicSq())
 ```
 
-### Non-Divisible Subset  
+### Non-Divisible Subset (medium, 20)  
 [LINK](https://www.hackerrank.com/challenges/non-divisible-subset/problem)  
 `(x + y) % k == ( x%k + y%k ) % k` is TRUE.  
 
+### Save the Prisoner! (eazy, 15)  
+[LINK](https://www.hackerrank.com/challenges/save-the-prisoner/problem)  
+Who receive the last candy?  
+1000000000 is meaning that Don't using loop.  
+
+### Circular Array Rotation (eazy, 20)  
+[LINK](https://www.hackerrank.com/challenges/circular-array-rotation/problem)  
+On rotating, move k elements at once.  
+
 ## Bit Manipulation
-### Counter game
+### Counter game (medium, 30)  
 [LINK](https://www.hackerrank.com/challenges/counter-game)  
 Can find the number of next largest power of 2?  
 If given n=132, put number 2^7=128.  
