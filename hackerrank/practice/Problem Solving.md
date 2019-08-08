@@ -102,3 +102,7 @@ I found abstracting the tree at right side on the drawing.
 ### Swap Nodes [Algo] (medium, 40)
 [LINK](https://www.hackerrank.com/challenges/swap-nodes-algo/problem)  
 Python : Use [`sys.setrecursionlimit(3000)`](https://www.hackerrank.com/challenges/swap-nodes-algo/forum/comments/240124) for runtime error.  
+
+### Is This a Binary Search Tree? (Medium, 30)
+[Problem](https://www.hackerrank.com/challenges/is-binary-search-tree/problem)  
+Consider that 'Every elements are have distinct data?'.  
