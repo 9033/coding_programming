@@ -1,6 +1,6 @@
-# Practice > Problem Solving
+# Practice > Problem Solving > Mathmatics
 ## Number Theory
-### Fibonacci Finding (easy)
+### Fibonacci Finding (easy) (Easy, 30)
 #### [problem link](https://www.hackerrank.com/challenges/fibonacci-finding-easy)  
 #### F(6) = B×f(6) + A×f(5)
 ![](img/fib.png)  

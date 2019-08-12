@@ -1,4 +1,4 @@
-# Practice > Problem Solving
+# Practice > Problem Solving > Algorithms
 ## Implementation
 ### Forming a Magic Square (medium, 20)  
 [LINK](https://www.hackerrank.com/challenges/magic-square-forming)  
@@ -84,6 +84,7 @@ On rotating, move k elements at once.
 Can find the number of next largest power of 2?  
 If given n=132, put number 2^7=128.  
 
+# Practice > Problem Solving > Data Structures
 ## Linked Lists
 ### Insert a Node at the Tail of a Linked List (eazy, 5)  
 [LINK](https://www.hackerrank.com/challenges/insert-a-node-at-the-tail-of-a-linked-list/problem)  
