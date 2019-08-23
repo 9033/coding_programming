@@ -22,7 +22,32 @@
     ```py
     print(*[str(i)+'x'+str(j)+'='+str(i*j) for i in range(2,10) for j in range(2,10) if i<=j])
     ```
-
++ using Counter  
+    ```py
+    import collections
+    a=collections.Counter([1,2,3,4,5])
+    b=collections.Counter([1,2,3,4])
+    a-=b
+    print([*a][0])
+    ```
++ sort with multi keys  
+    ```py
+    name=["B","A","C","B","C"]
+    score=[52,51,51.5,50,51]
+    total=[*zip(name,score)]
+    total.sort(key=lambda p:(-p[1],p[0]))
+    print(total)
+    ```
++ insert sort  
+    ```py
+    import bisect
+    sortedArr=[100,200,300,400,500,600,700]
+    bisect.insort(sortedArr,550)
+    bisect.insort(sortedArr,0)
+    bisect.insort(sortedArr,1000)
+    print(sortedArr)
+    ```
+    
 ## c
 + [set]
     ```c
