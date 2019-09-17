@@ -47,7 +47,55 @@
     bisect.insort(sortedArr,1000)
     print(sortedArr)
     ```
-    
++ bit counter
+    ```py
+    n=31
+    b=bin( n )
+    print(b.count('1'))
+    ```
++ number of True
+    ```py
+    strs=['aa','BB','cC','dd']
+    print( sum(map(str.islower,strs)))
+    ```
++ isprime?
+    ```py
+    def isprime(n):
+        if n==2:
+            return True
+        if n%2==0:
+            return False
+        if n==1:
+            return False    
+        sqrtN=int( pow(n,1/2) )
+        for x in range(3,sqrtN+1,2):
+            if n%x==0:
+                return False
+        return True
+    ```
++ permultation & combination
+    ```py
+    #순서무관 : 뽑는 순서는 상관이 없다.
+    #순서상관 : 뽑는 순서가 다르면 다른경우다.    
+    import itertools
+    n=5
+    r=3
+    arr=[*range(0,n)]
+    itertools.product(arr,repeat=r)#중복순열 : 순서상관, 중복허용
+    itertools.permutations(arr,r)#순열 : 순서상관, 중복안됨
+    itertools.combinations(arr,r)#조합 : 순서무관, 중복안됨
+    itertools.combinations_with_replacement(arr,r)#중복 조합 : 순서무관, 중복허용
+    ```
++ datetime from string and to string
+    ```py
+    import datetime
+    r=datetime.datetime.strptime("2019-09-17 11:11:11.111","%Y-%m-%d %H:%M:%S.%f")
+    print(r)
+    t=r-datetime.timedelta(seconds=0.999)
+    print(t)
+    print(datetime.datetime.strftime(t,"%Y-%m-%d %H:%M:%S.%f"))
+    ```
+
 ## c
 + [set]
     ```c
