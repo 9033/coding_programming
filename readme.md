@@ -6,6 +6,7 @@
 [hackerrank](hackerrank/readme.md)  
 [UVa Online Judge](uva_online/readme.md)  
 [USACO_Training_Program](USACO_Training_Program/readme.md)  
+[programmers](programmers.md)  
 # memo
 ## python
 + loop without for, while  
@@ -35,7 +36,7 @@
     name=["B","A","C","B","C"]
     score=[52,51,51.5,50,51]
     total=[*zip(name,score)]
-    total.sort(key=lambda p:(-p[1],p[0]))
+    total.sort(key=lambda p:(-p[1],p[0]))#by tuple
     print(total)
     ```
 + insert sort  
@@ -94,6 +95,17 @@
     t=r-datetime.timedelta(seconds=0.999)
     print(t)
     print(datetime.datetime.strftime(t,"%Y-%m-%d %H:%M:%S.%f"))
+    ```
++ number to string by radix
+    ```py
+    def radix(n,r):#n을 r진법으로 출력
+        ret=""
+        if n==0:
+            return "0"
+        while n>0:
+            n,m=divmod(n,r)
+            ret="0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"[m]+ret
+        return ret
     ```
 
 ## c
