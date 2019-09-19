@@ -2,7 +2,7 @@
 
 [ProjectEuler+](ProjectEuler+/readme.md)  
 [Problem Solving](practice/Problem%20Solving.md)  
-[Mathematics](practice/mathmatics.md)  
+[Mathematics](practice/mathematics.md)  
 [Python](practice/python.md)  
 [Regex](practice/regex.md)  
 [SQL](practice/sql.md)  

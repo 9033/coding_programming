@@ -39,3 +39,27 @@ https://programmers.co.kr/learn/courses/30/lessons/42892
 2. 바이너리 트리순회  
 pre order와 post order로 순회한다.  
 모르면 검색ㄱㄱ.  
+
+## 선입 선출 스케줄링
+https://programmers.co.kr/learn/courses/30/lessons/12920  
+
+각 코어의 완료시간을 고려하지 않고 완료되면 바로 남은 작업을 시작하는 문제이다.  
+
+Parametric Search로 작성하면 효율성도 통과가 가능하다.  
+그리고 루프문에 유의해서 작성해야 효율성도 전부 통과가 된다.  
+
+밑에 python 소스는 우선순위큐(heap)으로 어떻게든 비벼볼려고 하다가 나왔는데  
+효율성은 하나도 통과가 안되지만 파라메트릭 코드가 정확한지 보는데 유용하게 썼습니다.  
+```py
+import heapq
+def solution1(n, cores):
+    h=[(0,core) for core in range(len(cores))]# (작업완료시간, 코어숫자)
+    heapq.heapify(h)
+
+    while True:#작업끝 -> 바로 작업 수행 : 코드가 짧아진 이유.
+        donetime,donecore=h[0]
+        if n==1:
+            return donecore+1
+        heapq.heapreplace(h,(donetime+cores[donecore],donecore))#작업완료시간과 코어순서로 정렬됨.
+        n-=1
+```

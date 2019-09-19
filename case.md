@@ -5,6 +5,7 @@
 ## Binary Search, Parametric Search
 ➡ [선입 선출 스케줄링](https://programmers.co.kr/learn/courses/30/lessons/12920)  
 ➡ [징검다리](https://programmers.co.kr/learn/courses/30/lessons/43236), [River Hopscotch](http://poj.org/problem?id=3258) - 같은 문제  
+➡ [입국심사](https://programmers.co.kr/learn/courses/30/lessons/43238)  
 # 시간 복잡도 별
 ## O(1)
 ## O(log n)
