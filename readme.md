@@ -107,6 +107,23 @@
             ret="0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"[m]+ret
         return ret
     ```
++ all divisors of the number
+    ```py
+    def divisors(n):#n과 n의 약수들을 오름차 순으로 출력
+        r1=[]
+        r2=[]
+        sqrtn=int(n**(1/2))
+        for a in range(1,sqrtn):
+            if not n%a:
+                r1.append(a)
+                r2.append(n//a)
+        if sqrtn*sqrtn==n:
+            r1.append(sqrtn)
+        r2.reverse()
+        return r1+r2
+
+    print(divisors(244324**2))
+    ```
 
 ## c
 + [set]
