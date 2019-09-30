@@ -74,6 +74,19 @@
                 return False
         return True
     ```
++ prime numbers to N
+    ```py
+    primenums=set([2])
+    for i in range(3,N+1,2):
+        p=True
+        for c in primenums:
+            if i%c==0:
+                p=False
+                break
+        if p:
+            primenums.add(i)
+    #primenums.add(1)
+    ```    
 + permultation & combination
     ```py
     #순서무관 : 뽑는 순서는 상관이 없다.
