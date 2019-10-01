@@ -76,16 +76,21 @@
     ```
 + prime numbers to N
     ```py
-    primenums=set([2])
-    for i in range(3,N+1,2):
-        p=True
-        for c in primenums:
-            if i%c==0:
-                p=False
-                break
-        if p:
-            primenums.add(i)
-    #primenums.add(1)
+    def primenum(N):
+        cut=int(N**(1/2))
+        primenums=[2]
+        for i in range(3,N+1,2):
+            p=True
+            for c in primenums:
+                if i%c==0:
+                    p=False
+                    break
+                elif c>cut:
+                    break
+            if p:
+                primenums.append(i)
+        #primenums.append(1)
+        return primenums
     ```    
 + permultation & combination
     ```py
