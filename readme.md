@@ -144,8 +144,26 @@
     ```
 
 ## c
++ modulo big integer
+    ```c
+    #include<stdio.h>
+    int bigmod(char *num,int m){
+        int ret=0;
+        while(*num){
+            ret=(ret*10+(*num)-'0')%m;
+            num++;
+        }
+        return ret;
+    }
+    int main() {
+        char num[1000]="324842959490294584920434765756745534524235445";
+        int m=32854;
+        printf("%d\n",bigmod(num,m));
+    }
+    ```
 + [set]
     ```c
+    #include<stdio.h>
     int main()
     {
         char st[100];

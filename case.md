@@ -12,8 +12,8 @@
 ➡ [입국심사](https://programmers.co.kr/learn/courses/30/lessons/43238)  
 ➡ [10324 - Zeros and Ones](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=1265)  
 ➡ [10706 - Number Sequence](http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=1647)  
-## 양 옆을 교환해서 정렬할때 최소로 교환하는 수
-➡ [10327 - Flip Sort](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=1268), [Merge Sort: Counting Inversions](https://www.hackerrank.com/challenges/ctci-merge-sort/problem) - 같은 문제  
+## 양 옆을 교환해서 정렬할때 최소로 교환하는 수 (inversion counting)
+➡ [10327 - Flip Sort](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=1268), [Merge Sort: Counting Inversions](https://www.hackerrank.com/challenges/ctci-merge-sort/problem), [10810 - Ultra-QuickSort](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=1751) - 거의 같은 문제  
 # 시간 복잡도 별
 ## O(1)
 ➡ [10550 - Combination Lock](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=1491)  
@@ -22,10 +22,11 @@
 ➡ [Fibonacci Finding (easy)](https://www.hackerrank.com/challenges/fibonacci-finding-easy)  
 ## O(n)
 ➡ [저울](https://programmers.co.kr/learn/courses/30/lessons/42886)  
+➡ [2 x n 타일링](https://programmers.co.kr/learn/courses/30/lessons/12900), [900 - Brick Wall Patterns](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=841) : 유사함  
 ## O(n log n)
 ➡ [가장 큰 수](https://programmers.co.kr/learn/courses/30/lessons/42746)  
 ➡ [징검다리](https://programmers.co.kr/learn/courses/30/lessons/43236), [River Hopscotch](http://poj.org/problem?id=3258) - 같은 문제  
-➡ [Merge Sort: Counting Inversions](https://www.hackerrank.com/challenges/ctci-merge-sort/problem)  
+➡ [Merge Sort: Counting Inversions](https://www.hackerrank.com/challenges/ctci-merge-sort/problem), [10810 - Ultra-QuickSort](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=1751)  
 ## O(nm)
 ➡ [10405 - Longest Common Subsequence](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=1346)  
 ➡ [The Coin Change Problem](https://www.hackerrank.com/challenges/coin-change/problem)  

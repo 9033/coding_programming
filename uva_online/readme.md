@@ -1,3 +1,13 @@
+# Index
+[100 - The 3n + 1 problem](#100---the-3n--1-problem)  
+[374 - Big Mod](#374---big-mod)  
+[495 - Fibonacci Freeze](#495---Fibonacci-Freeze)  
+[10106 - Product](#10106---Product)  
+[10494 - If We Were a Child Again](#10494---if-we-were-a-child-again)  
+[10551 - Basic Remains](#10551---Basic-Remains)  
+[11636 - Hello World!](#11636---Hello-World!)  
+[12293 - Box Game](#12293---Box-Game)  
+[11984 - A Change in Thermal Unit](#11984---A-Change-in-Thermal-Unit)  
 # 100 - The 3n + 1 problem
 <pre>
 일단 답이 나오는 소스 대략 0.6초걸림
@@ -562,3 +572,18 @@ int main() {
     }
 }
 ```
+
+# 11984 - A Change in Thermal Unit
+### <p onclick="document.getElementById('11984').style.display=''">show</p>
+<pre style='display:none;' id='11984'>
+초기의 섭씨 온도와 변화한 온도가 화씨로 입력된다. 최종 섭씨 온도는 ?
+
+단순하게 화씨로 표시된 온도의 변화량을 섭씨로 변경해서 더해주면 정답이 나오지 않음.
+전부 화씨로 변경해서 더해준후 섭씨로 변환해야 원하는 답이 나옴.
+</pre>
+
+# 893 - Y3K Problem
+<pre>
+400년간의 날의 수는 146097로 일정하다.
+이 성질을 이용해서 루프를 돌리는 수를 줄인다.
+</pre>
