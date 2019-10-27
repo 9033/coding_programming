@@ -34,7 +34,7 @@
 ➡ [674 - Coin Change](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=615)  
 ## O(n*n)
 ➡ [10327 - Flip Sort](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=1268)  
-# 기타 유사 같은 문제
+# 기타 유사 하거나 같은 문제
 ## 여러 정수를 이어 붙여서 만들 수 있는 가장 큰수  
 ➡ [가장 큰 수](https://programmers.co.kr/learn/courses/30/lessons/42746)  
 ➡ [10905 - Children's Game](http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=1846)  
