@@ -1,13 +1,21 @@
 # Index
 [100 - The 3n + 1 problem](#100---the-3n--1-problem)  
+[193 - Graph Coloring](#193---Graph-Coloring)  
 [374 - Big Mod](#374---big-mod)  
+[469 - Wetlands of Florida](#469---Wetlands-of-Florida)  
 [495 - Fibonacci Freeze](#495---Fibonacci-Freeze)  
+[530 - Binomial Showdown](#530---Binomial-Showdown)  
+[893 - Y3K Problem](#893---Y3K-Problem)  
+[10013 - Super long sums](#10013---Super-long-sums)  
 [10106 - Product](#10106---Product)  
 [10494 - If We Were a Child Again](#10494---if-we-were-a-child-again)  
 [10551 - Basic Remains](#10551---Basic-Remains)  
+[10905 - Children's Game](#10905---Children's-Game)  
+[10943 - How do you add?](#10943---How-do-you-add?)  
+[11121 - Base -2](#11121---Base--2)  
 [11636 - Hello World!](#11636---Hello-World!)  
-[12293 - Box Game](#12293---Box-Game)  
 [11984 - A Change in Thermal Unit](#11984---A-Change-in-Thermal-Unit)  
+[12293 - Box Game](#12293---Box-Game)  
 # 100 - The 3n + 1 problem
 <pre>
 일단 답이 나오는 소스 대략 0.6초걸림
@@ -574,8 +582,7 @@ int main() {
 ```
 
 # 11984 - A Change in Thermal Unit
-### <p onclick="document.getElementById('11984').style.display=''">show</p>
-<pre style='display:none;' id='11984'>
+<pre>
 초기의 섭씨 온도와 변화한 온도가 화씨로 입력된다. 최종 섭씨 온도는 ?
 
 단순하게 화씨로 표시된 온도의 변화량을 섭씨로 변경해서 더해주면 정답이 나오지 않음.
@@ -586,4 +593,51 @@ int main() {
 <pre>
 400년간의 날의 수는 146097로 일정하다.
 이 성질을 이용해서 루프를 돌리는 수를 줄인다.
+</pre>
+
+# 469 - Wetlands of Florida
+<pre>
+이미 넓이를 구한 호수의 좌표면 구해 놓은 해당 호수의 넓이를 출력.
+</pre>
+
+# 10013 - Super long sums
+<pre>
+1000000자리수의 두 숫자의 덧셈.
+
+왼쪽의 자리수부터 들어온다. 그래서 전부 메모리에 저장함.
+오른쪽자리부터 덧셈을 계산해서 저장.
+결과에서 왼쪽 자리부터 출력.
+
+메모리 관점에서 보면 배열 3개가 아닌 결과를 저장할 배열 하나만 필요한게 포인트인 문제같음.
+</pre>
+
+# 11121 - Base -2
+<pre>
+-2진수
+-2진수라서 -가 필요없다고 한다.
+
+진법을 변환할때 나머지는 음수가 아닌 양수로 나오게 해야 한다. 그 나머지를 빼주는 것은 같다.
+-2가 아닌 2의 나머지를 구하면 됨.
+-2진수라도 digit는 0,1이라서 그런거 같음. (0, -1이 아니라)
+</pre>
+
+# 530 - Binomial Showdown
+<pre>
+n개중 r개와 n개중 (n-r)개는 가짓수가 같다. 그래서 k번 루프를 돌때 r과 (n-r)중 적은 수로 돌리면됨.
+</pre>
+
+# 10905 - Children's Game
+<pre>
+숫자중에서 가장 긴 길이가 아닌 그 2배를 기준으로 정렬함.
+</pre>
+
+# 193 - Graph Coloring
+<pre>
+출력인 블랙인 노드의수.
+블랙인 노드의 숫자. : 제대로만 출력하면 된다. udebug결과랑 달라도 무관.
+</pre>
+
+# 10943 - How do you add?
+<pre>
+동적 프로그래밍.
 </pre>
