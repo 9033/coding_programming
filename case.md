@@ -2,16 +2,19 @@
 같은 문제라도 원하는 시간 복잡도가 다를 수 있다.  
 ## 동적 계획법  
 ➡ [10405 - Longest Common Subsequence](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=1346)  
-#### 동전을 교환해주는 경우의수 (DP)
+### 동전을 교환해주는 경우의수 (DP)
 ➡ [The Coin Change Problem](https://www.hackerrank.com/challenges/coin-change/problem)  
 ➡ [거스름돈](https://programmers.co.kr/learn/courses/30/lessons/12907)  
 ➡ [674 - Coin Change](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=615)  
+### TSP
+➡ [10496 - Collecting Beepers](http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=1437)  
 ## Binary Search, Parametric Search
 ➡ [선입 선출 스케줄링](https://programmers.co.kr/learn/courses/30/lessons/12920)  
 ➡ [징검다리](https://programmers.co.kr/learn/courses/30/lessons/43236), [River Hopscotch](http://poj.org/problem?id=3258) - 같은 문제  
 ➡ [입국심사](https://programmers.co.kr/learn/courses/30/lessons/43238)  
 ➡ [10324 - Zeros and Ones](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=1265)  
 ➡ [10706 - Number Sequence](http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=1647)  
+➡ [1237 Expert Enough?](http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=3678)  
 ## 양 옆을 교환해서 정렬할때 최소로 교환하는 수 (inversion counting)
 ➡ [10327 - Flip Sort](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=1268), [Merge Sort: Counting Inversions](https://www.hackerrank.com/challenges/ctci-merge-sort/problem), [10810 - Ultra-QuickSort](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=1751) - 거의 같은 문제  
 # 시간 복잡도 별
@@ -35,6 +38,12 @@
 ## O(n*n)
 ➡ [10327 - Flip Sort](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=1268)  
 # 기타 유사 하거나 같은 문제
+## 콜라병 으로 콜라를 받아 마시는 문제.
+➡ [11150 - Cola](http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=2091)  
+➡ [11877 - The Coco-Cola Store](http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=2999)  
 ## 여러 정수를 이어 붙여서 만들 수 있는 가장 큰수  
 ➡ [가장 큰 수](https://programmers.co.kr/learn/courses/30/lessons/42746)  
 ➡ [10905 - Children's Game](http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=1846)  
+## 어떤 문자열이 다른 문자열의 prefix인가?
+➡ [11362 - Phone List](http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=2347)  
+➡ [644 - Immediate Decodability](http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=585)  

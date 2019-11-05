@@ -2,6 +2,8 @@
 ## Profiles
 [hackerrank](https://www.hackerrank.com/kkangnet)  
 [UVa Online Judge](https://uhunt.onlinejudge.org/id/82804)  
+## [Problems by cases](case.md)  
+링크 참조.  
 ## My solutions
 [hackerrank](hackerrank/readme.md)  
 [UVa Online Judge](uva_online/readme.md)  
