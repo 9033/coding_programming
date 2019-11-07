@@ -6,6 +6,7 @@
 [495 - Fibonacci Freeze](#495---Fibonacci-Freeze)  
 [530 - Binomial Showdown](#530---Binomial-Showdown)  
 [893 - Y3K Problem](#893---Y3K-Problem)  
+[924 - Spreading the News](#924---Spreading-the-News)  
 [10013 - Super long sums](#10013---Super-long-sums)  
 [10106 - Product](#10106---Product)  
 [10494 - If We Were a Child Again](#10494---if-we-were-a-child-again)  
@@ -640,4 +641,10 @@ n개중 r개와 n개중 (n-r)개는 가짓수가 같다. 그래서 k번 루프�
 # 10943 - How do you add?
 <pre>
 동적 프로그래밍.
+</pre>
+
+# 924 - Spreading the News
+<pre>
+간선에 방향이 있음.
+희소 그래프(sparse graph), 친구를 파악할때 set 자료구조를 쓰는걸 추천.
 </pre>
