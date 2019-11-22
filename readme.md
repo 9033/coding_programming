@@ -91,6 +91,8 @@
                     break
             if p:
                 primenums.append(i)
+            if i>cut:
+                break
         #primenums.append(1)
         return primenums
     ```    
