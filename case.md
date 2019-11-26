@@ -41,10 +41,15 @@
 ➡ [674 - Coin Change](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=615)  
 ## O(n*n)
 ➡ [10327 - Flip Sort](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=1268)  
+# 자료구조별
+## min-heap, max-heap
+➡ [Find the Running Median](https://www.hackerrank.com/challenges/find-the-running-median)  
+➡ [501 - Black Box](http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=442)  
 # 기타 유사 하거나 같은 문제
-## 콜라병 으로 콜라를 받아 마시는 문제.
+## 빈병을 가지고 교환해서 마시는 문제.
 ➡ [11150 - Cola](http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=2091)  
 ➡ [11877 - The Coco-Cola Store](http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=2999)  
+➡ [11689 - Soda Surpler](http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=2736)  
 ## 여러 정수를 이어 붙여서 만들 수 있는 가장 큰수  
 ➡ [가장 큰 수](https://programmers.co.kr/learn/courses/30/lessons/42746)  
 ➡ [10905 - Children's Game](http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=1846)  
