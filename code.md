@@ -191,7 +191,37 @@ def primenum(N):
             break
     #primenums.append(1)
     return primenums
-```    
+```
+### 에라토스테네스의 체
+```cpp
+const long long N = 3000001;
+vector<long long> primes;
+bitset<N> primeFlag;
+int primesieve(long long n){
+    primeFlag.flip();
+    long long i = 2;
+    if(primeFlag[i]){//소수일때
+        long long x = 2 * i;//p[i]는 true로 유지.
+        primes.push_back(2);
+        while (x < n){
+            primeFlag[x] = false;
+            x += i;
+        }
+
+    }
+    for(i = 3;i < n;i+=2){       
+        if(primeFlag[i]){//소수일때
+            long long x = 2 * i;//p[i]는 true로 유지.
+            primes.push_back(i);
+            while (x < n){
+                primeFlag[x] = false;
+                x += i;
+            }
+        }
+    }
+    return 0;
+}
+```
 ### 소수인지 판별.
 ```py
 def isprime(n):

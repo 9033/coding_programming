@@ -56,3 +56,7 @@
 ## 어떤 문자열이 다른 문자열의 prefix인가?
 ➡ [11362 - Phone List](http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=2347)  
 ➡ [644 - Immediate Decodability](http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=585)  
+# 기타 분류
+## 약수 관련.
+➡ [{Sum+=i++} to Reach N](http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=1231)  
+➡ [10830 - A New Function](http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=1771)  
