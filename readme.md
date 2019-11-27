@@ -3,9 +3,12 @@
 [hackerrank](https://www.hackerrank.com/kkangnet)  
 [UVa Online Judge](https://uhunt.onlinejudge.org/id/82804)  
 ## [Problems by cases](case.md)  
-링크 참조.  
+문제 분류 - 알고리즘별, 시간 복잡도별, 자료구조별.  
+비슷한 문제를 모아놓음.  
 ## [Code](code.md)  
-링크 참조.  
+알고리즘별 코드.  
+수학 - Prime number등.  
+기타 - 이분탐색 등.  
 ## My solutions
 [hackerrank](hackerrank/readme.md)  
 [UVa Online Judge](uva_online/readme.md)  
@@ -63,41 +66,6 @@
     strs=['aa','BB','cC','dd']
     print( sum(map(str.islower,strs)))
     ```
-+ isprime?
-    ```py
-    def isprime(n):
-        if n==2:
-            return True
-        if n%2==0:
-            return False
-        if n==1:
-            return False    
-        sqrtN=int( pow(n,1/2) )
-        for x in range(3,sqrtN+1,2):
-            if n%x==0:
-                return False
-        return True
-    ```
-+ prime numbers to N
-    ```py
-    def primenum(N):
-        cut=int(N**(1/2))
-        primenums=[2]
-        for i in range(3,N+1,2):
-            p=True
-            for c in primenums:
-                if i%c==0:
-                    p=False
-                    break
-                elif c>cut:
-                    break
-            if p:
-                primenums.append(i)
-            if i>cut:
-                break
-        #primenums.append(1)
-        return primenums
-    ```    
 + permultation & combination
     ```py
     #순서무관 : 뽑는 순서는 상관이 없다.
@@ -120,38 +88,6 @@
     print(t)
     print(datetime.datetime.strftime(t,"%Y-%m-%d %H:%M:%S.%f"))
     ```
-+ number to string by radix
-    ```py
-    def radix(n,r):#n을 r진법으로 출력
-        ret=""
-        if n==0:
-            return "0"
-        while n>0:
-            n,m=divmod(n,r)
-            ret="0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"[m]+ret
-        return ret
-    ```
-+ all divisors of the number
-    ```py
-    def divisors(n):#n과 n의 약수들을 오름차 순으로 출력
-        r1=[]
-        r2=[]
-        sqrtn=int(n**(1/2))
-        a = 1
-        while a * a < n:
-            if not n % a:
-                r1.append(a)
-                r2.append(n // a)
-            a += 1
-            
-        if sqrtn * sqrtn == n:
-            r1.append(sqrtn)
-        r2.reverse()
-        return r1+r2
-
-    print(divisors(244324**2))
-    ```
-
 ## c
 + modulo big integer
     ```c

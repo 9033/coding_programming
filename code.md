@@ -138,6 +138,75 @@ for k in range(1,20+1):
                 dis[i][j]=dis[i][k]+dis[k][j]
                 dis[j][i]=dis[i][k]+dis[k][j]
 ```
+# 수학
+## n과 n의 약수들을 오름차 순으로 출력
+```py
+def divisors(n):#n과 n의 약수들을 오름차 순으로 출력
+    r1=[]
+    r2=[]
+    sqrtn=int(n**(1/2))
+    a = 1
+    while a * a < n:
+        if not n % a:
+            r1.append(a)
+            r2.append(n // a)
+        a += 1
+        
+    if sqrtn * sqrtn == n:
+        r1.append(sqrtn)
+    r2.reverse()
+    return r1+r2
+
+print(divisors(244324**2))
+```
+## n을 r진법으로 출력
+```py
+def radix(n,r):#n을 r진법으로 출력
+    ret=""
+    if n==0:
+        return "0"
+    while n>0:
+        n,m=divmod(n,r)
+        ret="0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"[m]+ret
+    return ret
+```
+## 소수
+1 은 소수가 아님.  
+### 1부터 N까지 소수를 출력.
+```py
+def primenum(N):
+    cut=int(N**(1/2))
+    primenums=[2]
+    for i in range(3,N+1,2):
+        p=True
+        for c in primenums:
+            if i%c==0:
+                p=False
+                break
+            elif c>cut:
+                break
+        if p:
+            primenums.append(i)
+        if i>cut:
+            break
+    #primenums.append(1)
+    return primenums
+```    
+### 소수인지 판별.
+```py
+def isprime(n):
+    if n==2:
+        return True
+    if n%2==0:
+        return False
+    if n==1:
+        return False    
+    sqrtN=int( pow(n,1/2) )
+    for x in range(3,sqrtN+1,2):
+        if n%x==0:
+            return False
+    return True
+```
 # 기타
 ## Search
 ### 이분탐색 : 오름차순, Lower bound
