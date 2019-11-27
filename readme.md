@@ -137,11 +137,14 @@
         r1=[]
         r2=[]
         sqrtn=int(n**(1/2))
-        for a in range(1,sqrtn):
-            if not n%a:
+        a = 1
+        while a * a < n:
+            if not n % a:
                 r1.append(a)
-                r2.append(n//a)
-        if sqrtn*sqrtn==n:
+                r2.append(n // a)
+            a += 1
+            
+        if sqrtn * sqrtn == n:
             r1.append(sqrtn)
         r2.reverse()
         return r1+r2
