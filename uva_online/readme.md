@@ -5,6 +5,7 @@
 [469 - Wetlands of Florida](#469---Wetlands-of-Florida)  
 [495 - Fibonacci Freeze](#495---Fibonacci-Freeze)  
 [530 - Binomial Showdown](#530---Binomial-Showdown)  
+[665 - False coin](#665---False-coin)  
 [893 - Y3K Problem](#893---Y3K-Problem)  
 [924 - Spreading the News](#924---Spreading-the-News)  
 [10013 - Super long sums](#10013---Super-long-sums)  
@@ -659,4 +660,9 @@ n개중 r개와 n개중 (n-r)개는 가짓수가 같다. 그래서 k번 루프�
 # 11850 - Alaska
 <pre>
 목적지에는 충전소가 없다.  
+</pre>
+
+# 665 - False coin
+<pre>
+완전 탐색.
 </pre>
