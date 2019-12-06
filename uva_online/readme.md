@@ -9,6 +9,7 @@
 [893 - Y3K Problem](#893---Y3K-Problem)  
 [924 - Spreading the News](#924---Spreading-the-News)  
 [10013 - Super long sums](#10013---Super-long-sums)  
+[10023 - Square root](#10023---Square-root)  
 [10106 - Product](#10106---Product)  
 [10494 - If We Were a Child Again](#10494---if-we-were-a-child-again)  
 [10523 - Very Easy !!!](#10523---Very-Easy-!!!)  
@@ -665,4 +666,9 @@ n개중 r개와 n개중 (n-r)개는 가짓수가 같다. 그래서 k번 루프�
 # 665 - False coin
 <pre>
 완전 탐색.
+</pre>
+
+# 10023 - Square root
+<pre>
+Babylonian method.
 </pre>

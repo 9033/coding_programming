@@ -170,6 +170,18 @@ def radix(n,r):#n을 r진법으로 출력
         ret="0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"[m]+ret
     return ret
 ```
+## 정수의 제곱근.
+```py
+#x와 y는 둘다 정수.
+def sqrt(x):#Babylonian method
+    if x == 0 or x == 1:
+        return x
+    
+    y = x//2
+    while y > x//y:
+        y = (x // y + y) // 2
+    return y
+```
 ## 소수
 1 은 소수가 아님.  
 ### 1부터 N까지 소수를 출력.
