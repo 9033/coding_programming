@@ -18,9 +18,9 @@
 ## 양 옆을 교환해서 정렬할때 최소로 교환하는 수 (inversion counting)
 ➡ [10327 - Flip Sort](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=1268), [Merge Sort: Counting Inversions](https://www.hackerrank.com/challenges/ctci-merge-sort/problem), [10810 - Ultra-QuickSort](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=1751) - 거의 같은 문제  
 ## Dijkstra
-[762 - We Ship Cheap](http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=703)  
+➡ [762 - We Ship Cheap](http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=703)  
 ## Floyd Warshall
-[567 Risk](http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=508)  
+➡ [567 Risk](http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=508)  
 # 시간 복잡도 별
 ## O(1)
 ➡ [10550 - Combination Lock](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=1491)  
@@ -60,3 +60,5 @@
 ## 약수 관련.
 ➡ [{Sum+=i++} to Reach N](http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=1231)  
 ➡ [10830 - A New Function](http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=1771)  
+## Sample 에서 규칙을 파악.
+➡ [11946 - Code Number](http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=3097)  
