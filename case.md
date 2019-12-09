@@ -20,7 +20,7 @@
 ## Dijkstra
 ➡ [762 - We Ship Cheap](http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=703)  
 ## Floyd Warshall
-➡ [567 Risk](http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=508)  
+➡ [567 - Risk](http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=508)  
 # 시간 복잡도 별
 ## O(1)
 ➡ [10550 - Combination Lock](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=1491)  
