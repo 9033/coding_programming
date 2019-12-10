@@ -343,7 +343,7 @@ auto setroot=[&](int a,int b){//둘의 root를 일치시킴. b의 루트로 일�
     }
 };
 
-auto cntsets=[&](int e){//root가 e의 root인 elements의 갯수.
+auto cntElements=[&](int e){//e가 속한 집합의 elements의 갯수.
     int root=findroot(e);
     return setsize[root];
 };
