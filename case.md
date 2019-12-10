@@ -62,3 +62,16 @@
 ➡ [10830 - A New Function](http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=1771)  
 ## Sample 에서 규칙을 파악.
 ➡ [11946 - Code Number](http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=3097)  
+## 분수
+➡ 12060 - All Integer Average  
+## 시간, 날짜, 달력
+➡ Time Conversion  
+➡ 11677 - Alarm Clock  
+➡ 12157 - Tariff Plan  
+➡ 12439 - February 29  
+➡ 13275 - Leap Birthdays  
+➡ 1727 Counting Weekend Days
+➡ 893 - Y3K Problem  
+### 아날로그 시계
+➡ 11650 - Mirror Clock  
+➡ 12531 - Hours and Minutes  
