@@ -10,6 +10,7 @@
 [924 - Spreading the News](#924---Spreading-the-News)  
 [10013 - Super long sums](#10013---Super-long-sums)  
 [10023 - Square root](#10023---Square-root)  
+[10044 - Erdös Numbers](#10044---Erdös-Numbers)  
 [10106 - Product](#10106---Product)  
 [10494 - If We Were a Child Again](#10494---if-we-were-a-child-again)  
 [10523 - Very Easy !!!](#10523---Very-Easy-!!!)  
@@ -670,5 +671,11 @@ n개중 r개와 n개중 (n-r)개는 가짓수가 같다. 그래서 k번 루프�
 
 # 10023 - Square root
 <pre>
+Babylonian method.
+</pre>
+
+# 10044 - Erdös Numbers
+<button onclick='document.getElementById("10044").style.display = "";'>show</button>
+<pre id='10044' style="display: none;">
 Babylonian method.
 </pre>
