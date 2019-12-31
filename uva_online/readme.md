@@ -675,7 +675,10 @@ Babylonian method.
 </pre>
 
 # 10044 - Erdös Numbers
-<button onclick='document.getElementById("10044").style.display = "";'>show</button>
-<pre id='10044' style="display: none;">
-Babylonian method.
+다음 입력도 처리해야 한다.
+<pre>
+1
+1 1
+Martin, Smith, M.N., Erdos, P.: bla bla bla
+Martin
 </pre>
