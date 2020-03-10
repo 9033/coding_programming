@@ -128,6 +128,7 @@ GROUP
 |21|
 |22|
 |23|
+
 `ON` 뒤에 지정된 규칙대로 테이블을 join 한다.  
 `GROUP BY`를 했기 때문에 animal_outs에서 `hour(ANIMAL_OUTS.DATETIME) == theHour`에 해당하는 여러 row가 하나의 그룹을 이루고 있게 된다. select명령으로 조회하면 한 그룹당 하나의 row를 보여준다. 물론 빈 그룹이면 빈 row가 join되어 있을 것이다. (시퀄라이즈에서 include하면 하위 키 안에 배열에 있겠지.) 그 여러 row의 값을 세는 명령이 바로 count(datetime)이다.  
 근데 나같으면 저렇게 길기만한 쿼리를 시퀄라이즈로 짜기보다는 그냥 받아서 적절히 가공하겠다.  
