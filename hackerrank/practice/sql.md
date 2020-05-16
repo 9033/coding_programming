@@ -76,3 +76,14 @@ from(
 group by i
 ;
 ```
+### Binary Tree Nodes
+어떤 노드인지 구분하고 순서대로 출력.  
+```sql
+-- MySQL
+select n as nn
+, if(p is null,'Root',(    
+    if( (select count(p) from BST where nn = p) > 0, 'Inner', 'Leaf')
+) )as rr
+from BST
+order by n
+```
