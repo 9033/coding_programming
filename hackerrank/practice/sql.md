@@ -87,3 +87,35 @@ select n as nn
 from BST
 order by n
 ```
+### New Companies
+```sql
+-- MySQL
+select distinct
+    Company.*
+    ,(
+        select 
+            count(distinct Lead_Manager.lead_manager_code)
+            from Lead_Manager
+            where Lead_Manager.company_code = Company.company_code
+    )
+    ,(
+        select 
+            count(distinct Senior_Manager.senior_manager_code)
+            from Senior_Manager
+            where Senior_Manager.company_code = Company.company_code
+    )
+    ,(
+        select 
+            count(distinct Manager.manager_code)
+            from Manager
+            where Manager.company_code = Company.company_code
+    )
+    ,(
+        select 
+            count(distinct Employee.employee_code)
+            from Employee
+            where Employee.company_code = Company.company_code
+    )
+    from Company 
+order by Company.company_code
+```
