@@ -69,38 +69,38 @@ def solution1(n, cores):
 -- mysql
 SELECT h.theHour
      , COUNT(DATETIME) AS numberOfItems
-  FROM ( SELECT 0 AS theHour
-         UNION ALL SELECT 1
-         UNION ALL SELECT 2
-         UNION ALL SELECT 3
-         UNION ALL SELECT 4
-         UNION ALL SELECT 5
-         UNION ALL SELECT 6
-         UNION ALL SELECT 7
-         UNION ALL SELECT 8
-         UNION ALL SELECT 9
-         UNION ALL SELECT 10
-         UNION ALL SELECT 11
-         UNION ALL SELECT 12
-         UNION ALL SELECT 13
-         UNION ALL SELECT 14
-         UNION ALL SELECT 15
-         UNION ALL SELECT 16
-         UNION ALL SELECT 17
-         UNION ALL SELECT 18
-         UNION ALL SELECT 19
-         UNION ALL SELECT 20
-         UNION ALL SELECT 21
-         UNION ALL SELECT 22
-         UNION ALL SELECT 23
-       ) AS h
-LEFT OUTER
-  JOIN ANIMAL_OUTS 
-    ON hour(ANIMAL_OUTS.DATETIME) = h.theHour
-GROUP
-    BY h.theHour
+    FROM (
+        SELECT 0 AS theHour
+        UNION ALL SELECT 1
+        UNION ALL SELECT 2
+        UNION ALL SELECT 3
+        UNION ALL SELECT 4
+        UNION ALL SELECT 5
+        UNION ALL SELECT 6
+        UNION ALL SELECT 7
+        UNION ALL SELECT 8
+        UNION ALL SELECT 9
+        UNION ALL SELECT 10
+        UNION ALL SELECT 11
+        UNION ALL SELECT 12
+        UNION ALL SELECT 13
+        UNION ALL SELECT 14
+        UNION ALL SELECT 15
+        UNION ALL SELECT 16
+        UNION ALL SELECT 17
+        UNION ALL SELECT 18
+        UNION ALL SELECT 19
+        UNION ALL SELECT 20
+        UNION ALL SELECT 21
+        UNION ALL SELECT 22
+        UNION ALL SELECT 23
+    ) AS h
+    LEFT OUTER JOIN ANIMAL_OUTS 
+        ON hour(ANIMAL_OUTS.DATETIME) = h.theHour
+GROUP BY h.theHour
 ```
-`LEFT OUTER JOIN yourTableName ON hour(yourTableName.DATETIME) = h.theHour`: join수행시 좌측에 있는 테이블을 전부 나열. 그 옆에 주어진 규칙대로 테이블을 join한다. 이때 `OUTER JOIN`임으로 규칙에 해당하는 우측 테이블이 없는 경우에는 null 값이 된다.  
+시간대별로 집계를 하는 문제. 0시부터 23시까지 해당 시간대에 입양된 동물의 수를 출력. 단 동물의 수가 0인 시간도 출력을 해주어야 함.  
+`LEFT OUTER JOIN ANIMAL_OUTS ON hour(ANIMAL_OUTS.DATETIME) = h.theHour`: join수행시 좌측에 있는 `h`테이블을 전부 나열. 그 옆에 주어진 규칙대로 테이블을 join한다. 이때 `OUTER JOIN`임으로 규칙에 해당하는 우측 테이블의 열이 없는 경우에는 null 값이 된다.  
 즉 0에서 23시까지 나열된 h테이블에  
 |theHour|
 |-|
@@ -130,7 +130,9 @@ GROUP
 |23|
 
 `ON` 뒤에 지정된 규칙대로 테이블을 join 한다.  
-`GROUP BY`를 했기 때문에 animal_outs에서 `hour(ANIMAL_OUTS.DATETIME) == theHour`에 해당하는 여러 row가 하나의 그룹을 이루고 있게 된다. select명령으로 조회하면 한 그룹당 하나의 row를 보여준다. 물론 빈 그룹이면 빈 row가 join되어 있을 것이다. (시퀄라이즈에서 include하면 하위 키 안에 배열에 있겠지.) 그 여러 row의 값을 세는 명령이 바로 count(datetime)이다.  
+`GROUP BY`를 했기 때문에 animal_outs에서 `hour(ANIMAL_OUTS.DATETIME) = theHour`에 해당하는 여러 row가 하나의 그룹을 이루고 있게 된다. select명령으로 조회하면 한 그룹당 하나의 row를 보여준다. 물론 빈 그룹이면 빈 row가 join되어 있을 것이다. (시퀄라이즈에서 include하면 하위 키 안에 배열에 있겠지.) 그 여러 row의 값을 세는 명령이 바로 count(datetime)이다.  
 근데 나같으면 저렇게 길기만한 쿼리를 시퀄라이즈로 짜기보다는 그냥 받아서 적절히 가공하겠다.  
-`UNION ALL`은 (컬림이 같은) 두 테이블을 이어붙인다.  
-참고: mysql에서는 `connect by`가 없다고 한다. 오라클에 있다는데 뭔지는 모름. `UNION `혹은 `UNION DISTINCT`은 중복을 제거함. 당연히 중복을 제거하느라 추가적인 연산을함.  
+
+- 참고1: `UNION ALL`은 (컬림이 같은) 두 테이블을 이어붙인다.  
+- 참고2: mysql에서는 `connect by`가 없다고 한다. 오라클에 있다는데 뭔지는 모름. `UNION `혹은 `UNION DISTINCT`은 중복을 제거함. 당연히 중복을 제거하느라 추가적인 연산을함.  
+- 참고3: 다른 코드를 보면 변수를 선언해서 하는 방법도 있다. `ANIMAL_OUTS`에 있는 동물의 순번으로 넘버링 하는 방식이다. 그런데 예를 들어 동물의 숫자가 3마리라면 0,1,2까지만 넘버링되어서 0시 1시 2시만 카운트 하기떄문에 제대로 답이 안나옴. 확인하는 방법은 해당코드에서 `FROM ANIMAL_OUTS`대신 `FROM (SELECT * FROM ANIMAL_OUTS LIMIT 3) AS e`등으로 바꾸어 보연 답이 안나온다.  
