@@ -15,6 +15,18 @@
 [USACO_Training_Program](USACO_Training_Program/readme.md)  
 [programmers](programmers.md)  
 # memo
+## javascript
++ counter
+    ```js
+    let arr=[1,2,3,1,2,1,3,1,1,1,1]
+
+    const counter = arr => arr.reduce((cnt, v) => {
+      cnt[v] = (cnt[v] || 0) + 1
+      return cnt
+    }, {} )
+
+    console.log(counter(arr))
+    ```
 ## python
 + loop without for, while  
     ```py
