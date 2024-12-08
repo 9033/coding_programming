@@ -1,5 +1,6 @@
 # readme
 ## Profiles
+[LeetCode](https://leetcode.com/u/9033/)  
 [hackerrank](https://www.hackerrank.com/kkangnet)  
 [UVa Online Judge](https://uhunt.onlinejudge.org/id/82804)  
 [freeCodeCamp.org](https://www.freecodecamp.org/9033)  
@@ -11,6 +12,7 @@
 수학 - Prime number등.  
 기타 - 이분탐색 등.  
 ## My solutions
+[LeetCode](leetCode.md)  
 [hackerrank](hackerrank/readme.md)  
 [UVa Online Judge](uva_online/readme.md)  
 [USACO_Training_Program](USACO_Training_Program/readme.md)  
