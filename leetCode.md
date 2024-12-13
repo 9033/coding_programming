@@ -22,3 +22,5 @@ Output: false
 + 여러 제약 조건을 고려하면 단일 루프로 가능하다.
     + 최대 숫자인 경우만 출력, 숫자는 한번만 선택, maxSum 이하면 됨.
 + banned에 한 숫자가 2번 들어갈 수 있음
+## 2593. Find Score of an Array After Marking All Elements
++ indexing 으로 가장 작은 수 (같으면 가장 작은 index) 를 찾는 것을 빠르게 함
