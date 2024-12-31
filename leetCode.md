@@ -1,4 +1,5 @@
 # 문제별
+[Problems](https://leetcode.com/problemset/)
 ## 18. 4Sum
 + `15. 3sum`에서 루프문 하나를 더 추가.
   + 이중 루프로 모든 경우의 수를 처리해야함.
@@ -8,10 +9,26 @@
 + 시작 지점에도 장애물이 있을 수 있다.
 ## 183. Customers Who Never Order
 + 서브쿼리보다 left join이 속도가 빠르다.
+## 515. Find Largest Value in Each Tree Row
++ binary tree가 나오는 이전 문제(2471, 2415등)에서 사용한 BFS 코드를 재활용. 마찬가지로 다음 레벨을 탐색하기 직전에는 큐에 다음 레벨의 노드만 들어가 있다는 점을 활용함.
++ 트리가 빈 경우를 채크하는 부분 추가.
 ## 769. Max Chunks To Make Sorted
 + 정렬은 오름차순으로 하면 된다.
+## 983. Minimum Cost For Tickets
++ 1D DP 이며 2466과 거의 유사
++ 여행을 가지 않는 날인 경우 cost를 이전 날의 cost와 같게 한다.
 ## 1475. Final Prices With a Special Discount in a Shop
 + 본문에 있는대로 코드를 짜면 된다.
+## 1639. Number of Ways to Form a Target String Given a Dictionary
+vscode의 코파일럿(무료)가 알려주는데 cutting하는 조건을 처음에 다 알려주지 않는다.
+그리고 제시한 코드가 왜 정답이 나오게 되는지 이해하는데 시간이 걸림.
+
++ 각 문자열에 대한 각 문자의 개수를 하나의 객체로 만든다.
+  - 코파일럿의 코드는 이 방법이다. 나는 각 word별로 만들려고 생각함
++ memoization를 사용한다.
+  - 시간 초과라고 나와서 추가함.
++ words의 남은 문자열이 target의 남은 문자열보다 작으면 0을 반환한다.
+  - 시간 초과라고 나와서 추가함.
 ## 2054. Two Best Non-Overlapping Events
 + DP로 푸는 경우: max(현재 이벤트 이전까지 1개만 선택하는 경우 + 현재 이벤트 선택)
 ## 2337. Move Pieces to Obtain a String
@@ -27,6 +44,10 @@ Output: false
 ## 2415. Reverse Odd Levels of Binary Tree
 + Editorial을 참고해서 BFS 로 탐색을 함. 
 + 다음 level를 탐색하기 직전에는 큐에 같은 레벨의 노드만 있음. 짝수 레벨만 큐에 있을때 순서를 뒤집어서 값을 넣는다.
+## 2466. Count Ways To Build Good Strings
++ 1D DP로 각 길이에 대한 경우의 수를 구한다.
+  - 길이가 0인 경우의 수는 1가지.
++ 그리고 길이가 low부터 high까지인 문자열의 각 경우의 수를 더하면 된다.
 ## 2471. Minimum Number of Operations to Sort a Binary Tree by Level
 + 같은 레벨의 노드들을 찾는것은 2415. Reverse Odd Levels of Binary Tree에서 활용한 BFS를 가지고 옴. 큐에 같은 레벨의 노드가 있을때 swap 횟수를 구하고 해당 레벨을 채크해서 한 레벨에서 swap횟수를 중복으로 구하지 않게함.
 + SWAP횟수를 확인하는 알고리즘은 editorial를 참고. 여기서는 같은 값은 트리에서 한번만 나오기 떄문에 위치를 저장해서 활용함
