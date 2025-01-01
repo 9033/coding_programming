@@ -17,6 +17,20 @@
 ## 983. Minimum Cost For Tickets
 + 1D DP 이며 2466과 거의 유사
 + 여행을 가지 않는 날인 경우 cost를 이전 날의 cost와 같게 한다.
+## 1422. Maximum Score After Splitting a String
++ `l[i]`는 0~i까지 0의 개수 를 구한다. `r[i]`는 i~n-1까지 1의 개수 를 구한다.
++ 그리고 `l[i]+r[i+1] (0<=i<n-1)`의 최대값을 구하면 된다
++ boundary test cases
+  ```
+  Input: s = "00"
+  Output: 1
+
+  Input: s = "01"
+  Output: 2
+
+  Input: s = "10"
+  Output: 0
+  ```
 ## 1475. Final Prices With a Special Discount in a Shop
 + 본문에 있는대로 코드를 짜면 된다.
 ## 1639. Number of Ways to Form a Target String Given a Dictionary
@@ -34,13 +48,13 @@ vscode의 코파일럿(무료)가 알려주는데 cutting하는 조건을 처음
 ## 2337. Move Pieces to Obtain a String
 + 이중 루프 대신 단일 루프를 사용. 안되는 경우를 거른다.
 + 예제 테스트 케이스에 없는 L과 R이 번갈아서 나오는 경우를 테스트 케이스로 생각하는 것도 시간이 걸림.
-```
-Input: start = "___L____R____L", target = "__L______RL___"
-Output: true
+  ```
+  Input: start = "___L____R____L", target = "__L______RL___"
+  Output: true
 
-Input: start = "___L____L___R_", target = "__L______RL___"
-Output: false
-```
+  Input: start = "___L____L___R_", target = "__L______RL___"
+  Output: false
+  ```
 ## 2415. Reverse Odd Levels of Binary Tree
 + Editorial을 참고해서 BFS 로 탐색을 함. 
 + 다음 level를 탐색하기 직전에는 큐에 같은 레벨의 노드만 있음. 짝수 레벨만 큐에 있을때 순서를 뒤집어서 값을 넣는다.
@@ -57,6 +71,11 @@ Output: false
 + banned에 한 숫자가 2번 들어갈 수 있음
 ## 2593. Find Score of an Array After Marking All Elements
 + indexing 으로 가장 작은 수 (같으면 가장 작은 index) 를 찾는 것을 빠르게 함
+## 2844. Minimum Operations to Make a Special Number
++ hint를 보니 75, 50, 25, 00로 숫자가 끝나면 25로 나누어 떨어진다고 함.
++ 75, 50, 25, 00로 끝나는 수로 만드는 연산의 횟수를 구함.
+  + 75로 끝나는 수로 만든다면 7 뒤에 있는 숫자중에서 5를 제외한 숫자의 개수가 연산의 횟수가 됨.
++ 75, 50, 25, 00로 끝나는 수로 만들지 못하는 경우 0이 아닌 digit를 전부 삭제하기 때문에 0이 아닌 숫자의 개수가 연산의 횟수가 됨.
 ## 2940. Find Building Where Alice and Bob Can Meet
 + Editorial 참고함. 그런데 Monotonic Stack 사용시 왜 되는지 알아보는걸 하기 싫다. 그냥 왠지 그럴 기분이 아님. 뇌가 거부함
 + 당연하게도 O(queries * heights)는 타임 아웃 나옴
