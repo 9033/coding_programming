@@ -19,7 +19,7 @@
 + 1D DP 이며 2466과 거의 유사
 + 여행을 가지 않는 날인 경우 cost를 이전 날의 cost와 같게 한다.
 ## 1422. Maximum Score After Splitting a String
-+ `l[i]`는 0~i까지 0의 개수 를 구한다. `r[i]`는 i~n-1까지 1의 개수 를 구한다.
++ `l[i]`는 0\~i까지 0의 개수 를 구한다. `r[i]`는 i\~n-1까지 1의 개수 를 구한다.
 + 그리고 `l[i]+r[i+1] (0<=i<n-1)`의 최대값을 구하면 된다
 + boundary test cases
   ```
@@ -50,7 +50,7 @@ vscode의 코파일럿(무료)가 알려주는데 cutting하는 조건을 처음
   + https://support.leetcode.com/hc/en-us/articles/360011833974-What-are-the-environments-for-the-programming-languages
 ## 1930. Unique Length-3 Palindromic Subsequences
 + 양 옆의 구간의 개수를 보고 pallindrome이 되는지 확인 (prefix sum, O(n))
-  + 1~s-1의 루프에서 같은 문자가 왼쪽에 하나라도 있고 오른쪽에 하나라도 있으면 pallindrome이 됨
+  + 1\~s-1의 루프에서 같은 문자가 왼쪽에 하나라도 있고 오른쪽에 하나라도 있으면 pallindrome이 됨
 + editorial는 양 끝을 잡고 중간에 문자의 수를 확인. 중복되는 문자는 한번만 센다
 ## 2054. Two Best Non-Overlapping Events
 + DP로 푸는 경우: max(현재 이벤트 이전까지 1개만 선택하는 경우의 최대 value + 현재 이벤트의 value, 현재 이벤트의 끝나는 time까지 다른 이벤트를 2개 선택한 경우의 최대 value)
@@ -58,7 +58,7 @@ vscode의 코파일럿(무료)가 알려주는데 cutting하는 조건을 처음
 + 입력값의 순서와 출력값의 순서가 관련이 없어서 각 문자의 빈도수를 채크해서 처리함
 ## 2270. Number of Ways to Split Array
 + 1422와 유사한 문제
-+ 0~i 와 i+1~n-1의 두 구간의 합을 비교한다.
++ 0\~i 와 i+1\~n-1의 두 구간의 합을 비교한다.
 ## 2337. Move Pieces to Obtain a String
 + 이중 루프 대신 단일 루프를 사용. 안되는 경우를 거른다.
 + 예제 테스트 케이스에 없는 L과 R이 번갈아서 나오는 경우를 테스트 케이스로 생각하는 것도 시간이 걸림.
@@ -87,15 +87,15 @@ vscode의 코파일럿(무료)가 알려주는데 cutting하는 조건을 처음
 + 가장 큰 수의 위치를 찾을때 단순히 `findLastIndex`로 찿아도 타임 아웃이 안난다. O(gifts.length * k)
 ## 2559. Count Vowel Strings in Ranges
 + 조건을 만족하는 단어는 1 아니면 0으로 본다.
-+ words의 index를 기준으로 0~0, 0~1, 0~2, 0~i, ..., 0~n-1까지 조건을 만족하는 단어의 숫자를 구한다.
-+ 각 queries에 지정된 구간에서 조건을 만족하는 단어의 수를 출력한다. 예를 들면 1~4 구간은 0~4 에서 0~0을 빼면 된다.
++ words의 index를 기준으로 0\~0, 0\~1, 0\~2, 0\~i, ..., 0\~n-1까지 조건을 만족하는 단어의 숫자를 구한다.
++ 각 queries에 지정된 구간에서 조건을 만족하는 단어의 수를 출력한다. 예를 들면 1\~4 구간은 0\~4 에서 0\~0을 빼면 된다.
 ## 2593. Find Score of an Array After Marking All Elements
 + indexing 으로 가장 작은 수 (같으면 가장 작은 index) 를 찾는 것을 빠르게 함
 ## 2762. Continuous Subarrays
 + object를 사용해서 최대값과 최소값을 구하는 범위를 줄인다.
-  + 현재 구간이 i1~i2라면 i1과 i2사이에서(`[i1, i2]`) 나오는 숫자의 수를 object로 저장한다. 이 object에서 subarray의 최대값과 최소값을 구한다.
+  + 현재 구간이 i1\~i2라면 i1과 i2사이에서(`[i1, i2]`) 나오는 숫자의 수를 object로 저장한다. 이 object에서 subarray의 최대값과 최소값을 구한다.
 + 구간의 길이에 따라 subarray의 개수를 계산해서 더해줌. 
-  + i2를 증가시킴. 이떄 최대값과 최소값이 차이가 2가 넘으면 i1을 증가 시킨다. 이 경우에는 먼저 i1~i2까지의 subarray의 개수를 구하고 ii를 증가시킨 후에 i1~i2까지의 subarray의 개수를 구해서 뺀다.
+  + i2를 증가시킴. 이떄 최대값과 최소값이 차이가 2가 넘으면 i1을 증가 시킨다. 이 경우에는 먼저 i1\~i2까지의 subarray의 개수를 구하고 ii를 증가시킨 후에 i1\~i2까지의 subarray의 개수를 구해서 뺀다.
 ## 2844. Minimum Operations to Make a Special Number
 + hint를 보니 75, 50, 25, 00로 숫자가 끝나면 25로 나누어 떨어진다고 함.
 + 75, 50, 25, 00로 끝나는 수로 만드는 연산의 횟수를 구함.
