@@ -1,5 +1,8 @@
 # 알고리즘별
 같은 문제라도 원하는 시간 복잡도가 다를 수 있다.  
+## Prefix Sum
+➡ [구간 합 구하기 4](https://www.acmicpc.net/problem/11659)  
+➡ [2559. Count Vowel Strings in Ranges](https://leetcode.com/problems/count-vowel-strings-in-ranges)  
 ## 동적 계획법  
 ➡ [10405 - Longest Common Subsequence](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=1346)  
 ### 동전을 교환해주는 경우의수 (DP)
@@ -30,10 +33,13 @@
 ## O(n)
 ➡ [저울](https://programmers.co.kr/learn/courses/30/lessons/42886)  
 ➡ [2 x n 타일링](https://programmers.co.kr/learn/courses/30/lessons/12900), [900 - Brick Wall Patterns](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=841) : 유사함  
+➡ [1930. Unique Length-3 Palindromic Subsequences](https://leetcode.com/problems/unique-length-3-palindromic-subsequences?envType=daily-question&envId=2025-01-04)  
 ## O(n log n)
 ➡ [가장 큰 수](https://programmers.co.kr/learn/courses/30/lessons/42746)  
 ➡ [징검다리](https://programmers.co.kr/learn/courses/30/lessons/43236), [River Hopscotch](http://poj.org/problem?id=3258) - 같은 문제  
 ➡ [Merge Sort: Counting Inversions](https://www.hackerrank.com/challenges/ctci-merge-sort/problem), [10810 - Ultra-QuickSort](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=1751)  
+## O(n+m)
+➡ [2559. Count Vowel Strings in Ranges](https://leetcode.com/problems/count-vowel-strings-in-ranges)  
 ## O(nm)
 ➡ [10405 - Longest Common Subsequence](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=1346)  
 ➡ [The Coin Change Problem](https://www.hackerrank.com/challenges/coin-change/problem)  
