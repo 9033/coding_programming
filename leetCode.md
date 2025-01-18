@@ -7,6 +7,8 @@
 + binary search
 ## 63. Unique Paths II
 + 시작 지점에도 장애물이 있을 수 있다.
+## 139. Word Break
++ wordDict에 있는 단어가 여러번 쓰일 수 있다. -&gt; s의 길이까지 문자열을 조합하는 도중에 현재 길이의 문자열을 생성한 적이 있으면 skip
 ## 183. Customers Who Never Order
 + 서브쿼리보다 left join이 속도가 빠르다.
 ## 515. Find Largest Value in Each Tree Row
@@ -18,6 +20,21 @@
 ## 983. Minimum Cost For Tickets
 + 1D DP 이며 2466과 거의 유사
 + 여행을 가지 않는 날인 경우 cost를 이전 날의 cost와 같게 한다.
+## 1217. Minimum Cost to Move Chips to The Same Position
++ DP: O(n^2) (position * position)
+  + 위치의 범위는 넓지만 칩의 위치의 경우의 수가 1000개 때문에 가능
++ O(n)이 존재한다
+## 1368. Minimum Cost to Make at Least One Valid Path in a Grid
++ bfs에서 queue를 priority queue 로 변경함. 최소 cost부터 우선 탐색. 목적지에 도달하는 경우 종료.
++ dfs, bfs모두 타임 아웃나옴
++ cell에 갔을때 이전에 방문했을떄 cost보다 같거나 많으면 해당 경로는 종료. 그렇지 않으면 현재 cost를 저장
++ 화살표는 한번반 변경 가능. 그런데 여러번 바꾸는 경우는 cost가 올라가기 떄문에 코드상에서는 따로 고려 안함.
+## 1400. Construct K Palindrome Strings
++ prefix sum을 이용하여 풀이, O(n)
++ 문자열의 길이가 k보다 작으면 false
++ 문자열에서 홀수개의 문자가 k보다 많으면 false
+  + 홀수개의 문자의 수보다 더 적게 Palindrome String을 만들 수 없음
++ 나머지 경우는 true
 ## 1422. Maximum Score After Splitting a String
 + `l[i]`는 0\~i까지 0의 개수 를 구한다. `r[i]`는 i\~n-1까지 1의 개수 를 구한다.
 + 그리고 `l[i]+r[i+1] (0<=i<n-1)`의 최대값을 구하면 된다
@@ -44,16 +61,27 @@ vscode의 코파일럿(무료)가 알려주는데 cutting하는 조건을 처음
   - 시간 초과라고 나와서 추가함.
 + words의 남은 문자열이 target의 남은 문자열보다 작으면 0을 반환한다.
   - 시간 초과라고 나와서 추가함.
+## 1769. Minimum Number of Operations to Move All Balls to Each Box
++ 공의 개수를 세고, 이동 횟수를 세는 방식으로 풀이 (prefix sum)
++ 양쪽 구간으로 나누어서 함
+  + l[i]는 0\~i까지 1의 개수, r[i]는 i\~n-1까지 1의 개수
+  + i까지 0\~i-1 공의 이동 횟수, i까지 i+1\~n-1 공의 이동 횟수
 ## 1792. Maximum Average Pass Ratio
 + 최대 우선순위 큐를 사용함
 + leetcode에 기본적으로 javascript에서 `@datastructures-js/priority-queue@5.4.0`를 사용할 수 있다.
   + https://support.leetcode.com/hc/en-us/articles/360011833974-What-are-the-environments-for-the-programming-languages
 ## 1930. Unique Length-3 Palindromic Subsequences
-+ 양 옆의 구간의 개수를 보고 pallindrome이 되는지 확인 (prefix sum, O(n))
-  + 1\~s-1의 루프에서 같은 문자가 왼쪽에 하나라도 있고 오른쪽에 하나라도 있으면 pallindrome이 됨
++ 양 옆의 구간의 개수를 보고 palindrome이 되는지 확인 (prefix sum, O(n))
+  + 1\~s-1의 루프에서 같은 문자가 왼쪽에 하나라도 있고 오른쪽에 하나라도 있으면 palindrome이 됨
 + editorial는 양 끝을 잡고 중간에 문자의 수를 확인. 중복되는 문자는 한번만 센다
 ## 2054. Two Best Non-Overlapping Events
 + DP로 푸는 경우: max(현재 이벤트 이전까지 1개만 선택하는 경우의 최대 value + 현재 이벤트의 value, 현재 이벤트의 끝나는 time까지 다른 이벤트를 2개 선택한 경우의 최대 value)
+## 2116. Check if a Parentheses String Can Be Valid
++ stack으로 뭔가 해보려다가 잘 안됨
++ 앞에서 뒤로, 뒤에서 앞으로 2-pass로 검증
++ hint 3가지를 참고함, 2-pass로 그중에 2가지를 검증
++ false되는 경우는 hint 1까지 포함해서 총 3가지.
++ locked일때 '(', ')'와 unlocked일때, 총 3가지의 개수로 판단
 ## 2182. Construct String With Repeat Limit
 + 입력값의 순서와 출력값의 순서가 관련이 없어서 각 문자의 빈도수를 채크해서 처리함
 ## 2270. Number of Ways to Split Array
@@ -72,6 +100,9 @@ vscode의 코파일럿(무료)가 알려주는데 cutting하는 조건을 처음
 ## 2415. Reverse Odd Levels of Binary Tree
 + Editorial을 참고해서 BFS 로 탐색을 함. 
 + 다음 level를 탐색하기 직전에는 큐에 같은 레벨의 노드만 있음. 짝수 레벨만 큐에 있을때 순서를 뒤집어서 값을 넣는다.
+## 2425. Bitwise XOR of All Pairings
++ xor 연산의 법칙을 활용 O(n*m) -&gt; O(n+m) 으로 변경함
+  + 교환법칙, 결합법칙등  
 ## 2466. Count Ways To Build Good Strings
 + 1D DP로 각 길이에 대한 경우의 수를 구한다.
   - 길이가 0인 경우의 수는 1가지.
@@ -91,11 +122,16 @@ vscode의 코파일럿(무료)가 알려주는데 cutting하는 조건을 처음
 + 각 queries에 지정된 구간에서 조건을 만족하는 단어의 수를 출력한다. 예를 들면 1\~4 구간은 0\~4 에서 0\~0을 빼면 된다.
 ## 2593. Find Score of an Array After Marking All Elements
 + indexing 으로 가장 작은 수 (같으면 가장 작은 index) 를 찾는 것을 빠르게 함
+## 2683. Neighboring Bitwise XOR
++ xor 연산의 법칙을 활용
+  + 교환법칙, 결합법칙등  
 ## 2762. Continuous Subarrays
 + object를 사용해서 최대값과 최소값을 구하는 범위를 줄인다.
   + 현재 구간이 i1\~i2라면 i1과 i2사이에서(`[i1, i2]`) 나오는 숫자의 수를 object로 저장한다. 이 object에서 subarray의 최대값과 최소값을 구한다.
 + 구간의 길이에 따라 subarray의 개수를 계산해서 더해줌. 
   + i2를 증가시킴. 이떄 최대값과 최소값이 차이가 2가 넘으면 i1을 증가 시킨다. 이 경우에는 먼저 i1\~i2까지의 subarray의 개수를 구하고 ii를 증가시킨 후에 i1\~i2까지의 subarray의 개수를 구해서 뺀다.
+## 2825. Make String a Subsequence Using Cyclic Increments
++ str1이 str2의 subsequence가 될 수 있다. -&gt; str1에서 일부 문자가 없어도 str2를 만들 수 있다. -&gt; 한번의 loop로 확인 가능
 ## 2844. Minimum Operations to Make a Special Number
 + hint를 보니 75, 50, 25, 00로 숫자가 끝나면 25로 나누어 떨어진다고 함.
 + 75, 50, 25, 00로 끝나는 수로 만드는 연산의 횟수를 구함.
@@ -104,8 +140,6 @@ vscode의 코파일럿(무료)가 알려주는데 cutting하는 조건을 처음
     + 그리고 `7` 뒤에 있는 숫자중에서 `5`를 제외한 숫자의 개수가 연산의 횟수가 됨.
 + 75, 50, 25, 00로 끝나는 수로 만들지 못하는 경우 0이 아닌 digit를 전부 삭제하기 때문에 0이 아닌 숫자의 개수가 연산의 횟수가 됨.
 + 위의 5가지 중에서 가장 적은 수를 출력
-## 2825. Make String a Subsequence Using Cyclic Increments
-+ str1이 str2의 subsequence가 될 수 있다. -> str1에서 일부 문자가 없어도 str2를 만들 수 있다. -> 한번의 loop로 확인 가능
 ## 2872. Maximum Number of K-Divisible Components
 + Topics 참고해서 DFS, 그리고 Hints 참고
   + 힌트 2: 서브 트리의 모든 노드의 합이 k로 나누어 떨어지지 않으면 상위 노드와 합친다.
@@ -120,5 +154,12 @@ vscode의 코파일럿(무료)가 알려주는데 cutting하는 조건을 처음
 ## 3152. Special Array II
 + queries가 어려개 라서 양옆이 같은 parity인 경우를 미리 구해서 저장
   - 시간 초과라고 나와서 추가함.
+## 3223. Minimum Length of String After Operations
++ 같은 문자가 문자열에 3개 이상 들어있을때 그 중에서 2개를 뺼 수 있다.
 ## 3264. Final Array State After K Multiplication Operations I
 + 1792에서 priorityqueue 라이브러리를 사용해 봐서 그런지 여기서도 익숙하게 사용함
+## 3412. Find Mirror Score of a String
++ 문자별로 인덱스를 배열로 저장. 배열안에 숫자는 unmarked index이다.
++ j&lt;i인 j를 찾기 때문에 i앞에 있는 index 만 배열에 들어가 있으면 된다. 미리 넣어놓을 필요가 없다.
++ j를 찾을떄 stack처럼 FILO방식으로 pop을 한다. i랑 가장 가까운 j를 찾기 떄문이다.
++ 해당하는 j가 없으면 i를 push한다.

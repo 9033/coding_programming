@@ -1,5 +1,5 @@
 # 알고리즘별
-같은 문제라도 원하는 시간 복잡도가 다를 수 있다.  
+같은 문제라도 타임아웃이 나오지 않는 시간 복잡도가 다를 수 있다.  
 ## Prefix Sum
 ➡ [구간 합 구하기 4](https://www.acmicpc.net/problem/11659)  
 ➡ [2559. Count Vowel Strings in Ranges](https://leetcode.com/problems/count-vowel-strings-in-ranges)  
@@ -22,9 +22,11 @@
 ➡ [10327 - Flip Sort](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=1268), [Merge Sort: Counting Inversions](https://www.hackerrank.com/challenges/ctci-merge-sort/problem), [10810 - Ultra-QuickSort](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=1751) - 거의 같은 문제  
 ## Dijkstra
 ➡ [762 - We Ship Cheap](http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=703)  
+➡ [1368. Minimum Cost to Make at Least One Valid Path in a Grid](https://leetcode.com/problems/minimum-cost-to-make-at-least-one-valid-path-in-a-grid)  
 ## Floyd Warshall
 ➡ [567 - Risk](http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=508)  
 # 시간 복잡도 별
+한 문제가 풀이 방법에 따라서 여러 시간 복잡도에 해당하는 경우도 있다.  
 ## O(1)
 ➡ [10550 - Combination Lock](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=1491)  
 ## O(log n)
@@ -33,13 +35,21 @@
 ## O(n)
 ➡ [저울](https://programmers.co.kr/learn/courses/30/lessons/42886)  
 ➡ [2 x n 타일링](https://programmers.co.kr/learn/courses/30/lessons/12900), [900 - Brick Wall Patterns](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=841) : 유사함  
-➡ [1930. Unique Length-3 Palindromic Subsequences](https://leetcode.com/problems/unique-length-3-palindromic-subsequences?envType=daily-question&envId=2025-01-04)  
+➡ [1930. Unique Length-3 Palindromic Subsequences](https://leetcode.com/problems/unique-length-3-palindromic-subsequences)  
+➡ [1217. Minimum Cost to Move Chips to The Same Position](https://leetcode.com/problems/minimum-cost-to-move-chips-to-the-same-position)  
+➡ [1769. Minimum Number of Operations to Move All Balls to Each Box](https://leetcode.com/problems/minimum-number-of-operations-to-move-all-balls-to-each-box)  
+➡ [3412. Find Mirror Score of a String](https://leetcode.com/problems/find-mirror-score-of-a-string/)  
+➡ [1400. Construct K Palindrome Strings](https://leetcode.com/problems/construct-k-palindrome-strings)  
+➡ [2116. Check if a Parentheses String Can Be Valid](https://leetcode.com/problems/check-if-a-parentheses-string-can-be-valid)  
+➡ [2683. Neighboring Bitwise XOR](https://leetcode.com/problems/neighboring-bitwise-xor)  
 ## O(n log n)
 ➡ [가장 큰 수](https://programmers.co.kr/learn/courses/30/lessons/42746)  
 ➡ [징검다리](https://programmers.co.kr/learn/courses/30/lessons/43236), [River Hopscotch](http://poj.org/problem?id=3258) - 같은 문제  
 ➡ [Merge Sort: Counting Inversions](https://www.hackerrank.com/challenges/ctci-merge-sort/problem), [10810 - Ultra-QuickSort](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=1751)  
 ## O(n+m)
 ➡ [2559. Count Vowel Strings in Ranges](https://leetcode.com/problems/count-vowel-strings-in-ranges)  
+➡ [916. Word Subsets](https://leetcode.com/problems/word-subsets)  
+➡ [2425. Bitwise XOR of All Pairings](https://leetcode.com/problems/bitwise-xor-of-all-pairings)  
 ## O(nm)
 ➡ [10405 - Longest Common Subsequence](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=1346)  
 ➡ [The Coin Change Problem](https://www.hackerrank.com/challenges/coin-change/problem)  
@@ -47,6 +57,7 @@
 ➡ [674 - Coin Change](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=615)  
 ## O(n*n)
 ➡ [10327 - Flip Sort](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=1268)  
+➡ [1217. Minimum Cost to Move Chips to The Same Position](https://leetcode.com/problems/minimum-cost-to-move-chips-to-the-same-position)  
 # 자료구조별
 ## min-heap, max-heap
 ➡ [Find the Running Median](https://www.hackerrank.com/challenges/find-the-running-median)  
@@ -76,7 +87,7 @@
 ➡ 12157 - Tariff Plan  
 ➡ 12439 - February 29  
 ➡ 13275 - Leap Birthdays  
-➡ 1727 Counting Weekend Days
+➡ 1727 Counting Weekend Days  
 ➡ 893 - Y3K Problem  
 ### 아날로그 시계
 ➡ 11650 - Mirror Clock  
