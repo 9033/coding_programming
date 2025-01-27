@@ -23,8 +23,11 @@
 ## Dijkstra
 ➡ [762 - We Ship Cheap](http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=703)  
 ➡ [1368. Minimum Cost to Make at Least One Valid Path in a Grid](https://leetcode.com/problems/minimum-cost-to-make-at-least-one-valid-path-in-a-grid)  
+➡ [1765. Map of Highest Peak](https://leetcode.com/problems/map-of-highest-peak)  
 ## Floyd Warshall
 ➡ [567 - Risk](http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=508)  
+## Topological sorting
+➡ [1462. Course Schedule IV](https://leetcode.com/problems/course-schedule-iv)  
 # 시간 복잡도 별
 한 문제가 풀이 방법에 따라서 여러 시간 복잡도에 해당하는 경우도 있다.  
 ## O(1)

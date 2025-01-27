@@ -1,5 +1,6 @@
 # 문제별
-[Problems](https://leetcode.com/problemset/)
+내가 풀이한 방법에 대한 설명  
+LeetCode 문제 목록 링크: [Problems](https://leetcode.com/problemset/)  
 ## 18. 4Sum
 + `15. 3sum`에서 루프문 하나를 더 추가.
   + 이중 루프로 모든 경우의 수를 처리해야함.
@@ -17,6 +18,12 @@
 ## 769. Max Chunks To Make Sorted
 + 배열을 그냥 정렬할때와 chunk로 나누어서 각각 정렬 후에 합친 결과가 같다 -> 앞에 있는 chunk의 최대 숫자 < 뒤에 있는 chunk의 최소 숫자
 + 정렬은 오름차순으로 하면 된다.
+## 802. Find Eventual Safe States
++ 모든 경로가 terminal node에 도달한다는 것을 계산하려고 보니 왠지 복잡하다
++ terminal node로 가지 않는 경로가 하나라도 있는 경우는 cycle이 되는경로로 하나라도 향하는 경로가 있는 경우다
++ DFS로 탐색하면서 terminal node와 cycle로 가는 경로가 있는 노드 이렇게 두가지를 채크 하면서 탐색해야 함.
+  + terminal node거나 terminal node로만 가는 경로만 있는 노드를 채크해서 탐색하는 가지수를 줄인다.
+  + cycle로 가는 경로가 하나라도 있는 경우도 채크해서 탐색하는 가지수를 줄이고 답을 출력하면 된다.
 ## 983. Minimum Cost For Tickets
 + 1D DP 이며 2466과 거의 유사
 + 여행을 가지 않는 날인 경우 cost를 이전 날의 cost와 같게 한다.
@@ -24,6 +31,11 @@
 + DP: O(n^2) (position * position)
   + 위치의 범위는 넓지만 칩의 위치의 경우의 수가 1000개 때문에 가능
 + O(n)이 존재한다
+## 1267. Count Servers that Communicate
++ N-queen하고 비슷해 보임, 그리고 2661하고도 비슷해 보임
++ 행에 대해서 2개 이상인지 확인, 2개 이상이면 전부 카운트
++ 열에 대해서 2개 이상인지 확인, 2개 이상이면 전부 카운트
++ 그리고 중복해서 카운트 하는 경우를 방지함
 ## 1368. Minimum Cost to Make at Least One Valid Path in a Grid
 + bfs에서 queue를 priority queue 로 변경함. 최소 cost부터 우선 탐색. 목적지에 도달하는 경우 종료.
 + dfs, bfs모두 타임 아웃나옴
@@ -49,8 +61,14 @@
   Input: s = "10"
   Output: 0
   ```
+## 1462. Course Schedule IV
++ cycle이 없는 경우가 주어지니까 편안하게 위상 정렬로 구현
++ 위상정렬을 통해서 특정 course를 수강하기 전에 먼저 수강해야하는 course를 구한다.
+  + 스택으로 탐색하며 스택에는 수강이 가능한 course 를 넣으면 된다.
 ## 1475. Final Prices With a Special Discount in a Shop
 + 본문에 있는대로 코드를 짜면 된다. prices의 길이가 길지 않아서 O(n**2)로 통과된다.
+## 1492. The kth Factor of n
++ factors의 배열을 생성하고 해당 값을 출력하게 함
 ## 1639. Number of Ways to Form a Target String Given a Dictionary
 vscode의 코파일럿(무료)가 알려주는데 cutting하는 조건을 처음에 다 알려주지 않는다.
 그리고 제시한 코드가 왜 정답이 나오게 되는지 이해하는데 시간이 걸림.
@@ -61,6 +79,10 @@ vscode의 코파일럿(무료)가 알려주는데 cutting하는 조건을 처음
   - 시간 초과라고 나와서 추가함.
 + words의 남은 문자열이 target의 남은 문자열보다 작으면 0을 반환한다.
   - 시간 초과라고 나와서 추가함.
+## 1765. Map of Highest Peak
++ editorial에서 water까지 최단거리를 구하는 방식으로 함
++ priority queue로 탐색을 해서 여러 지점 에서 출발해서 각 cell의 최단거리를 구하게 변경
++ cell에서 가장 가까운 water까지 거리를 구하는 셈
 ## 1769. Minimum Number of Operations to Move All Balls to Each Box
 + 공의 개수를 세고, 이동 횟수를 세는 방식으로 풀이 (prefix sum)
 + 양쪽 구간으로 나누어서 함
@@ -82,6 +104,8 @@ vscode의 코파일럿(무료)가 알려주는데 cutting하는 조건을 처음
 + hint 3가지를 참고함, 2-pass로 그중에 2가지를 검증
 + false되는 경우는 hint 1까지 포함해서 총 3가지.
 + locked일때 '(', ')'와 unlocked일때, 총 3가지의 개수로 판단
+## 2133. Check if Every Row and Column Contains All Numbers
++ lodash zip과 set을 이용함
 ## 2182. Construct String With Repeat Limit
 + 입력값의 순서와 출력값의 순서가 관련이 없어서 각 문자의 빈도수를 채크해서 처리함
 ## 2270. Number of Ways to Split Array
@@ -122,6 +146,9 @@ vscode의 코파일럿(무료)가 알려주는데 cutting하는 조건을 처음
 + 각 queries에 지정된 구간에서 조건을 만족하는 단어의 수를 출력한다. 예를 들면 1\~4 구간은 0\~4 에서 0\~0을 빼면 된다.
 ## 2593. Find Score of an Array After Marking All Elements
 + indexing 으로 가장 작은 수 (같으면 가장 작은 index) 를 찾는 것을 빠르게 함
+## 2661. First Completely Painted Row or Column
++ 왠지 하나씩 칠할때 마다 행이나 열이 완성되었는지 확인 하는 방법은 아닐거 같다.
++ 각 행과 각 열이 완성되는 순서를 먼저 보는 방식으로 해봐야겠다
 ## 2683. Neighboring Bitwise XOR
 + xor 연산의 법칙을 활용
   + 교환법칙, 결합법칙등  
@@ -149,6 +176,9 @@ vscode의 코파일럿(무료)가 알려주는데 cutting하는 조건을 처음
 ## 2940. Find Building Where Alice and Bob Can Meet
 + Editorial 참고함. 그런데 Monotonic Stack 사용시 왜 되는지 알아보는걸 하기 싫다. 그냥 왠지 그럴 기분이 아님. 뇌가 거부함
 + 당연하게도 O(queries * heights)는 타임 아웃 나옴
+## 2948. Make Lexicographically Smallest Array by Swapping Elements
++ editorial에서 limit가 2면 1,3이 이동 가능하고 2,5가 이동가능해서 결국 1,3,5 3개의 숫자가 위치를 바꾸는게 가능하다고 함
+  + 1,3,5 3가지 숫자를 하나의 그룹으로 보고 그룹별로 index를 모아 정렬해서 앞에 index부터 작은 수를 넣어줌
 ## 2981. Find Longest Special Substring That Occurs Thrice I
 + object에 substring의 개수를 카운트, 그리고 3번 이상 나온 substring중에서 가장 긴 substring의 길이를 출력.
 ## 3152. Special Array II
