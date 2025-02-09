@@ -45,6 +45,13 @@
 ➡ [1400. Construct K Palindrome Strings](https://leetcode.com/problems/construct-k-palindrome-strings)  
 ➡ [2116. Check if a Parentheses String Can Be Valid](https://leetcode.com/problems/check-if-a-parentheses-string-can-be-valid)  
 ➡ [2683. Neighboring Bitwise XOR](https://leetcode.com/problems/neighboring-bitwise-xor)  
+➡ [3151. Special Array I](https://leetcode.com/problems/special-array-i)  
+➡ [1752. Check if Array Is Sorted and Rotated](https://leetcode.com/problems/check-if-array-is-sorted-and-rotated)  
+➡ [3105. Longest Strictly Increasing or Strictly Decreasing Subarray](https://leetcode.com/problems/longest-strictly-increasing-or-strictly-decreasing-subarray)  
+➡ [1800. Maximum Ascending Subarray Sum](https://leetcode.com/problems/maximum-ascending-subarray-sum)  
+➡ [1790. Check if One String Swap Can Make Strings Equal](https://leetcode.com/problems/check-if-one-string-swap-can-make-strings-equal)  
+➡ [3160. Find the Number of Distinct Colors Among the Balls](https://leetcode.com/problems/find-the-number-of-distinct-colors-among-the-balls)  
+➡ [2364. Count Number of Bad Pairs](https://leetcode.com/problems/count-number-of-bad-pairs)  
 ## O(n log n)
 ➡ [가장 큰 수](https://programmers.co.kr/learn/courses/30/lessons/42746)  
 ➡ [징검다리](https://programmers.co.kr/learn/courses/30/lessons/43236), [River Hopscotch](http://poj.org/problem?id=3258) - 같은 문제  
@@ -61,10 +68,12 @@
 ## O(n*n)
 ➡ [10327 - Flip Sort](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=1268)  
 ➡ [1217. Minimum Cost to Move Chips to The Same Position](https://leetcode.com/problems/minimum-cost-to-move-chips-to-the-same-position)  
+➡ [1726. Tuple with Same Product](https://leetcode.com/problems/tuple-with-same-product)  
 # 자료구조별
-## min-heap, max-heap
+## min-heap, max-heap, priority queue
 ➡ [Find the Running Median](https://www.hackerrank.com/challenges/find-the-running-median)  
 ➡ [501 - Black Box](http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=442)  
+➡ [1845. Seat Reservation Manager](https://leetcode.com/problems/seat-reservation-manager)  
 # 기타 유사 하거나 같은 문제
 ## 빈병을 가지고 교환해서 마시는 문제.
 ➡ [11150 - Cola](http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=2091)  

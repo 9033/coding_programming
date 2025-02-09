@@ -15,6 +15,9 @@ LeetCode 문제 목록 링크: [Problems](https://leetcode.com/problemset/)
 ## 515. Find Largest Value in Each Tree Row
 + binary tree가 나오는 이전 문제(2471, 2415등)에서 사용한 BFS 코드를 재활용. 마찬가지로 다음 레벨을 탐색하기 직전에는 큐에 다음 레벨의 노드만 들어가 있다는 점을 활용함.
 + 트리가 빈 경우를 채크하는 부분 추가.
+## 684. Redundant Connection
++ edge와 node의 수가 같으면 원형으로 연결된 곳이 한군데만 발생
++ 위상 정렬 - 간선이 1인 노드만 지움 -> cycle을 이루는 노드만 남음
 ## 769. Max Chunks To Make Sorted
 + 배열을 그냥 정렬할때와 chunk로 나누어서 각각 정렬 후에 합친 결과가 같다 -> 앞에 있는 chunk의 최대 숫자 < 뒤에 있는 chunk의 최소 숫자
 + 정렬은 오름차순으로 하면 된다.
@@ -24,6 +27,9 @@ LeetCode 문제 목록 링크: [Problems](https://leetcode.com/problemset/)
 + DFS로 탐색하면서 terminal node와 cycle로 가는 경로가 있는 노드 이렇게 두가지를 채크 하면서 탐색해야 함.
   + terminal node거나 terminal node로만 가는 경로만 있는 노드를 채크해서 탐색하는 가지수를 줄인다.
   + cycle로 가는 경로가 하나라도 있는 경우도 채크해서 탐색하는 가지수를 줄이고 답을 출력하면 된다.
+## 827. Making A Large Island
++ 각 섬의 넓이를 구함
++ 타일 1개를 매꿀 경우 이어지는 넓이의 최대값 (최대 4개의 섬의 넓이 + 매꾸는 넓이(1))
 ## 983. Minimum Cost For Tickets
 + 1D DP 이며 2466과 거의 유사
 + 여행을 가지 않는 날인 경우 cost를 이전 날의 cost와 같게 한다.
@@ -79,6 +85,12 @@ vscode의 코파일럿(무료)가 알려주는데 cutting하는 조건을 처음
   - 시간 초과라고 나와서 추가함.
 + words의 남은 문자열이 target의 남은 문자열보다 작으면 0을 반환한다.
   - 시간 초과라고 나와서 추가함.
+## 1726. Tuple with Same Product
++ nums안에 숫자를 서로 곱한다. 곱한 결과의 빈도수를 계산. 이때 a와 b가 같은 경우를 제외한다.
+  + 곱한 결과의 빈도수가 4개가 나온다면, 조건에 맞는 [a,b,c,d]로 8개이며 tuple를 만들 수 있다. 이떄 곱이 같은 pair가 2개가 있다고 본다. 
+  + 곱한 결과의 빈도수가 6개가 나온다면, 곱이 같은 pair가 3개이며 24개의 tuple를 만들 수 있다. 
+  + 곱한 결과의 빈도수가 8개가 나온다면, 곱이 같은 pair가 4개이며 48개의 tuple를 만들 수 있다. 
++ 두 수의 곱의 빈도수로 몇개의 tuple을 만들 수 있는지 계산해서 전부 더해서 출력
 ## 1765. Map of Highest Peak
 + editorial에서 water까지 최단거리를 구하는 방식으로 함
 + priority queue로 탐색을 해서 여러 지점 에서 출발해서 각 cell의 최단거리를 구하게 변경
@@ -88,10 +100,15 @@ vscode의 코파일럿(무료)가 알려주는데 cutting하는 조건을 처음
 + 양쪽 구간으로 나누어서 함
   + l[i]는 0\~i까지 1의 개수, r[i]는 i\~n-1까지 1의 개수
   + i까지 0\~i-1 공의 이동 횟수, i까지 i+1\~n-1 공의 이동 횟수
+## 1790. Check if One String Swap Can Make Strings Equal
++ 글자 빈도수가 같고 2군데만 다른 문자열인 경우에 한번에 swap으로 같은 문자열이 될 수 있다.
++ 이미 같은 경우와 한번 swap으로 같아질 수 있는 경우에 true로 출력
 ## 1792. Maximum Average Pass Ratio
 + 최대 우선순위 큐를 사용함
 + leetcode에 기본적으로 javascript에서 `@datastructures-js/priority-queue@5.4.0`를 사용할 수 있다.
   + https://support.leetcode.com/hc/en-us/articles/360011833974-What-are-the-environments-for-the-programming-languages
+## 1845. Seat Reservation Manager
++ 비어있는 자리를 우선순위 큐에 넣는 것이 간단하다.
 ## 1930. Unique Length-3 Palindromic Subsequences
 + 양 옆의 구간의 개수를 보고 palindrome이 되는지 확인 (prefix sum, O(n))
   + 1\~s-1의 루프에서 같은 문자가 왼쪽에 하나라도 있고 오른쪽에 하나라도 있으면 palindrome이 됨
@@ -121,6 +138,35 @@ vscode의 코파일럿(무료)가 알려주는데 cutting하는 조건을 처음
   Input: start = "___L____L___R_", target = "__L______RL___"
   Output: false
   ```
+## 2349. Design a Number Container System
++ Object를 2개 사용함. 숫자별로 가장 작은 index를 저장, 각 index에 있는 숫자를 저장
++ 테스트 하는 코드 (JS)
+  ```js
+  ;(()=>{
+    let obj
+    // const arr1=["NumberContainers", "find", "change", "change", "change", "change", "find", "change", "find"]
+    // const arr2=[[], [10], [2, 10], [1, 10], [3, 10], [5, 10], [10], [1, 20], [10]]
+    const arr1=["NumberContainers","change","find","change","find","find","find"]
+    const arr2=[[],[1,10],[10],[1,20],[10],[20],[30]]
+    const r=[]
+
+    for(let i=0;i<arr1.length;i++){
+      if(arr1[i]==='NumberContainers') {
+        obj = new NumberContainers()
+        r.push(null)
+      } else if(arr1[i]==='find'){
+        r.push(obj.find(arr2[i][0]))
+      } else if(arr1[i]==='change'){
+        obj.change(arr2[i][0],arr2[i][1])
+        r.push(null)
+      }
+    }
+
+    console.log(r);
+  })();
+  ```
+## 2364. Count Number of Bad Pairs
++ 모든 pair중에서 good pair의 수를 뺀다.
 ## 2415. Reverse Odd Levels of Binary Tree
 + Editorial을 참고해서 BFS 로 탐색을 함. 
 + 다음 level를 탐색하기 직전에는 큐에 같은 레벨의 노드만 있음. 짝수 레벨만 큐에 있을때 순서를 뒤집어서 값을 넣는다.
@@ -146,6 +192,10 @@ vscode의 코파일럿(무료)가 알려주는데 cutting하는 조건을 처음
 + 각 queries에 지정된 구간에서 조건을 만족하는 단어의 수를 출력한다. 예를 들면 1\~4 구간은 0\~4 에서 0\~0을 빼면 된다.
 ## 2593. Find Score of an Array After Marking All Elements
 + indexing 으로 가장 작은 수 (같으면 가장 작은 index) 를 찾는 것을 빠르게 함
+## 2658. Maximum Number of Fish in a Grid
++ bfs
++ 이미 물고기를 전부 낚은 cell은 다시 가지 않음
++ land라서 물고기가 없는 cell은 이미 방문 한 것으로 가정
 ## 2661. First Completely Painted Row or Column
 + 왠지 하나씩 칠할때 마다 행이나 열이 완성되었는지 확인 하는 방법은 아닐거 같다.
 + 각 행과 각 열이 완성되는 순서를 먼저 보는 방식으로 해봐야겠다
@@ -184,6 +234,10 @@ vscode의 코파일럿(무료)가 알려주는데 cutting하는 조건을 처음
 ## 3152. Special Array II
 + queries가 어려개 라서 양옆이 같은 parity인 경우를 미리 구해서 저장
   - 시간 초과라고 나와서 추가함.
+## 3160. Find the Number of Distinct Colors Among the Balls
++ 현재 한개의 공에만 칠해저 있는 색이 몇개인지 알기위해 머리를 썼다. queries마다 모든 공에서 색을 카운트 하면 시간이 많이 들기 때문이다.
+  + 3개의 Object를 사용. 각 ball의 색, 1개만 칠해저 있는 색의 숫자, 색 별 총 개수
+  + O(queries * balls) -> O(balls)
 ## 3223. Minimum Length of String After Operations
 + 같은 문자가 문자열에 3개 이상 들어있을때 그 중에서 2개를 뺼 수 있다.
 ## 3264. Final Array State After K Multiplication Operations I
