@@ -42,6 +42,10 @@ LeetCode 문제 목록 링크: [Problems](https://leetcode.com/problemset/)
 + 행에 대해서 2개 이상인지 확인, 2개 이상이면 전부 카운트
 + 열에 대해서 2개 이상인지 확인, 2개 이상이면 전부 카운트
 + 그리고 중복해서 카운트 하는 경우를 방지함
+## 1352. Product of the Last K Numbers
++ 곱셈도 prefix sum이 적용 된다고 함
+  + 인덱스 기준으로 -i * -j === -i / (-j-1)
+  + 0이 포함되는 경우 0으로 출력하게 처리
 ## 1368. Minimum Cost to Make at Least One Valid Path in a Grid
 + bfs에서 queue를 priority queue 로 변경함. 최소 cost부터 우선 탐색. 목적지에 도달하는 경우 종료.
 + dfs, bfs모두 타임 아웃나옴
@@ -85,6 +89,8 @@ vscode의 코파일럿(무료)가 알려주는데 cutting하는 조건을 처음
   - 시간 초과라고 나와서 추가함.
 + words의 남은 문자열이 target의 남은 문자열보다 작으면 0을 반환한다.
   - 시간 초과라고 나와서 추가함.
+## 1718. Construct the Lexicographically Largest Valid Sequence
++ 큰 수 부터 채워 나가면 처음에 찾은 배열이 가장 사전순으로 큰 시퀀스.
 ## 1726. Tuple with Same Product
 + nums안에 숫자를 서로 곱한다. 곱한 결과의 빈도수를 계산. 이때 a와 b가 같은 경우를 제외한다.
   + 곱한 결과의 빈도수가 4개가 나온다면, 조건에 맞는 [a,b,c,d]로 8개이며 tuple를 만들 수 있다. 이떄 곱이 같은 pair가 2개가 있다고 본다. 
@@ -196,6 +202,13 @@ vscode의 코파일럿(무료)가 알려주는데 cutting하는 조건을 처음
 + bfs
 + 이미 물고기를 전부 낚은 cell은 다시 가지 않음
 + land라서 물고기가 없는 cell은 이미 방문 한 것으로 가정
+## 2698. Find the Punishment Number of an Integer
++ 힌트에서 recursion으로 모든 경우의 수를 구하면 된다고 함. 그렇지만 익숙하지 않은 알고리즘이라 계속 햇갈림.
+  + fn(나누어지는 구간, 다른 구간의 숫자의 합), fn(n,s)
+    + n+s를 집합에 넣는다.
+    + n을 n1, n2로 나눔
+    + fn(n1, n2+s), fn(n2, n1+s) 실행
+  + 집합에서는 fn의 실행이 끝나고 나서 n**2가 있는지 확인한다.
 ## 2661. First Completely Painted Row or Column
 + 왠지 하나씩 칠할때 마다 행이나 열이 완성되었는지 확인 하는 방법은 아닐거 같다.
 + 각 행과 각 열이 완성되는 순서를 먼저 보는 방식으로 해봐야겠다
@@ -231,6 +244,8 @@ vscode의 코파일럿(무료)가 알려주는데 cutting하는 조건을 처음
   + 1,3,5 3가지 숫자를 하나의 그룹으로 보고 그룹별로 index를 모아 정렬해서 앞에 index부터 작은 수를 넣어줌
 ## 2981. Find Longest Special Substring That Occurs Thrice I
 + object에 substring의 개수를 카운트, 그리고 3번 이상 나온 substring중에서 가장 긴 substring의 길이를 출력.
+## 3066. Minimum Operations to Exceed Threshold Value II
++ 배열에서 연속으로 가장 작은 수 2개를 꺼낸다? 우선 순위 큐?
 ## 3152. Special Array II
 + queries가 어려개 라서 양옆이 같은 parity인 경우를 미리 구해서 저장
   - 시간 초과라고 나와서 추가함.
@@ -238,6 +253,9 @@ vscode의 코파일럿(무료)가 알려주는데 cutting하는 조건을 처음
 + 현재 한개의 공에만 칠해저 있는 색이 몇개인지 알기위해 머리를 썼다. queries마다 모든 공에서 색을 카운트 하면 시간이 많이 들기 때문이다.
   + 3개의 Object를 사용. 각 ball의 색, 1개만 칠해저 있는 색의 숫자, 색 별 총 개수
   + O(queries * balls) -> O(balls)
+## 3174. Clear Digits
++ 처음에는 문자를 string에서 지워가는 방법과 배열을 놓고 지워진 non-digit를 표시하는 되겠다는 생각을 했다.
++ 그런데 topics에서 stack이라는 키워드를 보자마자 방법이 문득 떠올랐다.
 ## 3223. Minimum Length of String After Operations
 + 같은 문자가 문자열에 3개 이상 들어있을때 그 중에서 2개를 뺼 수 있다.
 ## 3264. Final Array State After K Multiplication Operations I

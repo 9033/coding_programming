@@ -3,6 +3,7 @@
 ## Prefix Sum
 ➡ [구간 합 구하기 4](https://www.acmicpc.net/problem/11659)  
 ➡ [2559. Count Vowel Strings in Ranges](https://leetcode.com/problems/count-vowel-strings-in-ranges)  
+➡ [1352. Product of the Last K Numbers](https://leetcode.com/problems/product-of-the-last-k-numbers)  
 ## 동적 계획법  
 ➡ [10405 - Longest Common Subsequence](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=1346)  
 ### 동전을 교환해주는 경우의수 (DP)
@@ -52,6 +53,7 @@
 ➡ [1790. Check if One String Swap Can Make Strings Equal](https://leetcode.com/problems/check-if-one-string-swap-can-make-strings-equal)  
 ➡ [3160. Find the Number of Distinct Colors Among the Balls](https://leetcode.com/problems/find-the-number-of-distinct-colors-among-the-balls)  
 ➡ [2364. Count Number of Bad Pairs](https://leetcode.com/problems/count-number-of-bad-pairs)  
+➡ [3174. Clear Digits](https://leetcode.com/problems/clear-digits)  
 ## O(n log n)
 ➡ [가장 큰 수](https://programmers.co.kr/learn/courses/30/lessons/42746)  
 ➡ [징검다리](https://programmers.co.kr/learn/courses/30/lessons/43236), [River Hopscotch](http://poj.org/problem?id=3258) - 같은 문제  
@@ -69,11 +71,16 @@
 ➡ [10327 - Flip Sort](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=1268)  
 ➡ [1217. Minimum Cost to Move Chips to The Same Position](https://leetcode.com/problems/minimum-cost-to-move-chips-to-the-same-position)  
 ➡ [1726. Tuple with Same Product](https://leetcode.com/problems/tuple-with-same-product)  
+## O(n!)
 # 자료구조별
 ## min-heap, max-heap, priority queue
 ➡ [Find the Running Median](https://www.hackerrank.com/challenges/find-the-running-median)  
 ➡ [501 - Black Box](http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=442)  
 ➡ [1845. Seat Reservation Manager](https://leetcode.com/problems/seat-reservation-manager)  
+➡ [3066. Minimum Operations to Exceed Threshold Value II](https://leetcode.com/problems/minimum-operations-to-exceed-threshold-value-ii)  
+## stack
+➡ [3174. Clear Digits](https://leetcode.com/problems/clear-digits)  
+➡ [20. Valid Parentheses](https://leetcode.com/problems/valid-parentheses)  
 # 기타 유사 하거나 같은 문제
 ## 빈병을 가지고 교환해서 마시는 문제.
 ➡ [11150 - Cola](http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=2091)  
@@ -86,6 +93,8 @@
 ➡ [11362 - Phone List](http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=2347)  
 ➡ [644 - Immediate Decodability](http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=585)  
 # 기타 분류
+## 괄호
+➡ [20. Valid Parentheses](https://leetcode.com/problems/valid-parentheses)  
 ## 약수 관련.
 ➡ [{Sum+=i++} to Reach N](http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=1231)  
 ➡ [10830 - A New Function](http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=1771)  
