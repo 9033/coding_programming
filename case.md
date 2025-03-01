@@ -4,8 +4,12 @@
 ➡ [구간 합 구하기 4](https://www.acmicpc.net/problem/11659)  
 ➡ [2559. Count Vowel Strings in Ranges](https://leetcode.com/problems/count-vowel-strings-in-ranges)  
 ➡ [1352. Product of the Last K Numbers](https://leetcode.com/problems/product-of-the-last-k-numbers)  
+➡ [1749. Maximum Absolute Sum of Any Subarray](https://leetcode.com/problems/maximum-absolute-sum-of-any-subarray)  
 ## 동적 계획법  
 ➡ [10405 - Longest Common Subsequence](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=1346)  
+➡ [1524. Number of Sub-arrays With Odd Sum](https://leetcode.com/problems/number-of-sub-arrays-with-odd-sum)  
+➡ [873. Length of Longest Fibonacci Subsequence](https://leetcode.com/problems/length-of-longest-fibonacci-subsequence)  
+➡ [1092. Shortest Common Supersequence ](https://leetcode.com/problems/shortest-common-supersequence)  
 ### 동전을 교환해주는 경우의수 (DP)
 ➡ [The Coin Change Problem](https://www.hackerrank.com/challenges/coin-change/problem)  
 ➡ [거스름돈](https://programmers.co.kr/learn/courses/30/lessons/12907)  
@@ -81,6 +85,11 @@
 ## stack
 ➡ [3174. Clear Digits](https://leetcode.com/problems/clear-digits)  
 ➡ [20. Valid Parentheses](https://leetcode.com/problems/valid-parentheses)  
+## tree
+➡ [1261. Find Elements in a Contaminated Binary Tree](https://leetcode.com/problems/find-elements-in-a-contaminated-binary-tree)  
+➡ [1028. Recover a Tree From Preorder Traversal](https://leetcode.com/problems/recover-a-tree-from-preorder-traversal)  
+➡ [889. Construct Binary Tree from Preorder and Postorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal)  
+➡ [2467. Most Profitable Path in a Tree](https://leetcode.com/problems/most-profitable-path-in-a-tree)  
 # 기타 유사 하거나 같은 문제
 ## 빈병을 가지고 교환해서 마시는 문제.
 ➡ [11150 - Cola](http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=2091)  

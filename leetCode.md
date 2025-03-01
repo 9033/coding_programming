@@ -17,9 +17,9 @@ LeetCode 문제 목록 링크: [Problems](https://leetcode.com/problemset/)
 + 트리가 빈 경우를 채크하는 부분 추가.
 ## 684. Redundant Connection
 + edge와 node의 수가 같으면 원형으로 연결된 곳이 한군데만 발생
-+ 위상 정렬 - 간선이 1인 노드만 지움 -> cycle을 이루는 노드만 남음
++ 위상 정렬 - 간선이 1인 노드만 지움 -&gt; cycle을 이루는 노드만 남음
 ## 769. Max Chunks To Make Sorted
-+ 배열을 그냥 정렬할때와 chunk로 나누어서 각각 정렬 후에 합친 결과가 같다 -> 앞에 있는 chunk의 최대 숫자 < 뒤에 있는 chunk의 최소 숫자
++ 배열을 그냥 정렬할때와 chunk로 나누어서 각각 정렬 후에 합친 결과가 같다 -&gt; 앞에 있는 chunk의 최대 숫자 &lt; 뒤에 있는 chunk의 최소 숫자
 + 정렬은 오름차순으로 하면 된다.
 ## 802. Find Eventual Safe States
 + 모든 경로가 terminal node에 도달한다는 것을 계산하려고 보니 왠지 복잡하다
@@ -33,10 +33,53 @@ LeetCode 문제 목록 링크: [Problems](https://leetcode.com/problemset/)
 ## 983. Minimum Cost For Tickets
 + 1D DP 이며 2466과 거의 유사
 + 여행을 가지 않는 날인 경우 cost를 이전 날의 cost와 같게 한다.
+## 1028. Recover a Tree From Preorder Traversal
++ traversal에 입력되는 탐색 순서가 DFS로 되어 있다. 그래서 stack을 사용했다.
+  + 트리에 입력할 노드가 depth가 같거나 더 앝은 노드면 스택에서 parent노드가 top에 있을 때 까지 pop을 연속으로 한다.
++ TreeNode 기본값, left와 right가 null이여야 함.
+  ```js
+  {
+    left: null,
+    right: null,
+  }
+  ```
+## 1079. Letter Tile Possibilities
++ DFS를 사용하면서 Set 등으로 중복을 채크하지 않아도 되는 방법이 있다.
 ## 1217. Minimum Cost to Move Chips to The Same Position
 + DP: O(n^2) (position * position)
   + 위치의 범위는 넓지만 칩의 위치의 경우의 수가 1000개 때문에 가능
 + O(n)이 존재한다
+## 1261. Find Elements in a Contaminated Binary Tree
++ 실제로는 root에 배열이 아닌 트리 구조로 입력 값이 들어온다.
+  + 트리 문제를 오랫만에 봐서 감을 잃었다. 배열을 트리로 변환하느라 시간을 보냈다.
+    ```js
+    const makeTree = (arr) => {
+      _tree={
+        val: 0,
+      }
+      const q=[_tree]
+      for(let i=1;i<arr.length;i+=2){
+        const node=q.shift()
+        // console.log('node', node)
+        const x=node.val
+        // node.val = 2*x+c
+        if(typeof arr[i] === 'number'){
+          node.left = {
+            val: arr[i], // 2*x+1
+          }
+          q.push(node.left)
+        }
+        if(typeof arr[i+1] === 'number'){
+          node.right = {
+            val: arr[i+1], // 2*x+2
+          }
+          q.push(node.right)
+        }
+      }
+      // console.log('tree', _tree)
+      return _tree
+    }
+    ```
 ## 1267. Count Servers that Communicate
 + N-queen하고 비슷해 보임, 그리고 2661하고도 비슷해 보임
 + 행에 대해서 2개 이상인지 확인, 2개 이상이면 전부 카운트
@@ -119,6 +162,9 @@ vscode의 코파일럿(무료)가 알려주는데 cutting하는 조건을 처음
 + 양 옆의 구간의 개수를 보고 palindrome이 되는지 확인 (prefix sum, O(n))
   + 1\~s-1의 루프에서 같은 문자가 왼쪽에 하나라도 있고 오른쪽에 하나라도 있으면 palindrome이 됨
 + editorial는 양 끝을 잡고 중간에 문자의 수를 확인. 중복되는 문자는 한번만 센다
+## 1980. Find Unique Binary String
++ 정렬을 하고나서 최대 n번 루프를 돌림
+  + 답 중에서 가장 작은 수가 나오게됨
 ## 2054. Two Best Non-Overlapping Events
 + DP로 푸는 경우: max(현재 이벤트 이전까지 1개만 선택하는 경우의 최대 value + 현재 이벤트의 value, 현재 이벤트의 끝나는 time까지 다른 이벤트를 2개 선택한 경우의 최대 value)
 ## 2116. Check if a Parentheses String Can Be Valid
@@ -173,6 +219,9 @@ vscode의 코파일럿(무료)가 알려주는데 cutting하는 조건을 처음
   ```
 ## 2364. Count Number of Bad Pairs
 + 모든 pair중에서 good pair의 수를 뺀다.
+## 2375. Construct Smallest Number From DI String
++ 편의상 왼쪽부터 채운다. 조건에 맞으면 계속 오른쪽 까지 채워 나간다.
+  + 채울때 1부터 n+1 까지의 수 중에서 조건에 맞는지 확인한다.
 ## 2415. Reverse Odd Levels of Binary Tree
 + Editorial을 참고해서 BFS 로 탐색을 함. 
 + 다음 level를 탐색하기 직전에는 큐에 같은 레벨의 노드만 있음. 짝수 레벨만 큐에 있을때 순서를 뒤집어서 값을 넣는다.
@@ -183,6 +232,9 @@ vscode의 코파일럿(무료)가 알려주는데 cutting하는 조건을 처음
 + 1D DP로 각 길이에 대한 경우의 수를 구한다.
   - 길이가 0인 경우의 수는 1가지.
 + 그리고 길이가 low부터 high까지인 문자열의 각 경우의 수를 더하면 된다.
+## 2467. Most Profitable Path in a Tree
++ bob의 경로 alice경로 총 2번 탐색을 함
++ leaf노드인지 확인하는 부분을 습관대로 array로 하다가 timeout나옴, Set으로 바꿈.
 ## 2471. Minimum Number of Operations to Sort a Binary Tree by Level
 + 같은 레벨의 노드들을 찾는것은 2415. Reverse Odd Levels of Binary Tree에서 활용한 BFS를 가지고 옴. 큐에 같은 레벨의 노드가 있을때 swap 횟수를 구하고 해당 레벨을 채크해서 한 레벨에서 swap횟수를 중복으로 구하지 않게함.
 + SWAP횟수를 확인하는 알고리즘은 editorial를 참고. 여기서는 같은 값은 트리에서 한번만 나오기 떄문에 위치를 저장해서 활용함
@@ -252,7 +304,7 @@ vscode의 코파일럿(무료)가 알려주는데 cutting하는 조건을 처음
 ## 3160. Find the Number of Distinct Colors Among the Balls
 + 현재 한개의 공에만 칠해저 있는 색이 몇개인지 알기위해 머리를 썼다. queries마다 모든 공에서 색을 카운트 하면 시간이 많이 들기 때문이다.
   + 3개의 Object를 사용. 각 ball의 색, 1개만 칠해저 있는 색의 숫자, 색 별 총 개수
-  + O(queries * balls) -> O(balls)
+  + O(queries * balls) -&gt; O(balls)
 ## 3174. Clear Digits
 + 처음에는 문자를 string에서 지워가는 방법과 배열을 놓고 지워진 non-digit를 표시하는 되겠다는 생각을 했다.
 + 그런데 topics에서 stack이라는 키워드를 보자마자 방법이 문득 떠올랐다.
