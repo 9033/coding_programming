@@ -167,6 +167,9 @@ vscode의 코파일럿(무료)가 알려주는데 cutting하는 조건을 처음
   + 답 중에서 가장 작은 수가 나오게됨
 ## 2054. Two Best Non-Overlapping Events
 + DP로 푸는 경우: max(현재 이벤트 이전까지 1개만 선택하는 경우의 최대 value + 현재 이벤트의 value, 현재 이벤트의 끝나는 time까지 다른 이벤트를 2개 선택한 경우의 최대 value)
+## 2115. Find All Possible Recipes from Given Supplies
++ dfs + memoization and mark visited
+  + 그래프 탐색에 visited를 채크해서 풀리면 위상정렬로 될 수도?
 ## 2116. Check if a Parentheses String Can Be Valid
 + stack으로 뭔가 해보려다가 잘 안됨
 + 앞에서 뒤로, 뒤에서 앞으로 2-pass로 검증
@@ -175,8 +178,16 @@ vscode의 코파일럿(무료)가 알려주는데 cutting하는 조건을 처음
 + locked일때 '(', ')'와 unlocked일때, 총 3가지의 개수로 판단
 ## 2133. Check if Every Row and Column Contains All Numbers
 + lodash zip과 set을 이용함
+## 2161. Partition Array According to Given Pivot
++ 배열로 각각 pivot보다 작은수, 같은수, 큰수를 담고 나서 합쳐서 리턴해서 순서를 유지.
 ## 2182. Construct String With Repeat Limit
 + 입력값의 순서와 출력값의 순서가 관련이 없어서 각 문자의 빈도수를 채크해서 처리함
+## 2206. Divide Array Into Equal Pairs
++ 배열에 숫자가 짝수개 들어가 있는지 판별한다
++ editorial에 있는 방법만 4가지
+  + 정렬 - 1가지
+  + 빈도수 - 1가지
+  + 빈도가 홀수 인지 짝수인지 2가지 상태로 판별 - 2가지
 ## 2270. Number of Ways to Split Array
 + 1422와 유사한 문제
 + 0\~i 와 i+1\~n-1의 두 구간의 합을 비교한다.
@@ -222,6 +233,8 @@ vscode의 코파일럿(무료)가 알려주는데 cutting하는 조건을 처음
 ## 2375. Construct Smallest Number From DI String
 + 편의상 왼쪽부터 채운다. 조건에 맞으면 계속 오른쪽 까지 채워 나간다.
   + 채울때 1부터 n+1 까지의 수 중에서 조건에 맞는지 확인한다.
+## 2379. Minimum Recolors to Get K Consecutive Black Blocks
++ 길이가 k인 sliding window를 이용
 ## 2415. Reverse Odd Levels of Binary Tree
 + Editorial을 참고해서 BFS 로 탐색을 함. 
 + 다음 level를 탐색하기 직전에는 큐에 같은 레벨의 노드만 있음. 짝수 레벨만 큐에 있을때 순서를 뒤집어서 값을 넣는다.
@@ -238,6 +251,8 @@ vscode의 코파일럿(무료)가 알려주는데 cutting하는 조건을 처음
 ## 2471. Minimum Number of Operations to Sort a Binary Tree by Level
 + 같은 레벨의 노드들을 찾는것은 2415. Reverse Odd Levels of Binary Tree에서 활용한 BFS를 가지고 옴. 큐에 같은 레벨의 노드가 있을때 swap 횟수를 구하고 해당 레벨을 채크해서 한 레벨에서 swap횟수를 중복으로 구하지 않게함.
 + SWAP횟수를 확인하는 알고리즘은 editorial를 참고. 여기서는 같은 값은 트리에서 한번만 나오기 떄문에 위치를 저장해서 활용함
+## 2529. Maximum Count of Positive Integer and Negative Integer
++ 크기 순으로 정렬이 되어 있고 hint에 binary search라고 쓰여 있다. 그렇지만 O(n)으로 진행함.
 ## 2554. Maximum Number of Integers to Choose From a Range I
 + 여러 제약 조건을 고려하면 단일 루프로 가능하다. 조건에 맞는 다른 경우의 수를 볼 필요가 없기 때문
     + 조건: 최대 숫자인 경우만 출력, 숫자는 한번만 선택, maxSum 이하면 됨.
@@ -248,12 +263,22 @@ vscode의 코파일럿(무료)가 알려주는데 cutting하는 조건을 처음
 + 조건을 만족하는 단어는 1 아니면 0으로 본다.
 + words의 index를 기준으로 0\~0, 0\~1, 0\~2, 0\~i, ..., 0\~n-1까지 조건을 만족하는 단어의 숫자를 구한다.
 + 각 queries에 지정된 구간에서 조건을 만족하는 단어의 수를 출력한다. 예를 들면 1\~4 구간은 0\~4 에서 0\~0을 빼면 된다.
+## 2570. Merge Two 2D Arrays by Summing Values
++ 두 배열이 정렬되어 있어서 merge sort를 응용
 ## 2593. Find Score of an Array After Marking All Elements
 + indexing 으로 가장 작은 수 (같으면 가장 작은 index) 를 찾는 것을 빠르게 함
+## 2594. Minimum Time to Repair Cars
++ rank의 숫자가 낮은사람부터 수리할 차를 할당함
+  + rank의 숫자가 낮은사람이 같은 시간에 더 많은 차를 수리 가능.
++ m분에 몇대의 차를 수리할 수 있는지 대입해 보는 관점으로 푼다.
 ## 2658. Maximum Number of Fish in a Grid
 + bfs
 + 이미 물고기를 전부 낚은 cell은 다시 가지 않음
 + land라서 물고기가 없는 cell은 이미 방문 한 것으로 가정
+## 2685. Count the Number of Complete Components
++ 처음에는 3중 for문으로 floyd를 돌려서 거리가 2 이상인지 판별함.
++ 그런데 서로 연결이 되어 있는 집합을 구하는 과정에서 간접적으로도 연결되어 있는 노드도 파악됨.
++ 그래서 두 노드 사이에 간선이 있는지 아님 없는지 판별하는 것으로 변경함
 ## 2698. Find the Punishment Number of an Integer
 + 힌트에서 recursion으로 모든 경우의 수를 구하면 된다고 함. 그렇지만 익숙하지 않은 알고리즘이라 계속 햇갈림.
   + fn(나누어지는 구간, 다른 구간의 숫자의 합), fn(n,s)
@@ -298,6 +323,9 @@ vscode의 코파일럿(무료)가 알려주는데 cutting하는 조건을 처음
 + object에 substring의 개수를 카운트, 그리고 3번 이상 나온 substring중에서 가장 긴 substring의 길이를 출력.
 ## 3066. Minimum Operations to Exceed Threshold Value II
 + 배열에서 연속으로 가장 작은 수 2개를 꺼낸다? 우선 순위 큐?
+## 3108. Minimum Cost Walk in Weighted Graph
++ 다른 노드로 이동할때 이어저 있는 모든 간선을 지나처서 이동한다.
+  + 간선을 중복으로 이동이 가능하고 가중치에 비트 and 연산을 하기 때문
 ## 3152. Special Array II
 + queries가 어려개 라서 양옆이 같은 parity인 경우를 미리 구해서 저장
   - 시간 초과라고 나와서 추가함.

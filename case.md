@@ -23,6 +23,8 @@
 ➡ [10324 - Zeros and Ones](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=1265)  
 ➡ [10706 - Number Sequence](http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=1647)  
 ➡ [1237 Expert Enough?](http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=3678)  
+➡ [2226. Maximum Candies Allocated to K Children](https://leetcode.com/problems/maximum-candies-allocated-to-k-children)  
+➡ [2594. Minimum Time to Repair Cars](https://leetcode.com/problems/minimum-time-to-repair-cars)  
 ## 양 옆을 교환해서 정렬할때 최소로 교환하는 수 (inversion counting)
 ➡ [10327 - Flip Sort](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=1268), [Merge Sort: Counting Inversions](https://www.hackerrank.com/challenges/ctci-merge-sort/problem), [10810 - Ultra-QuickSort](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=1751) - 거의 같은 문제  
 ## Dijkstra
@@ -58,6 +60,11 @@
 ➡ [3160. Find the Number of Distinct Colors Among the Balls](https://leetcode.com/problems/find-the-number-of-distinct-colors-among-the-balls)  
 ➡ [2364. Count Number of Bad Pairs](https://leetcode.com/problems/count-number-of-bad-pairs)  
 ➡ [3174. Clear Digits](https://leetcode.com/problems/clear-digits)  
+➡ [2161. Partition Array According to Given Pivot](https://leetcode.com/problems/partition-array-according-to-given-pivot)  
+➡ [2529. Maximum Count of Positive Integer and Negative Integer](https://leetcode.com/problems/maximum-count-of-positive-integer-and-negative-integer)  
+➡ [2206. Divide Array Into Equal Pairs](https://leetcode.com/problems/divide-array-into-equal-pairs)  
+➡ [2401. Longest Nice Subarray](https://leetcode.com/problems/longest-nice-subarray)  
+➡ [3191. Minimum Operations to Make Binary Array Elements Equal to One I](https://leetcode.com/problems/minimum-operations-to-make-binary-array-elements-equal-to-one-i)  
 ## O(n log n)
 ➡ [가장 큰 수](https://programmers.co.kr/learn/courses/30/lessons/42746)  
 ➡ [징검다리](https://programmers.co.kr/learn/courses/30/lessons/43236), [River Hopscotch](http://poj.org/problem?id=3258) - 같은 문제  
@@ -66,6 +73,7 @@
 ➡ [2559. Count Vowel Strings in Ranges](https://leetcode.com/problems/count-vowel-strings-in-ranges)  
 ➡ [916. Word Subsets](https://leetcode.com/problems/word-subsets)  
 ➡ [2425. Bitwise XOR of All Pairings](https://leetcode.com/problems/bitwise-xor-of-all-pairings)  
+➡ [2570. Merge Two 2D Arrays by Summing Values](https://leetcode.com/problems/merge-two-2d-arrays-by-summing-values)  
 ## O(nm)
 ➡ [10405 - Longest Common Subsequence](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=1346)  
 ➡ [The Coin Change Problem](https://www.hackerrank.com/challenges/coin-change/problem)  
@@ -77,14 +85,19 @@
 ➡ [1726. Tuple with Same Product](https://leetcode.com/problems/tuple-with-same-product)  
 ## O(n!)
 # 자료구조별
+## set
+➡ [2206. Divide Array Into Equal Pairs](https://leetcode.com/problems/divide-array-into-equal-pairs)  
 ## min-heap, max-heap, priority queue
 ➡ [Find the Running Median](https://www.hackerrank.com/challenges/find-the-running-median)  
 ➡ [501 - Black Box](http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=442)  
 ➡ [1845. Seat Reservation Manager](https://leetcode.com/problems/seat-reservation-manager)  
 ➡ [3066. Minimum Operations to Exceed Threshold Value II](https://leetcode.com/problems/minimum-operations-to-exceed-threshold-value-ii)  
+➡ [2530. Maximal Score After Applying K Operations](https://leetcode.com/problems/maximal-score-after-applying-k-operations)  
 ## stack
 ➡ [3174. Clear Digits](https://leetcode.com/problems/clear-digits)  
 ➡ [20. Valid Parentheses](https://leetcode.com/problems/valid-parentheses)  
+## queue
+➡ [2379. Minimum Recolors to Get K Consecutive Black Blocks](https://leetcode.com/problems/minimum-recolors-to-get-k-consecutive-black-blocks)  
 ## tree
 ➡ [1261. Find Elements in a Contaminated Binary Tree](https://leetcode.com/problems/find-elements-in-a-contaminated-binary-tree)  
 ➡ [1028. Recover a Tree From Preorder Traversal](https://leetcode.com/problems/recover-a-tree-from-preorder-traversal)  
