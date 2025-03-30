@@ -39,6 +39,7 @@
 한 문제가 풀이 방법에 따라서 여러 시간 복잡도에 해당하는 경우도 있다.  
 ## O(1)
 ➡ [10550 - Combination Lock](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=1491)  
+➡ [3492. Maximum Containers on a Ship](https://leetcode.com/problems/maximum-containers-on-a-ship)  
 ## O(log n)
 ➡ [12293 - Box Game](http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=3714)  
 ➡ [Fibonacci Finding (easy)](https://www.hackerrank.com/challenges/fibonacci-finding-easy)  
@@ -69,6 +70,8 @@
 ➡ [가장 큰 수](https://programmers.co.kr/learn/courses/30/lessons/42746)  
 ➡ [징검다리](https://programmers.co.kr/learn/courses/30/lessons/43236), [River Hopscotch](http://poj.org/problem?id=3258) - 같은 문제  
 ➡ [Merge Sort: Counting Inversions](https://www.hackerrank.com/challenges/ctci-merge-sort/problem), [10810 - Ultra-QuickSort](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=1751)  
+➡ [3169. Count Days Without Meetings](https://leetcode.com/problems/count-days-without-meetings)  
+➡ [2033. Minimum Operations to Make a Uni-Value Grid](https://leetcode.com/problems/minimum-operations-to-make-a-uni-value-grid) - 그리드는 2차원이지만 총 숫자의 개수를 n으로 봤을때  
 ## O(n+m)
 ➡ [2559. Count Vowel Strings in Ranges](https://leetcode.com/problems/count-vowel-strings-in-ranges)  
 ➡ [916. Word Subsets](https://leetcode.com/problems/word-subsets)  

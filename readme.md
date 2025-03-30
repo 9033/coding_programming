@@ -172,3 +172,12 @@ c=[5,6,*a]
 a=[1,2]
 c=[5,6,...a]
 ```
+## swap
+```js
+//javascript
+[a,b]=[b,a]
+```
+```py
+#python
+a,b=b,a
+```

@@ -18,6 +18,12 @@ LeetCode 문제 목록 링크: [Problems](https://leetcode.com/problemset/)
 ## 684. Redundant Connection
 + edge와 node의 수가 같으면 원형으로 연결된 곳이 한군데만 발생
 + 위상 정렬 - 간선이 1인 노드만 지움 -&gt; cycle을 이루는 노드만 남음
+## 763. Partition Labels
++ 처음에 b인 경우 처음 b와 마지막 b 의 위치를 기억
++ 그 다음 문자를 처리, 처음 구간은 편의상 b-part, 그 다음 문자는 c라고 가정
+  + c의 시작이 b-part사이이며 c의 마지막 위치가 b-part에서 오른쪽 밖이면 b-part를 확장
+  + c의 처음과 마지막이 b-part사이에 포함되면 넘어감
+  + c의 시작과 끝이 구간 밖이면 새 part를 생성
 ## 769. Max Chunks To Make Sorted
 + 배열을 그냥 정렬할때와 chunk로 나누어서 각각 정렬 후에 합친 결과가 같다 -&gt; 앞에 있는 chunk의 최대 숫자 &lt; 뒤에 있는 chunk의 최소 숫자
 + 정렬은 오름차순으로 하면 된다.
@@ -162,9 +168,18 @@ vscode의 코파일럿(무료)가 알려주는데 cutting하는 조건을 처음
 + 양 옆의 구간의 개수를 보고 palindrome이 되는지 확인 (prefix sum, O(n))
   + 1\~s-1의 루프에서 같은 문자가 왼쪽에 하나라도 있고 오른쪽에 하나라도 있으면 palindrome이 됨
 + editorial는 양 끝을 잡고 중간에 문자의 수를 확인. 중복되는 문자는 한번만 센다
+## 1976. Number of Ways to Arrive at Destination
++ floyd에서 loop를 돌릴때 mid -> src -> desc 로 돌려야함
++ 풀이방법을 보니 경로의 가중치 뿐만 아니라 가지수를 곱하거나 더하는 방법이 있어서 참고함
 ## 1980. Find Unique Binary String
 + 정렬을 하고나서 최대 n번 루프를 돌림
   + 답 중에서 가장 작은 수가 나오게됨
+## 2033. Minimum Operations to Make a Uni-Value Grid
++ 처음에는 바이너리 서치를 생각함.
+  + 정렬 후에 m,n을 grid에서 제일 작은수랑 제일 큰 수로 해서 mid=(m+n)/2 를 통해서 찾는것임.
+  + 그런데 예재를 계산해보니 가운데 있는 숫자가 될 때 x가 최소화가됨.
++ grid에 있는 숫자중 하나를 고르는 것 까진 알겠는데 왜 정렬하고 가운데 있는 숫자를 고르면 되는지?
++ 짝수개라서 중앙값이 양옆으로 2개 나오는데 그 중에서 n/2, n/2+1중 하나만 고르면 되는것 까진 알겠음
 ## 2054. Two Best Non-Overlapping Events
 + DP로 푸는 경우: max(현재 이벤트 이전까지 1개만 선택하는 경우의 최대 value + 현재 이벤트의 value, 현재 이벤트의 끝나는 time까지 다른 이벤트를 2개 선택한 경우의 최대 value)
 ## 2115. Find All Possible Recipes from Given Supplies
@@ -333,6 +348,9 @@ vscode의 코파일럿(무료)가 알려주는데 cutting하는 조건을 처음
 + 현재 한개의 공에만 칠해저 있는 색이 몇개인지 알기위해 머리를 썼다. queries마다 모든 공에서 색을 카운트 하면 시간이 많이 들기 때문이다.
   + 3개의 Object를 사용. 각 ball의 색, 1개만 칠해저 있는 색의 숫자, 색 별 총 개수
   + O(queries * balls) -&gt; O(balls)
+## 3169. Count Days Without Meetings
++ 거의 유사한 문제를 예전에 본 것 같다.
++ 정렬을 한다. 그리고 1일 부터 처음 미팅 과 간격 + 각 미팅의 간격 + 마지막 미팅 종료 후 끝 날짜 까지 간격을 더해서 출력.
 ## 3174. Clear Digits
 + 처음에는 문자를 string에서 지워가는 방법과 배열을 놓고 지워진 non-digit를 표시하는 되겠다는 생각을 했다.
 + 그런데 topics에서 stack이라는 키워드를 보자마자 방법이 문득 떠올랐다.
