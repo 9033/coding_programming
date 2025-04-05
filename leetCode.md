@@ -51,6 +51,8 @@ LeetCode 문제 목록 링크: [Problems](https://leetcode.com/problemset/)
   ```
 ## 1079. Letter Tile Possibilities
 + DFS를 사용하면서 Set 등으로 중복을 채크하지 않아도 되는 방법이 있다.
+## 1123. Lowest Common Ancestor of Deepest Leaves
++ 문제를 한번 읽어서는 뭘 해야 하는지 머리속에 안들어온다
 ## 1217. Minimum Cost to Move Chips to The Same Position
 + DP: O(n^2) (position * position)
   + 위치의 범위는 넓지만 칩의 위치의 경우의 수가 1000개 때문에 가능
@@ -164,6 +166,8 @@ vscode의 코파일럿(무료)가 알려주는데 cutting하는 조건을 처음
   + https://support.leetcode.com/hc/en-us/articles/360011833974-What-are-the-environments-for-the-programming-languages
 ## 1845. Seat Reservation Manager
 + 비어있는 자리를 우선순위 큐에 넣는 것이 간단하다.
+## 1863. Sum of All Subset XOR Totals
++ nums의 수가 적어서 backtracking으로 모든 경우를 탐색
 ## 1930. Unique Length-3 Palindromic Subsequences
 + 양 옆의 구간의 개수를 보고 palindrome이 되는지 확인 (prefix sum, O(n))
   + 1\~s-1의 루프에서 같은 문자가 왼쪽에 하나라도 있고 오른쪽에 하나라도 있으면 palindrome이 됨
@@ -193,6 +197,9 @@ vscode의 코파일럿(무료)가 알려주는데 cutting하는 조건을 처음
 + locked일때 '(', ')'와 unlocked일때, 총 3가지의 개수로 판단
 ## 2133. Check if Every Row and Column Contains All Numbers
 + lodash zip과 set을 이용함
+## 2140. Solving Questions With Brainpower
++ O(n) 1D DP
+  + 배열 에서 0인 인덱스 부터 계산하니 bottom-up DP인듯
 ## 2161. Partition Array According to Given Pivot
 + 배열로 각각 pivot보다 작은수, 같은수, 큰수를 담고 나서 합쳐서 리턴해서 순서를 유지.
 ## 2182. Construct String With Repeat Limit
@@ -328,6 +335,11 @@ vscode의 코파일럿(무료)가 알려주는데 cutting하는 조건을 처음
   + 힌트 3: 서브 트리의 모든 노드의 합이 k로 나누어 떨어지면 상위 노드와 합치지 않는다.
   + 힌트 4: 굳이 각 그룹에 어떤 노드가 들어가 있는지 저장하지 않아도 된다.
 + edges 검색 부분을 빨리 찾도록 변형
+## 2873. Maximum Value of an Ordered Triplet I
++ 입력값의 크기가 작아서 3단 루프를 사용
+## 2874. Maximum Value of an Ordered Triplet II
++ j를 기준으로 0~j-1에서 최대 값 / j+1~n에서 최대값 을 찾는다
+ + 두 구간의 최대값은 미리 계산한다
 ## 2940. Find Building Where Alice and Bob Can Meet
 + Editorial 참고함. 그런데 Monotonic Stack 사용시 왜 되는지 알아보는걸 하기 싫다. 그냥 왠지 그럴 기분이 아님. 뇌가 거부함
 + 당연하게도 O(queries * heights)는 타임 아웃 나옴
