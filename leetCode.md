@@ -12,6 +12,12 @@ LeetCode 문제 목록 링크: [Problems](https://leetcode.com/problemset/)
 + wordDict에 있는 단어가 여러번 쓰일 수 있다. -&gt; s의 길이까지 문자열을 조합하는 도중에 현재 길이의 문자열을 생성한 적이 있으면 skip
 ## 183. Customers Who Never Order
 + 서브쿼리보다 left join이 속도가 빠르다.
+## 368. Largest Divisible Subset
++ DP, 그런데 다시 배열을 구성하는 방법이 햇갈렸다.
++ 오름차순으로 정렬 후 현재 위치에서 최대의 배열의 길이를 구한다.
++ 가장 긴 숫자를 선택. 답으로 출력할 배열에 넣음.
+  + 가능한 경우의 수 중에서 하나만 출력하면 되니까 같은 길이의 숫자중에 하나만 선택해서 출력하면됨.
++ 그리고 다음 번 숫자를 선택할때 배열에 넣은 숫자와 나머지 연산을 해서 확인한 후 넣는다.
 ## 515. Find Largest Value in Each Tree Row
 + binary tree가 나오는 이전 문제(2471, 2415등)에서 사용한 BFS 코드를 재활용. 마찬가지로 다음 레벨을 탐색하기 직전에는 큐에 다음 레벨의 노드만 들어가 있다는 점을 활용함.
 + 트리가 빈 경우를 채크하는 부분 추가.
@@ -168,6 +174,9 @@ vscode의 코파일럿(무료)가 알려주는데 cutting하는 조건을 처음
 + 비어있는 자리를 우선순위 큐에 넣는 것이 간단하다.
 ## 1863. Sum of All Subset XOR Totals
 + nums의 수가 적어서 backtracking으로 모든 경우를 탐색
+## 1922. Count Good Numbers
++ 각 자리 별로 경우의 수가 정해저 있다.
++ 연산에서 오차가 생겨서 BigInt (javascript)를 사용함
 ## 1930. Unique Length-3 Palindromic Subsequences
 + 양 옆의 구간의 개수를 보고 palindrome이 되는지 확인 (prefix sum, O(n))
   + 1\~s-1의 루프에서 같은 문자가 왼쪽에 하나라도 있고 오른쪽에 하나라도 있으면 palindrome이 됨
@@ -370,6 +379,8 @@ vscode의 코파일럿(무료)가 알려주는데 cutting하는 조건을 처음
 + 같은 문자가 문자열에 3개 이상 들어있을때 그 중에서 2개를 뺼 수 있다.
 ## 3264. Final Array State After K Multiplication Operations I
 + 1792에서 priorityqueue 라이브러리를 사용해 봐서 그런지 여기서도 익숙하게 사용함
+## 3375. Minimum Operations to Make Array Values Equal to K
++ 앞과 뒤의 숫자의 크기가 서로 2이상 차이가 나야 하는줄 착각해서 시간이 더 걸림.
 ## 3412. Find Mirror Score of a String
 + 문자별로 인덱스를 배열로 저장. 배열안에 숫자는 unmarked index이다.
 + j&lt;i인 j를 찾기 때문에 i앞에 있는 index 만 배열에 들어가 있으면 된다. 미리 넣어놓을 필요가 없다.
