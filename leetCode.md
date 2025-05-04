@@ -33,6 +33,10 @@ LeetCode 문제 목록 링크: [Problems](https://leetcode.com/problemset/)
 ## 769. Max Chunks To Make Sorted
 + 배열을 그냥 정렬할때와 chunk로 나누어서 각각 정렬 후에 합친 결과가 같다 -&gt; 앞에 있는 chunk의 최대 숫자 &lt; 뒤에 있는 chunk의 최소 숫자
 + 정렬은 오름차순으로 하면 된다.
+## 781. Rabbits in Forest
++ `[0]`이면 같은 색이 자기 자신만 있어서 1명
++ `[1]`이면 간은 색이 자기 자신과 또 다른 한명까지 2명, 그 중에서 응답을 한 사람은 한명.
++ `[1,1]`이면 간은 색이 자기 자신과 또 다른 한명까지 2명, 그리고 응답을 한 사람은 두명.
 ## 802. Find Eventual Safe States
 + 모든 경로가 terminal node에 도달한다는 것을 계산하려고 보니 왠지 복잡하다
 + terminal node로 가지 않는 경로가 하나라도 있는 경우는 cycle이 되는경로로 하나라도 향하는 경로가 있는 경우다
@@ -42,9 +46,17 @@ LeetCode 문제 목록 링크: [Problems](https://leetcode.com/problemset/)
 ## 827. Making A Large Island
 + 각 섬의 넓이를 구함
 + 타일 1개를 매꿀 경우 이어지는 넓이의 최대값 (최대 4개의 섬의 넓이 + 매꾸는 넓이(1))
+## 838. Push Dominoes
++ 힘이 가해지는 부분과 전달 받는 부분을 따로 조건문으로 처리
++ 전달 받는 부분을 처리하는 기준은 힘이 가해지는 부분에서 거리를 비교 - 여기서 전달 받는 부분에서 힘이 가해지는 부분에서 L과 R의 거리가 같으면 '.'으로 처리
 ## 983. Minimum Cost For Tickets
 + 1D DP 이며 2466과 거의 유사
 + 여행을 가지 않는 날인 경우 cost를 이전 날의 cost와 같게 한다.
+## 1007. Minimum Domino Rotations For Equal Row
++ 4가지 경우를 고려
+  + `tops[0]`과 같은 값을 tops로 옮김, `tops[0]`과 같은 값을 bottoms로 옮김, `bottoms[0]`과 같은 값을 tops로 옮김, `bottoms[0]`과 같은 값을 bottoms로 옮김
+  + 가능한지 불가능한지, 교환 횟수는 얼마인지
+  + 가능한 경우중에서 최소의 교환 횟수를 출력
 ## 1028. Recover a Tree From Preorder Traversal
 + traversal에 입력되는 탐색 순서가 DFS로 되어 있다. 그래서 stack을 사용했다.
   + 트리에 입력할 노드가 depth가 같거나 더 앝은 노드면 스택에서 parent노드가 top에 있을 때 까지 pop을 연속으로 한다.
@@ -59,6 +71,10 @@ LeetCode 문제 목록 링크: [Problems](https://leetcode.com/problemset/)
 + DFS를 사용하면서 Set 등으로 중복을 채크하지 않아도 되는 방법이 있다.
 ## 1123. Lowest Common Ancestor of Deepest Leaves
 + 문제를 한번 읽어서는 뭘 해야 하는지 머리속에 안들어온다
+## 1128. Number of Equivalent Domino Pairs
++ 각 domino가 등장한 수를 계산해서 저장
++ 등장한 domino를 pair로 만드는 수를 계산
+  + 같은 domino n개에서 2개를 pair로 만들때 중복없고 순서를 고려하지 않는 조합의 공식을 사용함
 ## 1217. Minimum Cost to Move Chips to The Same Position
 + DP: O(n^2) (position * position)
   + 위치의 범위는 넓지만 칩의 위치의 경우의 수가 1000개 때문에 가능
@@ -209,6 +225,8 @@ vscode의 코파일럿(무료)가 알려주는데 cutting하는 조건을 처음
 ## 2140. Solving Questions With Brainpower
 + O(n) 1D DP
   + 배열 에서 0인 인덱스 부터 계산하니 bottom-up DP인듯
+## 2145. Count the Hidden Sequences
++ 원래 수열의 가장 큰 수와 가장 작은 수로 lower와 upper사이에 있는지 판단한다.
 ## 2161. Partition Array According to Given Pivot
 + 배열로 각각 pivot보다 작은수, 같은수, 큰수를 담고 나서 합쳐서 리턴해서 순서를 유지.
 ## 2182. Construct String With Repeat Limit
