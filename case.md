@@ -34,6 +34,8 @@
 ➡ [762 - We Ship Cheap](http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=703)  
 ➡ [1368. Minimum Cost to Make at Least One Valid Path in a Grid](https://leetcode.com/problems/minimum-cost-to-make-at-least-one-valid-path-in-a-grid)  
 ➡ [1765. Map of Highest Peak](https://leetcode.com/problems/map-of-highest-peak)  
+➡ [3341. Find Minimum Time to Reach Last Room I](https://leetcode.com/problems/find-minimum-time-to-reach-last-room-i)  
+➡ [3342. Find Minimum Time to Reach Last Room II](https://leetcode.com/problems/find-minimum-time-to-reach-last-room-ii)  
 ## Floyd Warshall
 ➡ [567 - Risk](http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=508)  
 ## Topological sorting
@@ -82,6 +84,7 @@
 ➡ [916. Word Subsets](https://leetcode.com/problems/word-subsets)  
 ➡ [2425. Bitwise XOR of All Pairings](https://leetcode.com/problems/bitwise-xor-of-all-pairings)  
 ➡ [2570. Merge Two 2D Arrays by Summing Values](https://leetcode.com/problems/merge-two-2d-arrays-by-summing-values)  
+➡ [2918. Minimum Equal Sum of Two Arrays After Replacing Zeros](https://leetcode.com/problems/minimum-equal-sum-of-two-arrays-after-replacing-zeros)  
 ## O(nm)
 ➡ [10405 - Longest Common Subsequence](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=1346)  
 ➡ [The Coin Change Problem](https://www.hackerrank.com/challenges/coin-change/problem)  
@@ -101,6 +104,8 @@
 ➡ [1845. Seat Reservation Manager](https://leetcode.com/problems/seat-reservation-manager)  
 ➡ [3066. Minimum Operations to Exceed Threshold Value II](https://leetcode.com/problems/minimum-operations-to-exceed-threshold-value-ii)  
 ➡ [2530. Maximal Score After Applying K Operations](https://leetcode.com/problems/maximal-score-after-applying-k-operations)  
+➡ [3341. Find Minimum Time to Reach Last Room I](https://leetcode.com/problems/find-minimum-time-to-reach-last-room-i)  
+➡ [3342. Find Minimum Time to Reach Last Room II](https://leetcode.com/problems/find-minimum-time-to-reach-last-room-ii)  
 ## stack
 ➡ [3174. Clear Digits](https://leetcode.com/problems/clear-digits)  
 ➡ [20. Valid Parentheses](https://leetcode.com/problems/valid-parentheses)  

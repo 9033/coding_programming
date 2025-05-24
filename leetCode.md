@@ -1,15 +1,33 @@
 # 문제별
 내가 풀이한 방법에 대한 설명  
 LeetCode 문제 목록 링크: [Problems](https://leetcode.com/problemset/)  
+## 14. Longest Common Prefix
++ trie사용해봄
+  + 첫번째 str로 trie를 생성
+  + 2번째 str부터는 trie를 탐색
+  + end로 마킹한 부분까지 출력
 ## 18. 4Sum
 + `15. 3sum`에서 루프문 하나를 더 추가.
   + 이중 루프로 모든 경우의 수를 처리해야함.
 ## 35. Search Insert Position
 + binary search
+## 61. Rotate List
++ 가능한 추가적인 메모리를 안쓰는 방법을 사용.
++ 단 방향으로 된 연결 리스트 이기 때문에 rotate하는 방향을 반대로 함.
+  + 리스트의 전체 길이를 구하기 위해 탐색.
+  + rotate하는 방향이 반대일때 탐색을 해야할 횟수를 구함.
+  + tail의 next를 head로 설정 후에 탐색
+  + 새 tail의 next를 null로 하고 리턴
 ## 63. Unique Paths II
 + 시작 지점에도 장애물이 있을 수 있다.
 ## 139. Word Break
 + wordDict에 있는 단어가 여러번 쓰일 수 있다. -&gt; s의 길이까지 문자열을 조합하는 도중에 현재 길이의 문자열을 생성한 적이 있으면 skip
+## 180. Consecutive Numbers
++ lag함수를 이용해서 위 row와 위위 row의 num값을 구해서 연속인지 판단함.
+## 181. Employees Earning More Than Their Managers
++ from 에 한 테이블을 여러번 집어넣고 where로 join해서 테이블을 생성 한 후에 조건에 해당하는 row출력
+## 182. Duplicate Emails
++ count() 활용함
 ## 183. Customers Who Never Order
 + 서브쿼리보다 left join이 속도가 빠르다.
 ## 368. Largest Divisible Subset
@@ -367,6 +385,12 @@ vscode의 코파일럿(무료)가 알려주는데 cutting하는 조건을 처음
 ## 2874. Maximum Value of an Ordered Triplet II
 + j를 기준으로 0~j-1에서 최대 값 / j+1~n에서 최대값 을 찾는다
  + 두 구간의 최대값은 미리 계산한다
+## 2918. Minimum Equal Sum of Two Arrays After Replacing Zeros
++ 모든 0을 양의 정수로 대체해야 한다.
+  + 우선 양의 정수중에 최소값인 1로 replace (hint 1)
++ 0을 양의 정수로 대체하는 데에 크기에 제한이 없다.
+  + 모든 0을 1로 대체한 후에 합계를 구하고 나서 판단
+  + 0이 하나 이상 있는 경우에도 하나의 0만 값을 대체한다고 가정하고 판단 (hint 2)
 ## 2940. Find Building Where Alice and Bob Can Meet
 + Editorial 참고함. 그런데 Monotonic Stack 사용시 왜 되는지 알아보는걸 하기 싫다. 그냥 왠지 그럴 기분이 아님. 뇌가 거부함
 + 당연하게도 O(queries * heights)는 타임 아웃 나옴
@@ -397,6 +421,9 @@ vscode의 코파일럿(무료)가 알려주는데 cutting하는 조건을 처음
 + 같은 문자가 문자열에 3개 이상 들어있을때 그 중에서 2개를 뺼 수 있다.
 ## 3264. Final Array State After K Multiplication Operations I
 + 1792에서 priorityqueue 라이브러리를 사용해 봐서 그런지 여기서도 익숙하게 사용함
+## 3341. Find Minimum Time to Reach Last Room I
++ 최단 경로를 찾을때 우선순위큐에 다음 경로를 추가할 때 조건에 맞는 경로만 추가한다
+  + 다음 room에서 이동을 시작 할 수 있는 사간을 보고 판단해서 queue에 넣음
 ## 3375. Minimum Operations to Make Array Values Equal to K
 + 앞과 뒤의 숫자의 크기가 서로 2이상 차이가 나야 하는줄 착각해서 시간이 더 걸림.
 ## 3412. Find Mirror Score of a String
