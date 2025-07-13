@@ -30,6 +30,10 @@ LeetCode 문제 목록 링크: [Problems](https://leetcode.com/problemset/)
 + count() 활용함
 ## 183. Customers Who Never Order
 + 서브쿼리보다 left join이 속도가 빠르다.
+## 262. Trips and Users
+1. trips에서 banned된 user랑 날짜로 필터링
+2. 각 날짜 별로 전체랑 완료 안된 경우를 카운트
+3. 날짜 별로 rate를 계산해서 출력
 ## 368. Largest Divisible Subset
 + DP, 그런데 다시 배열을 구성하는 방법이 햇갈렸다.
 + 오름차순으로 정렬 후 현재 위치에서 최대의 배열의 길이를 구한다.
@@ -39,6 +43,14 @@ LeetCode 문제 목록 링크: [Problems](https://leetcode.com/problemset/)
 ## 515. Find Largest Value in Each Tree Row
 + binary tree가 나오는 이전 문제(2471, 2415등)에서 사용한 BFS 코드를 재활용. 마찬가지로 다음 레벨을 탐색하기 직전에는 큐에 다음 레벨의 노드만 들어가 있다는 점을 활용함.
 + 트리가 빈 경우를 채크하는 부분 추가.
+## 570. Managers with at Least 5 Direct Reports
++ inner join 할때 조건문에 5인 이상인 것도 추가함
+## 577. Employee Bonus
++ 보너스가 없는 경우 null로 출력하는것이 포인트
+## 602. Friend Requests II: Who Has the Most Friends
++ `UNION` 으로 전체 id의 목록을 만들고 각 id의 수를 `LEFT JOIN`함
++ `UNION`이 중복을 없에서 left join을 사용.
++ 알고보니 `UNION ALL`을 사용해보는 문제
 ## 684. Redundant Connection
 + edge와 node의 수가 같으면 원형으로 연결된 곳이 한군데만 발생
 + 위상 정렬 - 간선이 1인 노드만 지움 -&gt; cycle을 이루는 노드만 남음
@@ -238,6 +250,9 @@ vscode의 코파일럿(무료)가 알려주는데 cutting하는 조건을 처음
 + hint 3가지를 참고함, 2-pass로 그중에 2가지를 검증
 + false되는 경우는 hint 1까지 포함해서 총 3가지.
 + locked일때 '(', ')'와 unlocked일때, 총 3가지의 개수로 판단
+## 2131. Longest Palindrome by Concatenating Two Letter Words
++ 길이가 2인 word의 앞뒤가 같은 경우 가운데에 word가 오는게 가능
++ 앞뒤가 다른 word는 각각 양 옆에 배치 가능하고 하나만 있으면 배치 못함
 ## 2133. Check if Every Row and Column Contains All Numbers
 + lodash zip과 set을 이용함
 ## 2140. Solving Questions With Brainpower
@@ -302,6 +317,8 @@ vscode의 코파일럿(무료)가 알려주는데 cutting하는 조건을 처음
   + 채울때 1부터 n+1 까지의 수 중에서 조건에 맞는지 확인한다.
 ## 2379. Minimum Recolors to Get K Consecutive Black Blocks
 + 길이가 k인 sliding window를 이용
+## 2410. Maximum Matching of Players With Trainers
++ sort후 greedy
 ## 2415. Reverse Odd Levels of Binary Tree
 + Editorial을 참고해서 BFS 로 탐색을 함. 
 + 다음 level를 탐색하기 직전에는 큐에 같은 레벨의 노드만 있음. 짝수 레벨만 큐에 있을때 순서를 뒤집어서 값을 넣는다.
@@ -391,6 +408,8 @@ vscode의 코파일럿(무료)가 알려주는데 cutting하는 조건을 처음
 + 0을 양의 정수로 대체하는 데에 크기에 제한이 없다.
   + 모든 0을 1로 대체한 후에 합계를 구하고 나서 판단
   + 0이 하나 이상 있는 경우에도 하나의 0만 값을 대체한다고 가정하고 판단 (hint 2)
+## 2929. Distribute Candies Among Children II
++ 2명에게 나누는 횟수를 구하는 로직을 min(n,limit)번 돌린다
 ## 2940. Find Building Where Alice and Bob Can Meet
 + Editorial 참고함. 그런데 Monotonic Stack 사용시 왜 되는지 알아보는걸 하기 싫다. 그냥 왠지 그럴 기분이 아님. 뇌가 거부함
 + 당연하게도 O(queries * heights)는 타임 아웃 나옴
@@ -421,6 +440,9 @@ vscode의 코파일럿(무료)가 알려주는데 cutting하는 조건을 처음
 + 같은 문자가 문자열에 3개 이상 들어있을때 그 중에서 2개를 뺼 수 있다.
 ## 3264. Final Array State After K Multiplication Operations I
 + 1792에서 priorityqueue 라이브러리를 사용해 봐서 그런지 여기서도 익숙하게 사용함
+## 3307. Find the K-th Character in String Game II
++ operations는 최대 100개지만 50번 정도면 이미 최대 k를 넘어감
+  + k <= 10**14 < 2**50 < Number.MAX_SAFE_INTEGER
 ## 3341. Find Minimum Time to Reach Last Room I
 + 최단 경로를 찾을때 우선순위큐에 다음 경로를 추가할 때 조건에 맞는 경로만 추가한다
   + 다음 room에서 이동을 시작 할 수 있는 사간을 보고 판단해서 queue에 넣음
@@ -431,3 +453,9 @@ vscode의 코파일럿(무료)가 알려주는데 cutting하는 조건을 처음
 + j&lt;i인 j를 찾기 때문에 i앞에 있는 index 만 배열에 들어가 있으면 된다. 미리 넣어놓을 필요가 없다.
 + j를 찾을떄 stack처럼 FILO방식으로 pop을 한다. i랑 가장 가까운 j를 찾기 떄문이다.
 + 해당하는 j가 없으면 i를 push한다.
+## 3554. Find Category Recommendation Pairs
++ ProductInfo 에서 product_id가 달라도 같은 category인 경우가 있음. ProductPurchases 에서 quantity는 상관 없다. user의 수를 구하기 때문.
+## 3601. Find Drivers with Improved Fuel Efficiency
++ 각 trip에 대해 efficiency를 구해야함
++ first_half_avg, second_half_avg, efficiency_improvement 3가지 다 마지막 까지 계산 후에 round
++ efficiency_improvement > 0 조건으로 null인 경우와 낮아진 경우도 필터링

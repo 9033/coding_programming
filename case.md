@@ -13,7 +13,7 @@
 ➡ [873. Length of Longest Fibonacci Subsequence](https://leetcode.com/problems/length-of-longest-fibonacci-subsequence)  
 ➡ [1092. Shortest Common Supersequence](https://leetcode.com/problems/shortest-common-supersequence)  
 ➡ [368. Largest Divisible Subset](https://leetcode.com/problems/largest-divisible-subset)  
-### 동전을 교환해주는 경우의수 (DP)
+### 동전을 교환해주는 경우의 수 (DP)
 ➡ [The Coin Change Problem](https://www.hackerrank.com/challenges/coin-change/problem)  
 ➡ [거스름돈](https://programmers.co.kr/learn/courses/30/lessons/12907)  
 ➡ [674 - Coin Change](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=615)  
@@ -40,6 +40,8 @@
 ➡ [567 - Risk](http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=508)  
 ## Topological sorting
 ➡ [1462. Course Schedule IV](https://leetcode.com/problems/course-schedule-iv)  
+## Greedy
+➡ [2410. Maximum Matching of Players With Trainers](https://leetcode.com/problems/maximum-matching-of-players-with-trainers)  
 # 시간 복잡도 별
 한 문제가 풀이 방법에 따라서 여러 시간 복잡도에 해당하는 경우도 있다.  
 ## O(1)
