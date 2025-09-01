@@ -40,6 +40,13 @@ LeetCode 문제 목록 링크: [Problems](https://leetcode.com/problemset/)
 + 가장 긴 숫자를 선택. 답으로 출력할 배열에 넣음.
   + 가능한 경우의 수 중에서 하나만 출력하면 되니까 같은 길이의 숫자중에 하나만 선택해서 출력하면됨.
 + 그리고 다음 번 숫자를 선택할때 배열에 넣은 숫자와 나머지 연산을 해서 확인한 후 넣는다.
+## 498. Diagonal Traverse
++ 3x3 인경우
+  + 시작지점 (0,0), (1,0), (2,0), (2,1), (2,2)
+  + 오른쪽 상단 방향으로 임시 배열에 넣음
+  + 필요하면 리턴 배열에 임시 배열을 넣을때 reverse를 함
++ 직사각형 배열도 처리해야한다
+  + ~~시간이 많이 걸리면 실제로 개발할때도 시간이 많이 걸릴것 같다.~~
 ## 515. Find Largest Value in Each Tree Row
 + binary tree가 나오는 이전 문제(2471, 2415등)에서 사용한 BFS 코드를 재활용. 마찬가지로 다음 레벨을 탐색하기 직전에는 큐에 다음 레벨의 노드만 들어가 있다는 점을 활용함.
 + 트리가 빈 경우를 채크하는 부분 추가.
@@ -79,6 +86,11 @@ LeetCode 문제 목록 링크: [Problems](https://leetcode.com/problemset/)
 ## 838. Push Dominoes
 + 힘이 가해지는 부분과 전달 받는 부분을 따로 조건문으로 처리
 + 전달 받는 부분을 처리하는 기준은 힘이 가해지는 부분에서 거리를 비교 - 여기서 전달 받는 부분에서 힘이 가해지는 부분에서 L과 R의 거리가 같으면 '.'으로 처리
+## 904. Fruit Into Baskets
++ sliding window
+  + 바구니의 크기가 제한이 없다
+  + 처음 과일을 줏기 시작한 나무 부터 오른쪽으로 이동. 이동하면서 계속 줏어야 한다.
++ 1695. Maximum Erasure Value 와 유사
 ## 983. Minimum Cost For Tickets
 + 1D DP 이며 2466과 거의 유사
 + 여행을 가지 않는 날인 경우 cost를 이전 날의 cost와 같게 한다.
@@ -182,6 +194,8 @@ LeetCode 문제 목록 링크: [Problems](https://leetcode.com/problemset/)
 + 본문에 있는대로 코드를 짜면 된다. prices의 길이가 길지 않아서 O(n**2)로 통과된다.
 ## 1492. The kth Factor of n
 + factors의 배열을 생성하고 해당 값을 출력하게 함
+## 1493. Longest Subarray of 1's After Deleting One Element
++ sliding window에서 0하나만 허용한다.
 ## 1639. Number of Ways to Form a Target String Given a Dictionary
 vscode의 코파일럿(무료)가 알려주는데 cutting하는 조건을 처음에 다 알려주지 않는다.
 그리고 제시한 코드가 왜 정답이 나오게 되는지 이해하는데 시간이 걸림.
@@ -192,6 +206,10 @@ vscode의 코파일럿(무료)가 알려주는데 cutting하는 조건을 처음
   - 시간 초과라고 나와서 추가함.
 + words의 남은 문자열이 target의 남은 문자열보다 작으면 0을 반환한다.
   - 시간 초과라고 나와서 추가함.
+## 1695. Maximum Erasure Value
++ 오른쪽에 넣을 숫자랑 같은 숫자가 이미 sliding window에 있는 경우 -> 같은 숫자가 없을 때 까지 sliding window를 축소, 축소 할 때는 왼쪽에서 축소한다.
+## 1717. Maximum Score From Removing Substrings
+- greedy, stack
 ## 1718. Construct the Lexicographically Largest Valid Sequence
 + 큰 수 부터 채워 나가면 처음에 찾은 배열이 가장 사전순으로 큰 시퀀스.
 ## 1726. Tuple with Same Product
@@ -213,8 +231,11 @@ vscode의 코파일럿(무료)가 알려주는데 cutting하는 조건을 처음
 + 글자 빈도수가 같고 2군데만 다른 문자열인 경우에 한번에 swap으로 같은 문자열이 될 수 있다.
 + 이미 같은 경우와 한번 swap으로 같아질 수 있는 경우에 true로 출력
 ## 1792. Maximum Average Pass Ratio
-+ 최대 우선순위 큐를 사용함
-+ leetcode에 기본적으로 javascript에서 `@datastructures-js/priority-queue@5.4.0`를 사용할 수 있다.
++ 각 class의 합격율(ratio)의 평균을 최대화
+  - extra 한명이 추가될때 마다 추가된 class의 ratio 가 변한다
+  - 1명의 extra가 들어갔을때 가장 ratio의 변화가 높은 class에 집어넣음
+    - 위를 extraStudents번 반복한다, 최대 우선순위 큐를 활용
++ leetcode에 기본적으로 javascript에서 우선순위 큐 라이브러리를 사용할 수 있다.
   + https://support.leetcode.com/hc/en-us/articles/360011833974-What-are-the-environments-for-the-programming-languages
 ## 1845. Seat Reservation Manager
 + 비어있는 자리를 우선순위 큐에 넣는 것이 간단하다.
@@ -453,6 +474,9 @@ vscode의 코파일럿(무료)가 알려주는데 cutting하는 조건을 처음
 + j&lt;i인 j를 찾기 때문에 i앞에 있는 index 만 배열에 들어가 있으면 된다. 미리 넣어놓을 필요가 없다.
 + j를 찾을떄 stack처럼 FILO방식으로 pop을 한다. i랑 가장 가까운 j를 찾기 떄문이다.
 + 해당하는 j가 없으면 i를 push한다.
+## 3487. Maximum Unique Subarray Sum After Deletion
+- 입력받는 배열에서 음수밖에 없는 경우랑 그 외의 경우를 나누어서 처리해야함
+- [-1], [-1,-1], [-1,-1,0], [-1,0], [0]
 ## 3554. Find Category Recommendation Pairs
 + ProductInfo 에서 product_id가 달라도 같은 category인 경우가 있음. ProductPurchases 에서 quantity는 상관 없다. user의 수를 구하기 때문.
 ## 3601. Find Drivers with Improved Fuel Efficiency
