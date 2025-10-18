@@ -294,6 +294,8 @@ vscode의 코파일럿(무료)가 알려주는데 cutting하는 조건을 처음
 ## 2270. Number of Ways to Split Array
 + 1422와 유사한 문제
 + 0\~i 와 i+1\~n-1의 두 구간의 합을 비교한다.
+## 2300. Successful Pairs of Spells and Potions
++ potions 배열에 있는 각 potion에 spell을 곱하는 방법은 느리다, 대신 나누기를 사용함
 ## 2337. Move Pieces to Obtain a String
 + 이중 루프 대신 단일 루프를 사용. 안되는 경우를 거른다.
 + 예제 테스트 케이스에 없는 L과 R이 번갈아서 나오는 경우를 테스트 케이스로 생각하는 것도 시간이 걸림.
@@ -444,6 +446,9 @@ vscode의 코파일럿(무료)가 알려주는데 cutting하는 조건을 처음
 ## 3108. Minimum Cost Walk in Weighted Graph
 + 다른 노드로 이동할때 이어저 있는 모든 간선을 지나처서 이동한다.
   + 간선을 중복으로 이동이 가능하고 가중치에 비트 and 연산을 하기 때문
+## 3147. Taking Maximum Energy From the Mystic Dungeon
+1. 각 i별로 해당 위치에서 시작했을때 결과값을 구함
+2. 그 결과값 중에서 가장 큰 값을 출력
 ## 3152. Special Array II
 + queries가 어려개 라서 양옆이 같은 parity인 경우를 미리 구해서 저장
   - 시간 초과라고 나와서 추가함.
