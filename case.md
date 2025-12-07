@@ -47,6 +47,7 @@
 ## O(1)
 ➡ [10550 - Combination Lock](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=1491)  
 ➡ [3492. Maximum Containers on a Ship](https://leetcode.com/problems/maximum-containers-on-a-ship)  
+➡ [1523. Count Odd Numbers in an Interval Range](https://leetcode.com/problems/count-odd-numbers-in-an-interval-range)  
 ## O(log n)
 ➡ [12293 - Box Game](http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=3714)  
 ➡ [Fibonacci Finding (easy)](https://www.hackerrank.com/challenges/fibonacci-finding-easy)  
@@ -77,6 +78,7 @@
 ➡ [2145. Count the Hidden Sequences](https://leetcode.com/problems/count-the-hidden-sequences)  
 ➡ [1481. Least Number of Unique Integers after K Removals](https://leetcode.com/problems/least-number-of-unique-integers-after-k-removals)  
 ➡ [3397. Maximum Number of Distinct Elements After Operations](https://leetcode.com/problems/maximum-number-of-distinct-elements-after-operations)  
+➡ [1513. Number of Substrings With Only 1s](https://leetcode.com/problems/number-of-substrings-with-only-1s)  
 ## O(n log n)
 ➡ [가장 큰 수](https://programmers.co.kr/learn/courses/30/lessons/42746)  
 ➡ [징검다리](https://programmers.co.kr/learn/courses/30/lessons/43236), [River Hopscotch](http://poj.org/problem?id=3258) - 같은 문제  

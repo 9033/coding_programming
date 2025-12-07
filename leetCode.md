@@ -20,6 +20,8 @@ LeetCode 문제 목록 링크: [Problems](https://leetcode.com/problemset/)
   + 새 tail의 next를 null로 하고 리턴
 ## 63. Unique Paths II
 + 시작 지점에도 장애물이 있을 수 있다.
+## 83. Remove Duplicates from Sorted List
++ 리스트 조작이 햇갈렸다. 배열로 변환하고 난 후 리스트로 만들어서 리턴
 ## 139. Word Break
 + wordDict에 있는 단어가 여러번 쓰일 수 있다. -&gt; s의 길이까지 문자열을 조합하는 도중에 현재 길이의 문자열을 생성한 적이 있으면 skip
 ## 180. Consecutive Numbers
@@ -40,6 +42,11 @@ LeetCode 문제 목록 링크: [Problems](https://leetcode.com/problemset/)
 + 가장 긴 숫자를 선택. 답으로 출력할 배열에 넣음.
   + 가능한 경우의 수 중에서 하나만 출력하면 되니까 같은 길이의 숫자중에 하나만 선택해서 출력하면됨.
 + 그리고 다음 번 숫자를 선택할때 배열에 넣은 숫자와 나머지 연산을 해서 확인한 후 넣는다.
+## 417. Pacific Atlantic Water Flow
++ dfs
++ example만 보고 가로 세로의 길이가 같은 경우만 할 뻔함.
+## 474. Ones and Zeroes
++ 전체 subset 안에 있는 모든 0과 1의 수가 m과 n내에 있어야함
 ## 498. Diagonal Traverse
 + 3x3 인경우
   + 시작지점 (0,0), (1,0), (2,0), (2,1), (2,2)
@@ -99,6 +106,10 @@ LeetCode 문제 목록 링크: [Problems](https://leetcode.com/problemset/)
   + `tops[0]`과 같은 값을 tops로 옮김, `tops[0]`과 같은 값을 bottoms로 옮김, `bottoms[0]`과 같은 값을 tops로 옮김, `bottoms[0]`과 같은 값을 bottoms로 옮김
   + 가능한지 불가능한지, 교환 횟수는 얼마인지
   + 가능한 경우중에서 최소의 교환 횟수를 출력
+## 1015. Smallest Integer Divisible by K
++ 이전에 나왔던 나머지가 나오면 -1 출력함
+## 1018. Binary Prefix Divisible By 5
++ nums를 숫자로 변환한다, index를 이동할 때마다 나머지 연산이 필요하다
 ## 1028. Recover a Tree From Preorder Traversal
 + traversal에 입력되는 탐색 순서가 DFS로 되어 있다. 그래서 stack을 사용했다.
   + 트리에 입력할 노드가 depth가 같거나 더 앝은 노드면 스택에서 parent노드가 top에 있을 때 까지 pop을 연속으로 한다.
@@ -196,6 +207,17 @@ LeetCode 문제 목록 링크: [Problems](https://leetcode.com/problemset/)
 + factors의 배열을 생성하고 해당 값을 출력하게 함
 ## 1493. Longest Subarray of 1's After Deleting One Element
 + sliding window에서 0하나만 허용한다.
+## 1513. Number of Substrings With Only 1s
++ 1 -> 1
++ 11 -> 3
++ 111 -> 6
++ 1111 -> 10
+## 1523. Count Odd Numbers in an Interval Range
++ 가능한 경우의 수 4가지를 전부 Testcase에 입력해서 맞게 나오는지 봄
+  + 45645 342332 (odd even)
+  + 45646 342332 (even even)
+  + 45646 342331 (even odd)
+  + 45645 342331 (odd odd)
 ## 1639. Number of Ways to Form a Target String Given a Dictionary
 vscode의 코파일럿(무료)가 알려주는데 cutting하는 조건을 처음에 다 알려주지 않는다.
 그리고 제시한 코드가 왜 정답이 나오게 되는지 이해하는데 시간이 걸림.
@@ -260,6 +282,8 @@ vscode의 코파일럿(무료)가 알려주는데 cutting하는 조건을 처음
   + 그런데 예재를 계산해보니 가운데 있는 숫자가 될 때 x가 최소화가됨.
 + grid에 있는 숫자중 하나를 고르는 것 까진 알겠는데 왜 정렬하고 가운데 있는 숫자를 고르면 되는지?
 + 짝수개라서 중앙값이 양옆으로 2개 나오는데 그 중에서 n/2, n/2+1중 하나만 고르면 되는것 까진 알겠음
+## 2043. Simple Bank System
++ 계좌가 없는 경우, 잔액이 부족한 경우를 처리
 ## 2054. Two Best Non-Overlapping Events
 + DP로 푸는 경우: max(현재 이벤트 이전까지 1개만 선택하는 경우의 최대 value + 현재 이벤트의 value, 현재 이벤트의 끝나는 time까지 다른 이벤트를 2개 선택한 경우의 최대 value)
 ## 2115. Find All Possible Recipes from Given Supplies
@@ -360,6 +384,9 @@ vscode의 코파일럿(무료)가 알려주는데 cutting하는 조건을 처음
 + SWAP횟수를 확인하는 알고리즘은 editorial를 참고. 여기서는 같은 값은 트리에서 한번만 나오기 떄문에 위치를 저장해서 활용함
 ## 2529. Maximum Count of Positive Integer and Negative Integer
 + 크기 순으로 정렬이 되어 있고 hint에 binary search라고 쓰여 있다. 그렇지만 O(n)으로 진행함.
+## 2536. Increment Submatrices by One
++ 1차원 prefix sum을 먼저 해봐야함
++ example 1, 2는 x y축이 바뀌어도 확인이 되지 않음.
 ## 2554. Maximum Number of Integers to Choose From a Range I
 + 여러 제약 조건을 고려하면 단일 루프로 가능하다. 조건에 맞는 다른 경우의 수를 볼 필요가 없기 때문
     + 조건: 최대 숫자인 경우만 출력, 숫자는 한번만 선택, maxSum 이하면 됨.
@@ -439,6 +466,9 @@ vscode의 코파일럿(무료)가 알려주는데 cutting하는 조건을 처음
 ## 2948. Make Lexicographically Smallest Array by Swapping Elements
 + editorial에서 limit가 2면 1,3이 이동 가능하고 2,5가 이동가능해서 결국 1,3,5 3개의 숫자가 위치를 바꾸는게 가능하다고 함
   + 1,3,5 3가지 숫자를 하나의 그룹으로 보고 그룹별로 index를 모아 정렬해서 앞에 index부터 작은 수를 넣어줌
+## 2980. Check if Bitwise OR Has Trailing Zeros
++ or 을 했을 때 가장 오른쪽 bit가 0인 pair가 있으면 true
++ 다시 말하면 짝수가 2개 이상 있으면 true
 ## 2981. Find Longest Special Substring That Occurs Thrice I
 + object에 substring의 개수를 카운트, 그리고 3번 이상 나온 substring중에서 가장 긴 substring의 길이를 출력.
 ## 3066. Minimum Operations to Exceed Threshold Value II
@@ -464,14 +494,21 @@ vscode의 코파일럿(무료)가 알려주는데 cutting하는 조건을 처음
 + 그런데 topics에서 stack이라는 키워드를 보자마자 방법이 문득 떠올랐다.
 ## 3223. Minimum Length of String After Operations
 + 같은 문자가 문자열에 3개 이상 들어있을때 그 중에서 2개를 뺼 수 있다.
+## 3228. Maximum Number of Operations to Move Ones to the End
++ 몇번 수행을 하는게 필요한지 계산하는 문제였음, 직접 돌리면 timeout
 ## 3264. Final Array State After K Multiplication Operations I
 + 1792에서 priorityqueue 라이브러리를 사용해 봐서 그런지 여기서도 익숙하게 사용함
 ## 3307. Find the K-th Character in String Game II
 + operations는 최대 100개지만 50번 정도면 이미 최대 k를 넘어감
   + k <= 10**14 < 2**50 < Number.MAX_SAFE_INTEGER
+## 3318. Find X-Sum of All K-Long Subarrays I
++ 길이 k인 sliding window에서 발생횟수가 xth인 숫자까지의 합을 더함?
++ 최대 길이가 50개라서 우선순위 큐를 굳이 쓸 필요는 없음
 ## 3341. Find Minimum Time to Reach Last Room I
 + 최단 경로를 찾을때 우선순위큐에 다음 경로를 추가할 때 조건에 맞는 경로만 추가한다
   + 다음 room에서 이동을 시작 할 수 있는 사간을 보고 판단해서 queue에 넣음
+## 3370. Smallest Number With All Set Bits
++ 2진수에 대한 지식이 필요한 문제
 ## 3375. Minimum Operations to Make Array Values Equal to K
 + 앞과 뒤의 숫자의 크기가 서로 2이상 차이가 나야 하는줄 착각해서 시간이 더 걸림.
 ## 3412. Find Mirror Score of a String
@@ -488,3 +525,5 @@ vscode의 코파일럿(무료)가 알려주는데 cutting하는 조건을 처음
 + 각 trip에 대해 efficiency를 구해야함
 + first_half_avg, second_half_avg, efficiency_improvement 3가지 다 마지막 까지 계산 후에 round
 + efficiency_improvement > 0 조건으로 null인 경우와 낮아진 경우도 필터링
+## 3669. Balanced K-Factor Decomposition
++ hint대로 진행함, 약수들을 가지고 조합한다.
