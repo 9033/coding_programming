@@ -305,6 +305,10 @@ vscode의 코파일럿(무료)가 알려주는데 cutting하는 조건을 처음
   + 배열 에서 0인 인덱스 부터 계산하니 bottom-up DP인듯
 ## 2145. Count the Hidden Sequences
 + 원래 수열의 가장 큰 수와 가장 작은 수로 lower와 upper사이에 있는지 판단한다.
+## 2147. Number of Ways to Divide a Long Corridor
++ S가 홀수나 0개면 0 리턴
++ S가 2개마다 구간을 나눔, S가 2개 있는구간(사이에 P가 0개 이상 있음)과 P만 있는 구간으로 나뉘게 됨
++ P만 있는 구간에서 (구간의 길이+1)을 곱하면서 답을 구함, 이때 첫번쨰 구간에 P만 있는 구간과 마지막에 P만 있는 구간은 제외
 ## 2161. Partition Array According to Given Pivot
 + 배열로 각각 pivot보다 작은수, 같은수, 큰수를 담고 나서 합쳐서 리턴해서 순서를 유지.
 ## 2182. Construct String With Repeat Limit
@@ -521,6 +525,8 @@ vscode의 코파일럿(무료)가 알려주는데 cutting하는 조건을 처음
 - [-1], [-1,-1], [-1,-1,0], [-1,0], [0]
 ## 3554. Find Category Recommendation Pairs
 + ProductInfo 에서 product_id가 달라도 같은 category인 경우가 있음. ProductPurchases 에서 quantity는 상관 없다. user의 수를 구하기 때문.
+## 3583. Count Special Triplets
++ j에서 왼쪽에 있는 2배 큰 숫자의 수, j에서 오른쪽에 있는 2배 큰 숫자의 수 를 저장해서 활용
 ## 3601. Find Drivers with Improved Fuel Efficiency
 + 각 trip에 대해 efficiency를 구해야함
 + first_half_avg, second_half_avg, efficiency_improvement 3가지 다 마지막 까지 계산 후에 round
