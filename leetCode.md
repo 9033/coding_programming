@@ -270,6 +270,9 @@ vscode의 코파일럿(무료)가 알려주는데 cutting하는 조건을 처음
 + 양 옆의 구간의 개수를 보고 palindrome이 되는지 확인 (prefix sum, O(n))
   + 1\~s-1의 루프에서 같은 문자가 왼쪽에 하나라도 있고 오른쪽에 하나라도 있으면 palindrome이 됨
 + editorial는 양 끝을 잡고 중간에 문자의 수를 확인. 중복되는 문자는 한번만 센다
+## 1970. Last Day Where You Can Still Cross
++ 특정 day에 통과 가능한지 탐색한다.
++ 어떤 day에 가능한지 binary search로 탐색
 ## 1976. Number of Ways to Arrive at Destination
 + floyd에서 loop를 돌릴때 mid -> src -> desc 로 돌려야함
 + 풀이방법을 보니 경로의 가중치 뿐만 아니라 가지수를 곱하거나 더하는 방법이 있어서 참고함

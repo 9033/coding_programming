@@ -28,6 +28,7 @@
 ➡ [1237 Expert Enough?](http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=3678)  
 ➡ [2226. Maximum Candies Allocated to K Children](https://leetcode.com/problems/maximum-candies-allocated-to-k-children)  
 ➡ [2594. Minimum Time to Repair Cars](https://leetcode.com/problems/minimum-time-to-repair-cars)  
+➡ [1970. Last Day Where You Can Still Cross](https://leetcode.com/problems/last-day-where-you-can-still-cross)  
 ## 양 옆을 교환해서 정렬할때 최소로 교환하는 수 (inversion counting)
 ➡ [10327 - Flip Sort](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=1268), [Merge Sort: Counting Inversions](https://www.hackerrank.com/challenges/ctci-merge-sort/problem), [10810 - Ultra-QuickSort](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=1751) - 거의 같은 문제  
 ## Dijkstra
