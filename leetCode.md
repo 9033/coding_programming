@@ -22,6 +22,9 @@ LeetCode 문제 목록 링크: [Problems](https://leetcode.com/problemset/)
 + 시작 지점에도 장애물이 있을 수 있다.
 ## 83. Remove Duplicates from Sorted List
 + 리스트 조작이 햇갈렸다. 배열로 변환하고 난 후 리스트로 만들어서 리턴
+## 85. Maximal Rectangle
++ 1277과 유사하게 진행. 1277은 정사각형.
++ 이 문제는 직사각형이니 가로 및 세로로 1이 연속으로 몇개 나오는지 저장할 2차원 배열이 2개 필요함.
 ## 139. Word Break
 + wordDict에 있는 단어가 여러번 쓰일 수 있다. -&gt; s의 길이까지 문자열을 조합하는 도중에 현재 길이의 문자열을 생성한 적이 있으면 skip
 ## 180. Consecutive Numbers
@@ -93,6 +96,10 @@ LeetCode 문제 목록 링크: [Problems](https://leetcode.com/problemset/)
 ## 838. Push Dominoes
 + 힘이 가해지는 부분과 전달 받는 부분을 따로 조건문으로 처리
 + 전달 받는 부분을 처리하는 기준은 힘이 가해지는 부분에서 거리를 비교 - 여기서 전달 받는 부분에서 힘이 가해지는 부분에서 L과 R의 거리가 같으면 '.'으로 처리
+## 865. Smallest Subtree with all the Deepest Nodes
++ 각 노드의 레벨을 구하면서 레벨별로 노드를 분류함. 그러면서 가장 깊은 레벨을 확인
++ 트리를 다시 탐색 하면서 가장 깊은 레벨의 노드들이 다 있는 subtree인지 확인
+  + 하위에 있는 노드들의 집합을 합치면서 가장 깊은 노드들이 다 있는지 확인
 ## 904. Fruit Into Baskets
 + sliding window
   + 바구니의 크기가 제한이 없다
