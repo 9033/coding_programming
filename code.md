@@ -138,6 +138,26 @@ for k in range(1,20+1):
                 dis[i][j]=dis[i][k]+dis[k][j]
                 dis[j][i]=dis[i][k]+dis[k][j]
 ```
+```js
+// Floyd Warshall algorithm
+/*
+위 코드랑 차이: 방향이 있음
+i->j의 거리와 i->k->j의 거리를 비교해서 i->j의 거리를 업데이트 함
+
+이미 있는 경로에 k가 끼어 들거나 k가 경로를 이어준다.
+i->j => i->k->j // k를 경유하기
+i->k, k->j => i->k->j // i랑 j가 k를 경유해서 이어짐
+
+k 루프 안에 i랑 j의 루프가 있어야한다.
+*/
+for(let k=0;k<100;k++){
+    for(let i=0;i<100;i++){
+        for(let j=0;j<100;j++){
+            g[i][j]=Math.min(g[i][j], g[i][k]+g[k][j])
+        }
+    }
+}
+```
 # 수학
 ## n과 n의 약수들을 오름차 순으로 출력
 ```py
